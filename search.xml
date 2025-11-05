@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>S7-200系列[11]高速脉冲GETPUT</title>
+      <link href="/2025/09/11/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B11%5D%E9%AB%98%E9%80%9F%E8%84%89%E5%86%B2GETPUT/"/>
+      <url>/2025/09/11/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B11%5D%E9%AB%98%E9%80%9F%E8%84%89%E5%86%B2GETPUT/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【无衣】岂曰无衣七兮？不如子之衣，安且吉兮？—诗经 [先秦]</strong></p></blockquote><h1 id="一、S7-200smart基础通信"><a href="#一、S7-200smart基础通信" class="headerlink" title="一、S7-200smart基础通信"></a>一、S7-200smart基础通信</h1><h2 id="1-1-GET-PUT-通信基础"><a href="#1-1-GET-PUT-通信基础" class="headerlink" title="1.1 GET&#x2F;PUT 通信基础"></a>1.1 GET&#x2F;PUT 通信基础</h2><h3 id="1-1-1-通信总揽"><a href="#1-1-1-通信总揽" class="headerlink" title="1.1.1 通信总揽"></a>1.1.1 通信总揽</h3><p><img src="https://i.postimg.cc/3JP1dmW6/k01%E9%80%9A%E4%BF%A1%E6%80%BB%E8%A7%88.png" alt="k01通信总览.png"></p><center>图1-1：通信总揽</center><h3 id="1-1-2-GET-PUT-通信示例"><a href="#1-1-2-GET-PUT-通信示例" class="headerlink" title="1.1.2 GET&#x2F;PUT 通信示例"></a>1.1.2 GET&#x2F;PUT 通信示例</h3><p><img src="https://i.postimg.cc/rFdgVQyx/k02%E9%80%9A%E4%BF%A1%E7%A4%BA%E4%BE%8B.png" alt="k02通信示例.png"></p><center>图1-2：GET/PUT示例</center><h3 id="1-1-3-通信硬件要求"><a href="#1-1-3-通信硬件要求" class="headerlink" title="1.1.3 通信硬件要求"></a>1.1.3 通信硬件要求</h3><p><img src="https://i.postimg.cc/VknRMvCN/k03%E7%A1%AC%E4%BB%B6%E8%A6%81%E6%B1%82.png" alt="k03硬件要求.png"></p><center>图1-3：通信硬件要求</center><h2 id="1-2-GET-PUT-通信准备"><a href="#1-2-GET-PUT-通信准备" class="headerlink" title="1.2 GET&#x2F;PUT 通信准备"></a>1.2 GET&#x2F;PUT 通信准备</h2><h3 id="1-2-1-定义IP地址"><a href="#1-2-1-定义IP地址" class="headerlink" title="1.2.1 定义IP地址"></a>1.2.1 定义IP地址</h3><p><img src="https://i.postimg.cc/bvPRRPx9/k04%E5%AE%9A%E4%B9%89ip.png" alt="k04定义ip.png"></p><center>图1-4：PLC地址IP定义</center><p><img src="https://i.postimg.cc/g0KHS74F/k05%E5%9C%B0%E5%9D%80%E4%BF%AE%E6%94%B9.png" alt="k05地址修改.png"></p><p><img src="https://i.postimg.cc/j5dQGhkW/k06%E5%8F%A6%E4%B8%80IP.png" alt="k06另一IP.png"></p><center>图1-5：PLC地址IP修改</center><h2 id="1-3-GET-PUT-通信示例"><a href="#1-3-GET-PUT-通信示例" class="headerlink" title="1.3 GET&#x2F;PUT 通信示例"></a>1.3 GET&#x2F;PUT 通信示例</h2><h3 id="1-3-1-通信向导"><a href="#1-3-1-通信向导" class="headerlink" title="1.3.1 通信向导"></a>1.3.1 通信向导</h3><p><img src="https://i.postimg.cc/507q1FZs/k07%E9%80%9A%E4%BF%A1%E8%AE%BE%E7%BD%AE.png" alt="k07通信设置.png"></p><p><img src="https://i.postimg.cc/cCPRtG1Y/k08%E5%90%91%E5%AF%BC1.png" alt="k08向导1.png"></p><p><img src="https://i.postimg.cc/m2FNfkVS/k09%E9%80%9A%E4%BF%A11.png" alt="k09通信1.png"></p><p><img src="https://i.postimg.cc/qvVckr5H/k10%E9%80%9A%E4%BF%A12.png" alt="k10通信2.png"></p><p><img src="https://i.postimg.cc/Z588nQGB/k11%E5%AD%98%E5%82%A8%E5%99%A8%E5%88%86%E9%85%8D.png" alt="k11存储器分配.png"></p><center>图1-6：PLC通信向导预设</center><h3 id="1-3-2-通信程序"><a href="#1-3-2-通信程序" class="headerlink" title="1.3.2 通信程序"></a>1.3.2 通信程序</h3><p><img src="https://i.postimg.cc/fbMx9KsH/k12-1%E5%8F%B7%E6%9C%BA%E7%BC%96%E7%A8%8B.png" alt="k12-1号机编程.png"></p><center>图1-7：1号机程序</center><p><img src="https://i.postimg.cc/25TnFZ8C/k13-2%E5%8F%B7%E6%9C%BA%E7%BC%96%E7%A8%8B.png" alt="k13-2号机编程.png"></p><center>图1-8：2号机程序</center><blockquote><p><strong>岂曰无衣七兮？不如子之衣，安且吉兮？<br>岂曰无衣六兮？不如子之衣，安且燠兮？</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[10]高速脉冲</title>
+      <link href="/2025/09/10/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B10%5D%E9%AB%98%E9%80%9F%E8%84%89%E5%86%B2/"/>
+      <url>/2025/09/10/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B10%5D%E9%AB%98%E9%80%9F%E8%84%89%E5%86%B2/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【无衣】岂曰无衣？与子同裳。王于兴师，修我甲兵，与子偕行！—诗经 [先秦]</strong></p></blockquote><h1 id="一、S7-200smart高速脉冲"><a href="#一、S7-200smart高速脉冲" class="headerlink" title="一、S7-200smart高速脉冲"></a>一、S7-200smart高速脉冲</h1><h2 id="1-1-PWM脉冲"><a href="#1-1-PWM脉冲" class="headerlink" title="1.1 PWM脉冲"></a>1.1 PWM脉冲</h2><h3 id="1-1-1-PWM脉冲基础"><a href="#1-1-1-PWM脉冲基础" class="headerlink" title="1.1.1 PWM脉冲基础"></a>1.1.1 PWM脉冲基础</h3><p><img src="https://i.postimg.cc/hPSgNQKk/j01pwm%E8%84%89%E5%86%B2.png" alt="j01pwm脉冲.png"></p><center>图1-1：脉冲输出PWM</center><p><img src="https://i.postimg.cc/QCqDHhJY/j02%E6%AD%A5%E9%AA%A41.png" alt="j02步骤1.png"></p><p><img src="https://i.postimg.cc/Rhm9SNKn/j03%E6%AD%A5%E9%AA%A42.png" alt="j03步骤2.png"></p><p><img src="https://i.postimg.cc/595bPSW5/j04%E6%AD%A5%E9%AA%A43.png" alt="j04步骤3.png"></p><center>图1-2：脉冲输出PWM程序</center><blockquote><p><strong>组态设置好进行 调用子例程   Q0.0进行闪烁</strong></p></blockquote><h2 id="2-1-PTO脉冲串"><a href="#2-1-PTO脉冲串" class="headerlink" title="2.1 PTO脉冲串"></a>2.1 PTO脉冲串</h2><h3 id="2-1-1-PTO脉冲串基础"><a href="#2-1-1-PTO脉冲串基础" class="headerlink" title="2.1.1 PTO脉冲串基础"></a>2.1.1 PTO脉冲串基础</h3><p><img src="https://i.postimg.cc/GhqrR32H/j05%E8%84%89%E5%86%B2%E4%B8%B2.png" alt="j05脉冲串.png"></p><p><img src="https://i.postimg.cc/Cx50xyBJ/j06%E8%84%89%E5%86%B2%E4%B8%B2.png" alt="j06脉冲串.png"></p><center>图2-1：脉冲串PTO</center><p><img src="https://i.postimg.cc/k5tdWxyb/j07%E6%8E%A7%E5%88%B6%E5%AD%97%E8%8A%82.png" alt="j07控制字节.png"></p><center>图2-2：PTO脉冲控制字节说明</center><h3 id="2-1-2-PTO脉冲控制步进电机"><a href="#2-1-2-PTO脉冲控制步进电机" class="headerlink" title="2.1.2 PTO脉冲控制步进电机"></a>2.1.2 PTO脉冲控制步进电机</h3><p><img src="https://i.postimg.cc/htYBJCVn/j08%E6%AD%A5%E8%BF%9B%E6%8E%A7%E5%88%B6.png" alt="j08步进控制.png"></p><center>图2-3：PTO脉冲步进硬件组成</center><p><img src="https://i.postimg.cc/cHyGhrD5/j09%E6%AD%A5%E8%BF%9B%E7%A8%8B%E5%BA%8F.png" alt="j09步进程序.png"></p><center>图2-4：PTO脉冲步进示例程序</center><h2 id="3-1-运动控制向导"><a href="#3-1-运动控制向导" class="headerlink" title="3.1 运动控制向导"></a>3.1 运动控制向导</h2><h3 id="3-1-1-运动控制组态"><a href="#3-1-1-运动控制组态" class="headerlink" title="3.1.1 运动控制组态"></a>3.1.1 运动控制组态</h3><p><img src="https://i.postimg.cc/9Md5nCKX/j10%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%90%91%E5%AF%BC.png" alt="j10运动控制向导.png"></p><p><img src="https://i.postimg.cc/cCdyqPGR/j11%E6%B5%8B%E9%87%8F%E7%B3%BB%E7%BB%9F.png" alt="j11测量系统.png"></p><p><img src="https://i.postimg.cc/prkNPkPg/j12%E6%96%B9%E5%90%91%E6%8E%A7%E5%88%B6.png" alt="j12方向控制.png"></p><p><img src="https://i.postimg.cc/qBGHcB2j/j13%E8%BE%93%E5%85%A5%E6%8E%A7%E5%88%B6.png" alt="j13输入控制.png"></p><p><img src="https://i.postimg.cc/m22fmxwR/j14%E8%B4%9F%E6%96%B9%E5%90%91.png" alt="j14负方向.png"></p><p><img src="https://i.postimg.cc/kX1rZj1S/j15%E7%BB%9D%E5%AF%B9%E7%A7%BB%E5%8A%A8.png" alt="j15绝对移动.png"></p><p><img src="https://i.postimg.cc/cLvqNQ2b/j16%E5%81%9C%E6%AD%A2%E8%84%89%E5%86%B2.png" alt="j16停止脉冲.png"></p><p><img src="https://i.postimg.cc/Z52GYWhK/j17%E7%94%B5%E6%9C%BA%E9%80%9F%E5%BA%A6.png" alt="j17电机速度.png"></p><p><img src="https://i.postimg.cc/rp4vDq8G/j18%E7%BB%84%E6%80%81%E8%AE%BE%E7%BD%AE.png" alt="j18组态设置.png"></p><p><img src="https://i.postimg.cc/W3Pxrx3B/j19%E5%8A%A0%E5%87%8F%E9%80%9F%E6%97%B6%E9%97%B4.png" alt="j19加减速时间.png"></p><p><img src="https://i.postimg.cc/76MdNXJf/j20%E8%A1%A5%E5%81%BF.png" alt="j20补偿.png"></p><p><img src="https://i.postimg.cc/sxj8HS5K/j21%E5%90%AF%E7%94%A8%E5%8F%82%E8%80%83%E7%82%B9.png" alt="j21启用参考点.png"></p><p><img src="https://i.postimg.cc/XqsPRJ8W/j22%E6%89%BE%E5%8E%9F%E7%82%B9%E6%96%B9%E5%90%91.png" alt="j22找原点方向.png"></p><p><img src="https://i.postimg.cc/Vsg2rGch/j23%E5%8E%9F%E7%82%B9%E5%81%9C%E6%AD%A2.png" alt="j23原点停止.png"></p><p><img src="https://i.postimg.cc/4N3qz6fx/j24%E7%BB%9D%E5%AF%B9%E4%BD%8D%E7%BD%AE.png" alt="j24绝对位置.png"></p><p><img src="https://i.postimg.cc/02H3Zzjd/j25%E5%AF%84%E5%AD%98%E5%99%A8%E5%88%86%E9%85%8D.png" alt="j25寄存器分配.png"></p><p><img src="https://i.postimg.cc/503Kz0Dz/j26%E7%94%9F%E6%88%90%E5%AD%90%E7%A8%8B%E5%BA%8F.png" alt="j26生成子程序.png"></p><center>图3-1：运动控制组态</center><h3 id="3-1-2-运动控制示例"><a href="#3-1-2-运动控制示例" class="headerlink" title="3.1.2 运动控制示例"></a>3.1.2 运动控制示例</h3><p><img src="https://i.postimg.cc/4yxLQGTS/j27%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3.png" alt="j27帮助文档.png"></p><p><img src="https://i.postimg.cc/RZkY52cW/j28%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6%E5%88%9D%E5%A7%8B%E5%8C%961.png" alt="j28运动控制初始化1.png"></p><p><img src="https://i.postimg.cc/B6swtD7s/j29%E6%89%8B%E5%8A%A8%E6%8E%A7%E5%88%B62.png" alt="j29手动控制2.png"></p><p><img src="https://i.postimg.cc/Bb7hhzSQ/j30%E5%B8%AE%E5%8A%A92.png" alt="j30帮助2.png"></p><p><img src="https://i.postimg.cc/R0xgbKBf/j31%E5%B8%AE%E5%8A%A93.png" alt="j31帮助3.png"></p><p><img src="https://i.postimg.cc/1547gyBg/j32%E5%AE%9A%E4%BD%8D3.png" alt="j32定位3.png"></p><p><img src="https://i.postimg.cc/YqVnYTDd/j33%E5%9B%9E%E5%8E%9F%E7%82%B94.png" alt="j33回原点4.png"></p><p><img src="https://i.postimg.cc/qv3mLQ94/j34%E8%B0%83%E8%AF%95.png" alt="j34调试.png"></p><center>图3-2：运动控制示例</center><blockquote><p><strong>岂曰无衣？与子同袍。王于兴师，修我戈矛，与子同仇！<br>岂曰无衣？与子同泽。王于兴师，修我矛戟，与子偕作！<br>岂曰无衣？与子同裳。王于兴师，修我甲兵，与子偕行！</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[09]高速计数器</title>
+      <link href="/2025/09/09/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B09%5D%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8/"/>
+      <url>/2025/09/09/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B09%5D%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【君子于役】君子于役，不知其期，曷至哉？—诗经 [先秦]</strong></p></blockquote><h1 id="一、S7-200smart高速计数器"><a href="#一、S7-200smart高速计数器" class="headerlink" title="一、S7-200smart高速计数器"></a>一、S7-200smart高速计数器</h1><h2 id="1-1-高速计数器概念"><a href="#1-1-高速计数器概念" class="headerlink" title="1.1 高速计数器概念"></a>1.1 高速计数器概念</h2><h3 id="1-1-1-高速计数器特点"><a href="#1-1-1-高速计数器特点" class="headerlink" title="1.1.1 高速计数器特点"></a>1.1.1 高速计数器特点</h3><p><img src="https://i.postimg.cc/tTYn3vMz/i01%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E7%89%B9%E7%82%B9.png" alt="i01高速计数特点.png"></p><center>图1-1：高速计数器特点</center><h3 id="1-1-2-高速计数功能HSC"><a href="#1-1-2-高速计数功能HSC" class="headerlink" title="1.1.2 高速计数功能HSC"></a>1.1.2 高速计数功能HSC</h3><p><img src="https://i.postimg.cc/QM6WWZ0t/i02%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%8A%9F%E8%83%BD.png" alt="i02高速计数功能.png"></p><center>图1-2：高速计数功能HSC</center><h3 id="1-1-3-高速计数模式"><a href="#1-1-3-高速计数模式" class="headerlink" title="1.1.3 高速计数模式"></a>1.1.3 高速计数模式</h3><p><img src="https://i.postimg.cc/TwFLCq8v/i03%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E8%AE%A1%E6%95%B0%E6%A8%A1%E5%BC%8F.png" alt="i03高速计数计数模式.png"></p><center>图1-3：高速计数模式</center><blockquote><p><strong>【  A&#x2F;B相正交计数器用于避免误差   实际应用较多  】</strong></p></blockquote><h2 id="1-2-高速计数器步骤"><a href="#1-2-高速计数器步骤" class="headerlink" title="1.2 高速计数器步骤"></a>1.2 高速计数器步骤</h2><h3 id="1-2-1-高速计数器步骤"><a href="#1-2-1-高速计数器步骤" class="headerlink" title="1.2.1 高速计数器步骤"></a>1.2.1 高速计数器步骤</h3><p><img src="https://i.postimg.cc/QNKWVP58/i04%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%AD%A5%E9%AA%A41.png" alt="i04高速计数步骤1.png"></p><blockquote><p><strong>若选择HSC0 进行字SMB37.0 的8个字节控制<br>          1.1.1.1.1.0.0.0 由高位到低位 转换为16进制 数值传入到SMB37.O</strong>          </p></blockquote><p><img src="https://i.postimg.cc/m2x19wNQ/i05%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%AD%A5%E9%AA%A42.png" alt="i05高速计数步骤2.png"></p><p><img src="https://i.postimg.cc/pXDhJFq3/i06%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%AD%A5%E9%AA%A43.png" alt="i06高速计数步骤3.png"></p><blockquote><p><strong>启用中断子程序 ENI  设置事件编号</strong></p><p><strong>中断子程序进入后  将QB0 进行自加  将0传送到起始值  再次启用高速计数器编号</strong></p></blockquote><p><img src="https://i.postimg.cc/dVw7HVf3/i07%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%AD%A5%E9%AA%A44.png" alt="i07高速计数步骤4.png"></p><center>图1-4：高速计数器一般步骤</center><h3 id="1-2-2-高速计数器数字滤波"><a href="#1-2-2-高速计数器数字滤波" class="headerlink" title="1.2.2 高速计数器数字滤波"></a>1.2.2 高速计数器数字滤波</h3><p><img src="https://i.postimg.cc/zfPVGSGH/i08%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%95%B0%E5%AD%97%E6%BB%A4%E6%B3%A2.png" alt="i08高速计数数字滤波.png"></p><blockquote><p><strong>设置完数字滤波 即可通过 I0.0 接通来实现高速计数</strong></p></blockquote><center>图1-5：高速计数器数字滤波</center><h3 id="1-2-3-高速计数器计数模式"><a href="#1-2-3-高速计数器计数模式" class="headerlink" title="1.2.3 高速计数器计数模式"></a>1.2.3 高速计数器计数模式</h3><p><img src="https://i.postimg.cc/d00hFSwK/i10%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%A8%A1%E5%BC%8F1.png" alt="i10高速计数模式1.png"></p><p><img src="https://i.postimg.cc/TwLhLLK7/i11%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%A8%A1%E5%BC%8F2.png" alt="i11高速计数模式2.png"></p><p><img src="https://i.postimg.cc/j5p2zxNs/i12%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%A8%A1%E5%BC%8F3.png" alt="i12高速计数模式3.png"></p><blockquote><p><strong>0&#x2F;1模式   单向计数器  内部数值增计数  INC 加计数器   DEC 减计数器<br>3&#x2F;4模式   通过外部 I0.1  &#x2F;  I0.3 改变技术方向<br>6&#x2F;7模式   根据接通的输入进行  增减计数</strong></p></blockquote><p><img src="https://i.postimg.cc/QCctm2kc/i13%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%A8%A1%E5%BC%8F4.png" alt="i13高速计数模式4.png"></p><blockquote><p><strong>9&#x2F;10模式   AB相正交   A比B之前接通 进行增计数  A比B之慢接通 进行减计数</strong></p></blockquote><p><img src="https://i.postimg.cc/HWMVTMDj/i14%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E6%A8%A1%E5%BC%8F5.png" alt="i14高速计数模式5.png"></p><center>图1-6：高速计数器计数模式</center><h1 id="二、编码器的应用"><a href="#二、编码器的应用" class="headerlink" title="二、编码器的应用"></a>二、编码器的应用</h1><h2 id="2-1-编码器概念"><a href="#2-1-编码器概念" class="headerlink" title="2.1 编码器概念"></a>2.1 编码器概念</h2><h3 id="2-1-1-编码器特点"><a href="#2-1-1-编码器特点" class="headerlink" title="2.1.1 编码器特点"></a>2.1.1 编码器特点</h3><p><img src="https://i.postimg.cc/X70Xqv4L/i15%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E7%BC%96%E7%A0%81%E5%99%A8.png" alt="i15高速计数编码器.png"></p><center>图2-1：编码器特点</center><h3 id="2-1-2-编码器分类"><a href="#2-1-2-编码器分类" class="headerlink" title="2.1.2 编码器分类"></a>2.1.2 编码器分类</h3><p><img src="https://i.postimg.cc/sD9xhR2r/i16%E7%BC%96%E7%A0%81%E5%99%A8%E5%88%86%E7%B1%BB.png" alt="i16编码器分类.png"></p><center>图2-2：编码器分类</center><h3 id="2-1-3-编码器应用"><a href="#2-1-3-编码器应用" class="headerlink" title="2.1.3 编码器应用"></a>2.1.3 编码器应用</h3><p><img src="https://i.postimg.cc/Dwxzxdsp/i17%E7%BC%96%E7%A0%81%E5%99%A8%E5%BA%94%E7%94%A8.png" alt="i17编码器应用.png"></p><center>图2-3：编码器应用</center><h3 id="2-1-4-高速计数编码器"><a href="#2-1-4-高速计数编码器" class="headerlink" title="2.1.4 高速计数编码器"></a>2.1.4 高速计数编码器</h3><p><img src="https://i.postimg.cc/TPh3FLJd/i18%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E7%BC%96%E7%A0%81%E5%99%A8.png" alt="i18高速计数编码器.png"></p><center>图2-4：高速计数编码器</center><h3 id="2-1-5-编码器接线图"><a href="#2-1-5-编码器接线图" class="headerlink" title="2.1.5 编码器接线图"></a>2.1.5 编码器接线图</h3><p><img src="https://i.postimg.cc/0Qw25T4h/i19%E6%8E%A5%E7%BA%BF.png" alt="i19接线.png"></p><center>图2-5：编码器接线图</center><h3 id="2-1-6-编码器程序"><a href="#2-1-6-编码器程序" class="headerlink" title="2.1.6 编码器程序"></a>2.1.6 编码器程序</h3><p><img src="https://i.postimg.cc/0N3yskVp/i20%E7%BC%96%E7%A0%81%E5%99%A8%E7%A8%8B%E5%BA%8F.png" alt="i20编码器程序.png"></p><center>图2-6：编码器程序</center><blockquote><p><strong>通过正反向转动编码器实现   数值的高速增减计数</strong></p></blockquote><blockquote><p><strong>君子于役，不知其期，曷至哉？<br>鸡栖于埘，日之夕矣，羊牛下来。<br>君子于役，如之何勿思！<br>君子于役，不日不月，曷其有佸[1]？<br>鸡栖于桀，日之夕矣，羊牛下括。<br>君子于役，苟无饥渴！</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[08]之PID调节.</title>
+      <link href="/2025/09/08/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B08%5D%E4%B9%8BPID%E8%B0%83%E8%8A%82/"/>
+      <url>/2025/09/08/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B08%5D%E4%B9%8BPID%E8%B0%83%E8%8A%82/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【硕鼠】硕鼠硕鼠，无食我黍！三岁贯女，莫我肯顾。—诗经 [先秦]</strong></p></blockquote><h1 id="一、PID调节知识"><a href="#一、PID调节知识" class="headerlink" title="一、PID调节知识"></a>一、PID调节知识</h1><h2 id="1-1-PID调节概述"><a href="#1-1-PID调节概述" class="headerlink" title="1.1 PID调节概述"></a>1.1 PID调节概述</h2><h3 id="1-1-1-PID调节概念"><a href="#1-1-1-PID调节概念" class="headerlink" title="1.1.1 PID调节概念"></a>1.1.1 PID调节概念</h3><p><img src="https://i.postimg.cc/N0Sx51Kz/h01pid%E8%B0%83%E8%8A%82%E6%A6%82%E5%BF%B5.png" alt="h01pid调节概念.png"></p><center>图1-1：PID调节概念</center><h3 id="1-1-2-PID控制原理图"><a href="#1-1-2-PID控制原理图" class="headerlink" title="1.1.2 PID控制原理图"></a>1.1.2 PID控制原理图</h3><p><img src="https://i.postimg.cc/jS8crVtK/h02pid%E6%8E%A7%E5%88%B6%E5%8E%9F%E7%90%86%E5%9B%BE.png" alt="h02pid控制原理图.png"></p><center>图1-2：PID控制原理图</center><h3 id="1-1-3-PID调节典型算法"><a href="#1-1-3-PID调节典型算法" class="headerlink" title="1.1.3 PID调节典型算法"></a>1.1.3 PID调节典型算法</h3><p><img src="https://i.postimg.cc/6Qy0WHpZ/h03pid%E8%B0%83%E8%8A%82%E7%AE%97%E6%B3%95.png" alt="h03pid调节算法.png"></p><center>图1-3：PID调节典型算法</center><h3 id="1-1-4-PID调节设定"><a href="#1-1-4-PID调节设定" class="headerlink" title="1.1.4 PID调节设定"></a>1.1.4 PID调节设定</h3><p><img src="https://i.postimg.cc/xCm3HcHT/h04%E8%B0%83%E8%8A%82%E8%AE%BE%E5%AE%9A.png" alt="h04调节设定.png"></p><center>图1-4：PID调节设定</center><h2 id="1-2-PID案例"><a href="#1-2-PID案例" class="headerlink" title="1.2 PID案例"></a>1.2 PID案例</h2><h3 id="1-2-1-PID调节实验"><a href="#1-2-1-PID调节实验" class="headerlink" title="1.2.1 PID调节实验"></a>1.2.1 PID调节实验</h3><p><img src="https://i.postimg.cc/prYQG4qw/h05%E6%A1%88%E4%BE%8B%E6%81%92%E5%8E%8B%E4%BE%9B%E6%B0%B4.png" alt="h05案例恒压供水.png"></p><p><img src="https://i.postimg.cc/7Y9MgvC7/h06%E6%8E%A5%E7%BA%BF%E5%9B%BE.png" alt="h06接线图.png"></p><p><img src="https://i.postimg.cc/15srnRzs/h07%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D.png" alt="h07模拟量地址分配.png"></p><center>图1-5：PID调节实验</center><h3 id="1-2-2-PID调节过程"><a href="#1-2-2-PID调节过程" class="headerlink" title="1.2.2 PID调节过程"></a>1.2.2 PID调节过程</h3><p><img src="https://i.postimg.cc/XNcwbMkh/h08%E6%A8%A1%E5%9D%97%E8%AE%BE%E7%BD%AE.png" alt="h08模块设置.png"></p><p><img src="https://i.postimg.cc/ZqB8tCwF/h09%E9%80%9A%E9%81%93%E8%AE%BE%E7%BD%AE.png" alt="h09通道设置.png"></p><p><img src="https://i.postimg.cc/rsJWCWpc/h10pid.png" alt="h10pid.png"></p><p><img src="https://i.postimg.cc/yxBcZnsv/h11%E6%8A%A5%E8%AD%A6%E5%90%AF%E5%8A%A8.png" alt="h11报警启动.png"></p><p><img src="https://i.postimg.cc/6q9433fP/h15%E7%B1%BB%E5%9E%8B%E6%A0%87%E5%AE%9A.jpg" alt="h15类型标定.jpg"></p><p><img src="https://i.postimg.cc/BQS2Zhhv/h12%E6%89%8B%E5%8A%A8%E6%8E%A7%E5%88%B6.png" alt="h12手动控制.png"></p><p><img src="https://i.postimg.cc/YqdYv1Vz/h13%E5%88%86%E9%85%8D.png" alt="h13分配.png"></p><p><img src="https://i.postimg.cc/RhX6nBPZ/h16%E7%A8%8B%E5%BA%8F%E8%AE%BE%E5%AE%9A.jpg" alt="h16程序设定.jpg"></p><p><img src="https://i.postimg.cc/XJKy4FdF/h14%E7%A8%8B%E5%BA%8F%E6%8E%A7%E5%88%B6.png" alt="h14程序控制.png"></p><p><img src="https://i.postimg.cc/SQrzP6yb/h17%E6%89%8B%E5%8A%A8%E8%B0%83%E8%8A%82.png" alt="h17手动调节.png"></p><p><img src="https://i.postimg.cc/YCJ4F8xY/h18%E8%87%AA%E8%B0%83%E8%8A%82.png" alt="h18自调节.png"></p><p><img src="https://i.postimg.cc/HxmVZxRL/h19%E6%9B%B4%E6%96%B0.png" alt="h19更新.png"></p><center>图1-6：PID调节过程</center><blockquote><p><strong>硕鼠硕鼠，无食我黍！三岁贯女，莫我肯顾。<br>逝将去女，适彼乐土。乐土乐土，爰得我所？<br>硕鼠硕鼠，无食我麦！三岁贯女，莫我肯德。<br>逝将去女，适彼乐国。乐国乐国，爰得我直？<br>硕鼠硕鼠，无食我苗！三岁贯女，莫我肯劳。<br>逝将去女，适彼乐郊。乐郊乐郊，谁之永号？</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[07]认识模拟量</title>
+      <link href="/2025/09/07/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B07%5D%E8%AE%A4%E8%AF%86%E6%A8%A1%E6%8B%9F%E9%87%8F/"/>
+      <url>/2025/09/07/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B07%5D%E8%AE%A4%E8%AF%86%E6%A8%A1%E6%8B%9F%E9%87%8F/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【伐檀】坎坎伐檀兮，寘之河之干兮，河水清且涟猗。—诗经 [先秦]</strong></p></blockquote><h2 id="一、S7-200smart模拟量概念"><a href="#一、S7-200smart模拟量概念" class="headerlink" title="一、S7-200smart模拟量概念"></a>一、S7-200smart模拟量概念</h2><h3 id="1-1-模拟量知识"><a href="#1-1-模拟量知识" class="headerlink" title="1.1 模拟量知识"></a>1.1 模拟量知识</h3><h4 id="1-1-1-模拟量简述"><a href="#1-1-1-模拟量简述" class="headerlink" title="1.1.1 模拟量简述"></a>1.1.1 模拟量简述</h4><p><img src="https://i.postimg.cc/C5q69Q5K/g01%E6%A8%A1%E6%8B%9F%E9%87%8F%E6%A6%82%E8%BF%B0.png" alt="g01模拟量概述.png"></p><center>图1-1：模拟量简述</center><h4 id="1-1-2-模拟量常用传感器"><a href="#1-1-2-模拟量常用传感器" class="headerlink" title="1.1.2 模拟量常用传感器"></a>1.1.2 模拟量常用传感器</h4><p><img src="https://i.postimg.cc/qRY5bTkY/g02%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%B8%B8%E7%94%A8%E4%BC%A0%E6%84%9F%E5%99%A8.png" alt="g02模拟量常用传感器.png"></p><center>图1-2：模拟量常用传感器</center><h4 id="1-1-3-温度变送器"><a href="#1-1-3-温度变送器" class="headerlink" title="1.1.3 温度变送器"></a>1.1.3 温度变送器</h4><p><img src="https://i.postimg.cc/ryBH5MZR/g03%E4%BC%A0%E6%84%9F%E5%99%A8%E5%8F%98%E9%80%81%E5%99%A8.png" alt="g03传感器变送器.png"></p><center>图1-3：模拟量常用温度变送器</center><h3 id="1-2-模拟量转换模块"><a href="#1-2-模拟量转换模块" class="headerlink" title="1.2 模拟量转换模块"></a>1.2 模拟量转换模块</h3><h4 id="1-2-1-模拟量模块（A-D模块、D-A模块）"><a href="#1-2-1-模拟量模块（A-D模块、D-A模块）" class="headerlink" title="1.2.1 模拟量模块（A&#x2F;D模块、D&#x2F;A模块）"></a>1.2.1 模拟量模块（A&#x2F;D模块、D&#x2F;A模块）</h4><p><img src="https://i.postimg.cc/DfJDW86K/g04%E6%A8%A1%E6%8B%9F%E9%87%8F%E6%A8%A1%E5%9D%97.png" alt="g04模拟量模块.png"></p><center>图1-4：模拟量转换模块</center><h4 id="1-2-2-模拟量处理过程"><a href="#1-2-2-模拟量处理过程" class="headerlink" title="1.2.2 模拟量处理过程"></a>1.2.2 模拟量处理过程</h4><p><img src="https://i.postimg.cc/027BfFhW/g05%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B.png" alt="g05模拟量处理过程.png"></p><center>图1-5：模拟量处理过程</center><h2 id="二、模拟量模块"><a href="#二、模拟量模块" class="headerlink" title="二、模拟量模块"></a>二、模拟量模块</h2><h3 id="2-1-模拟量常用模块"><a href="#2-1-模拟量常用模块" class="headerlink" title="2.1 模拟量常用模块"></a>2.1 模拟量常用模块</h3><h4 id="2-1-1-输入模块-EM-AE04"><a href="#2-1-1-输入模块-EM-AE04" class="headerlink" title="2.1.1 输入模块 EM AE04"></a>2.1.1 输入模块 EM AE04</h4><p><img src="https://i.postimg.cc/mgR66Vsb/g06%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97EMAE04.png" alt="g06输入模块EMAE04.png"></p><p><img src="https://i.postimg.cc/0yfHgmk7/g07%E6%A8%A1%E5%9D%97%E7%BB%84%E6%80%81.png" alt="g07模块组态.png"></p><center>图2-1：模拟量输入模块EM AE04参数</center><h4 id="2-1-2-输出模块-EM-AQ02"><a href="#2-1-2-输出模块-EM-AQ02" class="headerlink" title="2.1.2 输出模块 EM AQ02"></a>2.1.2 输出模块 EM AQ02</h4><p><img src="https://i.postimg.cc/jjS3R52m/g08%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9D%97EMAQ02.png" alt="g08输出模块EMAQ02.png"></p><p><img src="https://i.postimg.cc/0NXWjsJQ/g09%E7%BB%84%E6%80%81%E6%A8%A1%E5%9D%97.png" alt="g09组态模块.png"></p><center>图2-2：模拟量输出模块EM AQ02参数</center><h4 id="2-1-3-输入-输出模块-EM-AM03"><a href="#2-1-3-输入-输出模块-EM-AM03" class="headerlink" title="2.1.3 输入&#x2F;输出模块 EM AM03"></a>2.1.3 输入&#x2F;输出模块 EM AM03</h4><p><img src="https://i.postimg.cc/4dK8hSz1/g10%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9D%97EMAM03.png" alt="g10输入输出模块EMAM03.png"></p><p><img src="https://i.postimg.cc/DZtxQP63/g11%E6%8E%A5%E7%BA%BF%E5%9B%BE.png" alt="g11接线图.png"></p><center>图2-3：模拟量输入/输出模块EM AM03参数</center><h4 id="2-1-4-热电阻输入模块-EM-AR02"><a href="#2-1-4-热电阻输入模块-EM-AR02" class="headerlink" title="2.1.4 热电阻输入模块 EM AR02"></a>2.1.4 热电阻输入模块 EM AR02</h4><p><img src="https://i.postimg.cc/x8Mt6NpJ/g12%E7%83%AD%E7%94%B5%E9%98%BB%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97.png" alt="g12热电阻输入模块.png"></p><p><img src="https://i.postimg.cc/T2D7dB2d/g13%E7%83%AD%E7%94%B5%E9%98%BB%E6%8E%A5%E7%BA%BF%E5%9B%BE.png" alt="g13热电阻接线图.png"></p><p><img src="https://i.postimg.cc/sDCnvK1p/g14%E7%83%AD%E7%94%B5%E9%98%BB%E6%A8%A1%E5%9D%97.png" alt="g14热电阻模块.png"></p><center>图2-4：热电阻输入模块EM AR02参数</center><h4 id="2-1-5-热电偶输入模块-EM-AT04-（高温环境）"><a href="#2-1-5-热电偶输入模块-EM-AT04-（高温环境）" class="headerlink" title="2.1.5 热电偶输入模块 EM AT04 （高温环境）"></a>2.1.5 热电偶输入模块 EM AT04 （高温环境）</h4><p><img src="https://i.postimg.cc/W12X73Gz/g15EMAT04%E6%A8%A1%E5%9D%97.png" alt="g15EMAT04模块.png"></p><p><img src="https://i.postimg.cc/fT78XX01/g16%E7%BB%84%E6%80%81EMAT04.png" alt="g16组态EMAT04.png"></p><center>图2-5：热电阻输入模块EM AR02参数</center><h3 id="2-2-模拟量地址分配"><a href="#2-2-模拟量地址分配" class="headerlink" title="2.2 模拟量地址分配"></a>2.2 模拟量地址分配</h3><h4 id="2-2-1-模拟量地址分配"><a href="#2-2-1-模拟量地址分配" class="headerlink" title="2.2.1 模拟量地址分配"></a>2.2.1 模拟量地址分配</h4><p><img src="https://i.postimg.cc/43yPrSFT/g17%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D.png" alt="g17模拟量地址分配.png"></p><center>图2-6：模拟量地址分配</center><h4 id="2-2-2-温度变送器与模拟量输入接线图"><a href="#2-2-2-温度变送器与模拟量输入接线图" class="headerlink" title="2.2.2 温度变送器与模拟量输入接线图"></a>2.2.2 温度变送器与模拟量输入接线图</h4><p><img src="https://i.postimg.cc/bw3LVhgT/g18%E6%B8%A9%E5%BA%A6%E5%8F%98%E9%80%81%E4%B8%8E%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%85%A5%E6%8E%A5%E7%BA%BF.png" alt="g18温度变送与模拟量输入接线.png"></p><center>图2-7：温度变送器与模拟量输入接线图</center><h4 id="2-2-3-压力传感器与模拟量输入接线图"><a href="#2-2-3-压力传感器与模拟量输入接线图" class="headerlink" title="2.2.3 压力传感器与模拟量输入接线图"></a>2.2.3 压力传感器与模拟量输入接线图</h4><p><img src="https://i.postimg.cc/RFnR0nBs/g19%E5%8E%8B%E5%8A%9B%E5%8F%98%E9%80%81%E5%99%A8%E4%B8%8E%E6%A8%A1%E6%8B%9F%E9%87%8F.png" alt="g19压力变送器与模拟量.png"></p><p><img src="https://i.postimg.cc/wBr2HQSR/g20%E4%B8%89%E7%BA%BF%E5%88%B6%E5%8E%8B%E5%8A%9B%E5%8F%98%E9%80%81%E5%99%A8.png" alt="g20三线制压力变送器.png"></p><center>图2-8：压力传感器与模拟量输入接线图</center><h2 id="三、模拟量数字量转换"><a href="#三、模拟量数字量转换" class="headerlink" title="三、模拟量数字量转换"></a>三、模拟量数字量转换</h2><h3 id="3-1-对应关系"><a href="#3-1-对应关系" class="headerlink" title="3.1 对应关系"></a>3.1 对应关系</h3><h4 id="3-1-1-模拟量输入模块"><a href="#3-1-1-模拟量输入模块" class="headerlink" title="3.1.1 模拟量输入模块"></a>3.1.1 模拟量输入模块</h4><p><img src="https://i.postimg.cc/MH2YfKZW/g21%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97.png" alt="g21模拟量输入模块.png"></p><center>图3-1：模拟量输入模块与数字量</center><h4 id="3-1-1-模拟量输出模块"><a href="#3-1-1-模拟量输出模块" class="headerlink" title="3.1.1 模拟量输出模块"></a>3.1.1 模拟量输出模块</h4><p><img src="https://i.postimg.cc/Hnw9wDjb/g22%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9D%97.png" alt="g22模拟量输出模块.png"></p><center>图3-2：模拟量输出模块与数字量</center><h2 id="四、模拟量案例"><a href="#四、模拟量案例" class="headerlink" title="四、模拟量案例"></a>四、模拟量案例</h2><h3 id="4-1-温度读取"><a href="#4-1-温度读取" class="headerlink" title="4.1 温度读取"></a>4.1 温度读取</h3><h4 id="4-1-1-PT100读取当前温度"><a href="#4-1-1-PT100读取当前温度" class="headerlink" title="4.1.1 PT100读取当前温度"></a>4.1.1 PT100读取当前温度</h4><p><a href="https://postimg.cc/dDWd6qFZ"><img src="https://i.postimg.cc/15SH9tYB/g23%E6%A8%A1%E6%8B%9F%E9%87%8F%E9%87%87%E9%9B%86%E8%BD%AC%E6%8D%A2%E6%A1%88%E4%BE%8B.png" alt="g23模拟量采集转换案例.png"></a><img src="https://i.postimg.cc/SQCdF8Vj/g23%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C.png" alt="g23程序运行.png"></p><center>图4-1：温度读取</center><h4 id="4-1-2-PTJ410读取当前压力"><a href="#4-1-2-PTJ410读取当前压力" class="headerlink" title="4.1.2 PTJ410读取当前压力"></a>4.1.2 PTJ410读取当前压力</h4><p><img src="https://i.postimg.cc/8PbbsS2S/g24%E9%87%87%E5%8F%96%E5%BD%93%E5%89%8D%E5%8E%8B%E5%8A%9B.png" alt="g24采取当前压力.png"></p><p><img src="https://i.postimg.cc/CxLsq20f/g25%E6%A8%A1%E6%8B%9F%E9%87%8F%E4%B8%8E%E6%95%B0%E5%AD%97%E9%87%8F%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB.png" alt="g25模拟量与数字量对应关系.png"></p><p><img src="https://i.postimg.cc/527qqm9K/g26EMAM03%E7%BB%84%E6%80%81.png" alt="g26EMAM03组态.png"></p><p><img src="https://i.postimg.cc/9fDPxqrm/g27%E5%8E%8B%E5%8A%9B%E8%AF%BB%E5%8F%96%E7%A8%8B%E5%BA%8F.png" alt="g27压力读取程序.png"></p><center>图4-2：压力读取</center><blockquote><p><strong>坎坎伐檀兮，寘之河之干兮，河水清且涟猗。不稼不穑，胡取禾三百廛兮？<br>不狩不猎，胡瞻尔庭有县貆兮？彼君子兮，不素餐兮！<br>坎坎伐辐兮，寘之河之侧兮，河水清且直猗。不稼不穑，胡取禾三百亿兮？<br>不狩不猎，胡瞻尔庭有县特兮？彼君子兮，不素食兮！<br>坎坎伐轮兮，寘之河之漘兮，河水清且沦猗。不稼不穑，胡取禾三百囷兮？<br>不狩不猎，胡瞻尔庭有县鹑兮？彼君子兮，不素飧兮！</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网络数据攻防及相关工具</title>
+      <link href="/2025/09/07/%5B%E7%BB%BC%E5%90%88%E8%B5%84%E6%96%99%5D%5B%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%5D_%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E6%94%BB%E9%98%B2%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/"/>
+      <url>/2025/09/07/%5B%E7%BB%BC%E5%90%88%E8%B5%84%E6%96%99%5D%5B%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%5D_%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E6%94%BB%E9%98%B2%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【击鼓】死生契阔，与子成说。执子之手，与子偕老。—诗经 [先秦]</strong></p></blockquote><h1 id="一、子域名收集"><a href="#一、子域名收集" class="headerlink" title="一、子域名收集"></a>一、子域名收集</h1><h2 id="1-1-Subfinder"><a href="#1-1-Subfinder" class="headerlink" title="1.1 Subfinder"></a>1.1 Subfinder</h2><h3 id="1-1-1-Subfinder介绍"><a href="#1-1-1-Subfinder介绍" class="headerlink" title="1.1.1 Subfinder介绍"></a>1.1.1 Subfinder介绍</h3><p><strong>Subfinder</strong> 是一款专注于子域名收集的开源工具，旨在帮助安全专业人员、渗透测试人员和研究人员快速有效地发现目标域的子域名。该工具通过与多个子域名源（例如搜索引擎、DNS数据）集成，提供了一个全面的子域名搜集解决方案。</p><p>以下是 Subfinder 的一些主要特点和功能：</p><p><strong>多源搜集：</strong> Subfinder 集成了多个子域名源，包括但不限于谷歌（Google）、Shodan、Censys、Virustotal等，以提高搜集的全面性。</p><p><strong>快速且并发：</strong> Subfinder 被设计为快速且支持并发搜集，以加速子域名发现过程。</p><p>DNS 数据源： 工具可以利用DNS数据，通过查询DNS服务器来发现子域名。这包括常规域传输、DNS枚举和暴力破解。</p><p><strong>API支持：</strong> Subfinder 提供了对多个子域名API的支持，以允许用户在工具中集成自定义的数据源。</p><p><strong>漏洞扫描集成：</strong> Subfinder 还可以与漏洞扫描工具（如 Amass、Assetnote、Virustotal）进行集成，以提供更全面的信息。</p><p><strong>结果导出：</strong> Subfinder 支持将搜集到的子域名结果导出为常见的文件格式，如文本文件、JSON和CSV。</p><p><strong>自定义字典：</strong> 用户可以使用自定义字典进行子域名的暴力破解尝试，以满足特定的搜集需求。</p><p>Subfinder 是一个灵活而强大的工具，适用于用于渗透测试、漏洞评估、红队操作以及一般的信息搜集任务。使用 Subfinder 时，请确保在合法和授权的范围内操作，并遵循法律和道德准则。</p><h3 id="1-1-1-安装-Golang"><a href="#1-1-1-安装-Golang" class="headerlink" title="1.1.1 安装 Golang"></a>1.1.1 安装 Golang</h3><p><img src="https://i.postimg.cc/MK6hFkqm/b1-Golang.png" alt="b1-Golang.png"></p><center>图1-1：安装Golang</center><p><img src="https://i.postimg.cc/0jfhyndS/b2-Golang.png" alt="b2-Golang.png"></p><center>图1-2：Golang安装成功</center><p><img src="https://i.postimg.cc/nVYy2VbL/b3.png" alt="b3.png"></p><center>图1-3：本地安装成功</center><h3 id="1-1-1-安装-Subfinder"><a href="#1-1-1-安装-Subfinder" class="headerlink" title="1.1.1 安装 Subfinder"></a>1.1.1 安装 Subfinder</h3><pre><code class="language-html">设置代理  go env -w GOPROXY=https://goproxy.cn,direct 执行安装go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest 测试指令subfinder -h </code></pre><pre><code class="language-html">Flags:输入:  -d, -domain string[]  要查找子域名的域名  -dL, -list string     包含要进行子域名发现的域名列表的文件 来源:  -s, -sources string[]           用于发现的特定来源（-s crtsh,github）。使用 -ls 显示所有可用来源。  -recursive                      仅使用能够递归处理子域的来源（例如 subdomain.domain.tld vs domain.tld）  -all                            使用所有来源进行枚举（速度较慢）  -es, -exclude-sources string[]  从枚举中排除的来源（-es alienvault,zoomeyeapi） 过滤:  -m, -match string[]   要匹配的子域名或子域名列表（文件或逗号分隔）  -f, -filter string[]   要过滤的子域名或子域名列表（文件或逗号分隔） 速率限制:  -rl, -rate-limit int  每秒发送的最大HTTP请求数  -rls value            每秒为四个提供程序发送的最大HTTP请求数（以 key=value 格式，例如 -rls &quot;hackertarget=10/s,shodan=15/s&quot;）  -t int                用于解析的并发goroutines数（仅在 -active 模式下）（默认 10） 更新:   -up, -update                 更新 subfinder 到最新版本   -duc, -disable-update-check  禁用自动 subfinder 更新检查 输出:  -o, -output string       要写入输出的文件  -oJ, -json               以 JSONL(ines) 格式写入输出  -oD, -output-dir string  要写入输出的目录（仅对 -dL 有效）  -cs, -collect-sources    在输出中包含所有来源（仅在 -json 模式下有效）  -oI, -ip                 在输出中包含主机IP（仅在 -active 模式下有效） 配置:  -config string                配置文件路径（默认为 &quot;$CONFIG/subfinder/config.yaml&quot;）  -pc, -provider-config string  提供程序配置文件路径（默认为 &quot;$CONFIG/subfinder/provider-config.yaml&quot;）  -r string[]                   逗号分隔的要使用的解析器列表  -rL, -rlist string            包含要使用的解析器列表的文件  -nW, -active                  仅显示活动的子域  -proxy string                 用于 subfinder 的 HTTP 代理  -ei, -exclude-ip              从域名列表中排除IP地址 调试:  -silent             仅显示输出中的子域名  -version            显示 subfinder 的版本  -v                  显示详细输出  -nc, -no-color      禁用输出中的颜色  -ls, -list-sources  列出所有可用来源 优化:  -timeout int   在超时之前等待的秒数（默认 30）  -max-time int  等待枚举结果的分钟数（默认 10）</code></pre><p><strong>枚举子域名： subfinder -d 域名(eastdawns.com)</strong></p><blockquote><p><strong>击鼓其镗，踊跃用兵。土国城漕，我独南行。<br>从孙子仲，平陈与宋。不我以归，忧心有忡。<br>爰居爰处？爰丧其马？于以求之？于林之下。<br>死生契阔，与子成说。执子之手，与子偕老。<br>于嗟阔兮，不我活兮。于嗟洵兮，不我信兮。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 综合资料 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+            <tag> 网络攻防 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[06]简单程序案例</title>
+      <link href="/2025/09/06/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B06%5D%E7%AE%80%E5%8D%95%E7%A8%8B%E5%BA%8F%E6%A1%88%E4%BE%8B/"/>
+      <url>/2025/09/06/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B06%5D%E7%AE%80%E5%8D%95%E7%A8%8B%E5%BA%8F%E6%A1%88%E4%BE%8B/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【桃夭】桃之夭夭，灼灼其华。之子于归，宜其室家。_—诗经 [先秦]</strong></p></blockquote><h1 id="一、机械手控制案例"><a href="#一、机械手控制案例" class="headerlink" title="一、机械手控制案例"></a>一、机械手控制案例</h1><h2 id="1-1-机械手系统设计"><a href="#1-1-机械手系统设计" class="headerlink" title="1.1 机械手系统设计"></a>1.1 机械手系统设计</h2><h3 id="1-1-1-控制要求"><a href="#1-1-1-控制要求" class="headerlink" title="1.1.1 控制要求"></a>1.1.1 控制要求</h3><p><img src="https://i.postimg.cc/xCrfWWTk/f01%E6%9C%BA%E6%A2%B0%E6%89%8B%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B61.png" alt="f01机械手系统控制1.png"></p><center>图1-1：控制要求</center><h3 id="1-1-2-地址分配表"><a href="#1-1-2-地址分配表" class="headerlink" title="1.1.2 地址分配表"></a>1.1.2 地址分配表</h3><p><img src="https://i.postimg.cc/C5SFKk8S/f02%E6%9C%BA%E6%A2%B0%E6%89%8B%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B62.png" alt="f02机械手系统控制2.png"></p><center>图1-2：地址分配表</center><h3 id="1-1-3-电气图纸绘制"><a href="#1-1-3-电气图纸绘制" class="headerlink" title="1.1.3 电气图纸绘制"></a>1.1.3 电气图纸绘制</h3><p><img src="https://i.postimg.cc/bvSYVz8c/f03%E6%9C%BA%E6%A2%B0%E6%89%8B%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B63.png" alt="f03机械手系统控制3.png"></p><center>图1-3：电气图纸绘制</center><h3 id="1-1-4-框架及结构"><a href="#1-1-4-框架及结构" class="headerlink" title="1.1.4 框架及结构"></a>1.1.4 框架及结构</h3><p><img src="https://i.postimg.cc/PxmXh2PS/f04%E6%9C%BA%E6%A2%B0%E6%89%8B%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B64.png" alt="f04机械手系统控制4.png"></p><center>图1-4：框架及结构</center><h3 id="1-1-5-系统控制程序"><a href="#1-1-5-系统控制程序" class="headerlink" title="1.1.5 系统控制程序"></a>1.1.5 系统控制程序</h3><pre><code class="language-txt">多种编写方式:暂略。</code></pre><blockquote><p><strong>桃之夭夭，灼灼其华。之子于归，宜其室家。<br>桃之夭夭，有蕡其实。之子于归，宜其家室。<br>桃之夭夭，其叶蓁蓁。之子于归，宜其家人。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HCIA[04网络层协议及IP地址</title>
+      <link href="/2025/09/06/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B04%E7%BD%91%E7%BB%9C%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%8F%8AIP%E5%9C%B0%E5%9D%80/"/>
+      <url>/2025/09/06/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B04%E7%BD%91%E7%BB%9C%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%8F%8AIP%E5%9C%B0%E5%9D%80/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【谷风】习习谷风，维风及雨。将恐将惧，维予与女。将安将乐，女转弃予。—诗经 [先秦]</strong></p></blockquote><h1 id="一、网络层协议"><a href="#一、网络层协议" class="headerlink" title="一、网络层协议"></a>一、网络层协议</h1><h2 id="1-1-IP协议"><a href="#1-1-IP协议" class="headerlink" title="1.1 IP协议"></a>1.1 IP协议</h2><h3 id="1-1-1-IP报文概述"><a href="#1-1-1-IP报文概述" class="headerlink" title="1.1.1 IP报文概述"></a>1.1.1 IP报文概述</h3><p><img src="https://i.postimg.cc/GtRMWDD5/a1.png" alt="a1.png"></p><center>图1-1：网络层协议前言</center><p><img src="https://i.postimg.cc/Jh9YQvzm/a2.png" alt="a2.png"></p><center>图1-2：网络层协议</center><p><img src="https://i.postimg.cc/YCPdpZgg/a3-IP.png" alt="a3-IP.png"></p><center>图1-3：IP协议</center><p><img src="https://i.postimg.cc/fTw25xD3/a4.png" alt="a4.png"></p><center>图1-4：数据封装</center><p><img src="https://i.postimg.cc/T1QcB4fK/a5-IP4.png" alt="a5-IP4.png"></p><center>图1-5：IP4报文格式</center><p><img src="https://i.postimg.cc/K8C5XLSD/a6.png" alt="a6.png"></p><center>图1-6：数据包分片</center><p><img src="https://i.postimg.cc/j5bQ2bjW/a7.png" alt="a7.png"></p><center>图1-7：TTL生存时间</center><p><img src="https://i.postimg.cc/SQV7SHbs/a8.png" alt="a8.png"></p><center>图1-8：协议号</center><h2 id="1-2-IP地址"><a href="#1-2-IP地址" class="headerlink" title="1.2 IP地址"></a>1.2 IP地址</h2><h3 id="1-2-1-IP地址知识"><a href="#1-2-1-IP地址知识" class="headerlink" title="1.2.1 IP地址知识"></a>1.2.1 IP地址知识</h3><p><img src="https://i.postimg.cc/vmR52sfP/a9-IP.png" alt="a9-IP.png"></p><center>图1-9：什么是IP地址</center><p><img src="https://i.postimg.cc/Y9MYkzXY/a10-IP.png" alt="a10-IP.png"></p><center>图1-10：IP地址表示</center><p><img src="https://i.postimg.cc/J0hXH4Ch/a11-IP.png" alt="a11-IP.png"></p><center>图1-11：IP地址构成.</center><p><img src="https://i.postimg.cc/8zv6609L/a12-IP.png" alt="a12-IP.png"></p><center>图1-12：IP地址寻址</center><p><img src="https://i.postimg.cc/C5tRZG4v/a13-IP.png" alt="a13-IP.png"></p><center>图1-13：IP地址分类</center><p><img src="https://i.postimg.cc/qMPt4Gqq/a14-IP.png" alt="a14-IP.png"></p><center>图1-14：IP地址类型</center><p><img src="https://i.postimg.cc/rmZmb178/a15-IP.png" alt="a15-IP.png"></p><center>图1-15：IP地址计算</center><p><img src="https://i.postimg.cc/Dz2wwpTv/a16-IP.png" alt="a16-IP.png"></p><center>图1-16：私网IP地址</center><p><img src="https://i.postimg.cc/gk8hw7f8/a17-IP.png" alt="a17-IP.png"></p><center>图1-17：特殊IP地址</center><p><img src="https://i.postimg.cc/7LYJWZbn/a18-IP4-IP6.png" alt="a18-IP4-IP6.png"></p><center>图1-18：IP4与IP6</center><blockquote><p><strong>习习谷风，维风及雨。将恐将惧，维予与女。<br>将安将乐，女转弃予。<br>习习谷风，维风及颓。将恐将惧，置予于怀。<br>将安将乐，弃予如遗。<br>习习谷风，维山崔嵬。无草不死，无木不萎。<br>忘我大德，思我小怨。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络工程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HCIA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[05]中断子程序</title>
+      <link href="/2025/09/05/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B05%5D%E4%B8%AD%E6%96%AD%E5%AD%90%E7%A8%8B%E5%BA%8F/"/>
+      <url>/2025/09/05/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B05%5D%E4%B8%AD%E6%96%AD%E5%AD%90%E7%A8%8B%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【静女】静女其姝，俟我于城隅。爱而不见，搔首踟蹰。—诗经 [先秦]</strong></p></blockquote><h1 id="一、S7-200smart子程序"><a href="#一、S7-200smart子程序" class="headerlink" title="一、S7-200smart子程序"></a>一、S7-200smart子程序</h1><h2 id="1-1-子程序的使用"><a href="#1-1-子程序的使用" class="headerlink" title="1.1 子程序的使用"></a>1.1 子程序的使用</h2><h3 id="1-1-1-子程序作用"><a href="#1-1-1-子程序作用" class="headerlink" title="1.1.1 子程序作用"></a>1.1.1 子程序作用</h3><p><img src="https://i.postimg.cc/zvS4VhkS/e01%E5%AD%90%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%BD%9C%E7%94%A8.png" alt="e01子程序的作用.png"></p><center>图1-1：子程序作用</center><h3 id="1-1-2-子程序架构"><a href="#1-1-2-子程序架构" class="headerlink" title="1.1.2 子程序架构"></a>1.1.2 子程序架构</h3><p><img src="https://i.postimg.cc/prtgWCKL/e02%E5%AD%90%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9E%B6%E6%9E%84.png" alt="e02子程序的架构.png"></p><center>图1-2：子程序架构</center><h3 id="1-1-3-子程序的编写方式"><a href="#1-1-3-子程序的编写方式" class="headerlink" title="1.1.3 子程序的编写方式"></a>1.1.3 子程序的编写方式</h3><p><img src="https://i.postimg.cc/vHbpCPQP/e03%E5%AD%90%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%96%E5%86%99%E6%96%B9%E5%BC%8F.png" alt="e03子程序的编写方式.png"></p><center>图1-3：子程序编写</center><h3 id="1-1-4-子程序的注意事项"><a href="#1-1-4-子程序的注意事项" class="headerlink" title="1.1.4 子程序的注意事项"></a>1.1.4 子程序的注意事项</h3><p><img src="https://i.postimg.cc/wxhCfKdy/e04%E5%AD%90%E7%A8%8B%E5%BA%8F%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.png" alt="e04子程序注意事项.png"></p><center>图1-4：子程序注意事项</center><h1 id="二、S7-200smart中断程序"><a href="#二、S7-200smart中断程序" class="headerlink" title="二、S7-200smart中断程序"></a>二、S7-200smart中断程序</h1><h2 id="2-1-中断程序的使用"><a href="#2-1-中断程序的使用" class="headerlink" title="2.1 中断程序的使用"></a>2.1 中断程序的使用</h2><h3 id="2-1-1-中断程序的概念"><a href="#2-1-1-中断程序的概念" class="headerlink" title="2.1.1 中断程序的概念"></a>2.1.1 中断程序的概念</h3><p><img src="https://i.postimg.cc/15BLSpXy/e05%E4%B8%AD%E6%96%AD%E7%A8%8B%E5%BA%8F.png" alt="e05中断程序.png"></p><center>图2-1：中断程序概念</center><h3 id="2-1-2-中断事件"><a href="#2-1-2-中断事件" class="headerlink" title="2.1.2 中断事件"></a>2.1.2 中断事件</h3><p><img src="https://i.postimg.cc/2S5gSVLh/e06%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6.png" alt="e06中断事件.png"></p><p><img src="https://i.postimg.cc/bvDM1WTv/e07%E4%B8%AD%E6%96%AD%E4%BA%8B%E4%BB%B6%E5%88%97%E8%A1%A8.jpg" alt="e07中断事件列表.jpg"></p><p><strong>36-下降沿，信号板输入0</strong></p><p><strong>37-上降沿，信号板输入1</strong></p><center>图2-2：中断事件</center><h3 id="2-1-3-中断指令及程序编写"><a href="#2-1-3-中断指令及程序编写" class="headerlink" title="2.1.3 中断指令及程序编写"></a>2.1.3 中断指令及程序编写</h3><p><img src="https://i.postimg.cc/3xbV4Y26/e08%E4%B8%AD%E6%96%AD%E6%8C%87%E4%BB%A4%E5%8F%8A%E4%B8%AD%E6%96%AD%E7%A8%8B%E5%BA%8F.png" alt="e08中断指令及中断程序.png"></p><p><img src="https://i.postimg.cc/QM2zmm4J/e09%E4%B8%AD%E6%96%AD%E5%AE%9E%E4%BE%8B.png" alt="e09中断实例.png"></p><center>图2-3：中断程序</center><h3 id="2-1-4-中断程序的注意事项"><a href="#2-1-4-中断程序的注意事项" class="headerlink" title="2.1.4 中断程序的注意事项"></a>2.1.4 中断程序的注意事项</h3><p><img src="https://i.postimg.cc/2ymKR6fq/e10%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.png" alt="e10注意事项.png"></p><center>图2-4：中断程序注意事项</center><p><img src="https://i.postimg.cc/63CmmZFJ/e11%E4%B8%AD%E6%96%AD%E7%A8%8B%E5%BA%8F%E7%A4%BA%E4%BE%8B.png" alt="e11中断程序示例.png"></p><center>图2-5：中断程序调用示例</center><h3 id="2-1-5-中断程序的程序示例"><a href="#2-1-5-中断程序的程序示例" class="headerlink" title="2.1.5 中断程序的程序示例"></a>2.1.5 中断程序的程序示例</h3><p><img src="https://i.postimg.cc/pXW6spZ4/e12%E4%B8%AD%E6%96%AD%E7%A8%8B%E5%BA%8F%E5%AE%9E%E4%BE%8B.png" alt="e12中断程序实例.png"></p><p><img src="https://i.postimg.cc/vTzSQsQ0/e13%E4%B8%AD%E6%96%AD%E5%AE%9E%E4%BE%8B1.png" alt="e13中断实例1.png"></p><center>图2-6：中断程序示例1</center><p><img src="https://i.postimg.cc/T2qsjrrn/e14%E4%B8%AD%E6%96%AD%E5%AE%9E%E4%BE%8B2.png" alt="e14中断实例2.png"></p><p><img src="https://i.postimg.cc/yYLrtspd/e15%E4%B8%AD%E6%96%AD%E5%AE%9E%E4%BE%8B3.png" alt="e15中断实例3.png"></p><center>图2-7：中断程序示例2-1</center><p><img src="https://i.postimg.cc/T3hHXFBc/e16%E4%B8%AD%E6%96%AD%E5%AE%9E%E4%BE%8B4.png" alt="e16中断实例4.png"></p><p><img src="https://i.postimg.cc/dVXNQnYc/e17%E4%B8%AD%E6%96%AD%E5%AE%9E%E4%BE%8B5.png" alt="e17中断实例5.png"></p><center>图2-8：中断程序示例2-2</center><blockquote><p><strong>静女其姝，俟我于城隅。爱而不见，搔首踟蹰。<br>静女其娈，贻我彤管。彤管有炜，说怿女美。<br>自牧归荑，洵美且异。匪女之为美，美人之贻。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[04]进阶指令</title>
+      <link href="/2025/09/04/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B04%5D%E8%BF%9B%E9%98%B6%E6%8C%87%E4%BB%A4/"/>
+      <url>/2025/09/04/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B04%5D%E8%BF%9B%E9%98%B6%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【小雅·采薇】采薇采薇，薇亦作止。曰归曰归，岁亦莫止。—诗经 [先秦]</strong></p></blockquote><h1 id="一、S7-200smart进阶指令"><a href="#一、S7-200smart进阶指令" class="headerlink" title="一、S7-200smart进阶指令"></a>一、S7-200smart进阶指令</h1><h2 id="1-1-S7-200smart比较指令"><a href="#1-1-S7-200smart比较指令" class="headerlink" title="1.1 S7-200smart比较指令"></a>1.1 S7-200smart比较指令</h2><h3 id="1-1-1-比较指令"><a href="#1-1-1-比较指令" class="headerlink" title="1.1.1 比较指令"></a>1.1.1 比较指令</h3><p><img src="https://i.postimg.cc/MHcQd0nq/d01%E6%AF%94%E8%BE%83%E6%8C%87%E4%BB%A4.png" alt="d01比较指令.png"></p><center>图1-1：比较指令</center><h3 id="1-1-2-比较指令喷泉案例"><a href="#1-1-2-比较指令喷泉案例" class="headerlink" title="1.1.2 比较指令喷泉案例"></a>1.1.2 比较指令喷泉案例</h3><p><img src="https://i.postimg.cc/wxPJ3rrv/d02%E5%96%B7%E6%B3%891.png" alt="d02喷泉1.png"></p><center>图1-2：比较指令喷泉示例</center><p><strong>本案例只作为比较指令的用法。实际使用需要更精确及考虑周全。</strong></p><h3 id="1-1-3-比较指令示例程序"><a href="#1-1-3-比较指令示例程序" class="headerlink" title="1.1.3 比较指令示例程序"></a>1.1.3 比较指令示例程序</h3><p><img src="https://i.postimg.cc/c4n33mqc/d03%E6%AF%94%E8%BE%83%E6%8C%87%E4%BB%A4%E7%A4%BA%E4%BE%8B.png" alt="d03比较指令示例.png"></p><center>图1-3：比较指令示例程序</center><h2 id="1-2-数据传送指令"><a href="#1-2-数据传送指令" class="headerlink" title="1.2 数据传送指令"></a>1.2 数据传送指令</h2><h3 id="1-2-1-传送、交换指令"><a href="#1-2-1-传送、交换指令" class="headerlink" title="1.2.1 传送、交换指令"></a>1.2.1 传送、交换指令</h3><p><img src="https://i.postimg.cc/0jLJ36Sm/d04%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%81%E6%8C%87%E4%BB%A4.png" alt="d04数据传送指令.png"></p><p><img src="https://i.postimg.cc/NjvHkHBv/d05%E5%9D%97%E4%BC%A0%E9%80%81%E6%8C%87%E4%BB%A4.png" alt="d05块传送指令.png"></p><p><img src="https://i.postimg.cc/4xvhLxx7/d06%E4%BA%A4%E6%8D%A2%E6%8C%87%E4%BB%A4.png" alt="d06交换指令.png"></p><center>图1-4：数据传送、交换指令</center><h3 id="1-2-2-数据转换、四舍五入、取整指令"><a href="#1-2-2-数据转换、四舍五入、取整指令" class="headerlink" title="1.2.2 数据转换、四舍五入、取整指令"></a>1.2.2 数据转换、四舍五入、取整指令</h3><p><img src="https://i.postimg.cc/FKDkvCch/d07%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E6%8C%87%E4%BB%A4.png" alt="d07数据转换指令.png"></p><center>图1-5：数据转换指令</center><p><img src="https://i.postimg.cc/jjsnGYD8/d08%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%E5%8F%96%E6%95%B4%E6%8C%87%E4%BB%A4.png" alt="d08四舍五入取整指令.png"></p><center>图1-6：四舍五入、取整指令</center><h3 id="1-2-3-整数运算指令及应用"><a href="#1-2-3-整数运算指令及应用" class="headerlink" title="1.2.3 整数运算指令及应用"></a>1.2.3 整数运算指令及应用</h3><p><img src="https://i.postimg.cc/hjvzt8bT/d09%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%BA%94%E7%94%A8.png" alt="d09整数运算指令及应用.png"></p><center>图1-7：整数运算指令及应用</center><p><img src="https://i.postimg.cc/br2ZQz5v/d10%E6%95%B4%E6%95%B0%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4%E7%A4%BA%E4%BE%8B.png" alt="d10整数运算指令示例.png"></p><center>图1-8：整数运算指令示例</center><h3 id="1-2-4-浮点数四则运算指令及应用"><a href="#1-2-4-浮点数四则运算指令及应用" class="headerlink" title="1.2.4 浮点数四则运算指令及应用"></a>1.2.4 浮点数四则运算指令及应用</h3><p><img src="https://i.postimg.cc/C12ZBZmt/d11%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%BA%94%E7%94%A8.png" alt="d11浮点数四则运算指令及应用.png"></p><center>图1-9：浮点数四则运算指令及应用</center><p><img src="https://i.postimg.cc/5jd6ghcS/d12%E6%B5%AE%E7%82%B9%E6%95%B0%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4%E5%8F%8A%E5%BA%94%E7%94%A8%E7%A4%BA%E4%BE%8B.png" alt="d12浮点数四则运算指令及应用示例.png"></p><center>图1-10：浮点数四则运算指令及应用示例</center><h3 id="1-2-5-浮点数三角函数运算指令"><a href="#1-2-5-浮点数三角函数运算指令" class="headerlink" title="1.2.5 浮点数三角函数运算指令"></a>1.2.5 浮点数三角函数运算指令</h3><p><img src="https://i.postimg.cc/Y24RXQKv/d13%E6%B5%AE%E7%82%B9%E6%95%B0%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4.png" alt="d13浮点数三角函数运算指令.png"></p><p><img src="https://i.postimg.cc/kMkcLDqf/d14%E6%B5%AE%E7%82%B9%E6%95%B0%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4%E7%A4%BA%E4%BE%8B.png" alt="d14浮点数三角函数运算指令示例.png"></p><center>图1-11：浮点数三角函数运算指令</center><h3 id="1-2-6-移位指令"><a href="#1-2-6-移位指令" class="headerlink" title="1.2.6 移位指令"></a>1.2.6 移位指令</h3><p><img src="https://i.postimg.cc/g2pKk5wh/d15%E7%A7%BB%E4%BD%8D%E6%8C%87%E4%BB%A4.png" alt="d15移位指令.png"></p><p><img src="https://i.postimg.cc/02DfvxNx/d16%E7%A7%BB%E4%BD%8D%E6%8C%87%E4%BB%A4.png" alt="d16移位指令.png"></p><p><img src="https://i.postimg.cc/3xZFyBpc/d17%E5%BE%AA%E7%8E%AF%E5%8F%B3%E7%A7%BB.png" alt="d17循环右移.png"></p><center>图1-12：移位指令</center><blockquote><p><strong>采薇采薇，薇亦作止。曰归曰归，岁亦莫止。靡室靡家，猃狁之故。不遑启居，猃狁之故。<br>采薇采薇，薇亦柔止。曰归曰归，心亦忧止。忧心烈烈，载饥载渴。我戍未定，靡使归聘。<br>采薇采薇，薇亦刚止。曰归曰归，岁亦阳止。王事靡盬，不遑启处。忧心孔疚，我行不来。<br>彼尔维何，维常之华。彼路斯何，君子之车。戎车既驾，四牡业业。岂敢定居，一月三捷。<br>驾彼四牡，四牡騤騤。君子所依，小人所腓。四牡翼翼，象弭鱼服。岂不日戒，猃狁孔棘。<br>昔我往矣，杨柳依依。今我来思，雨雪霏霏。行道迟迟，载渴载饥。我心伤悲，莫知我哀。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HCIA[03]VRP概念指令及CLI界面</title>
+      <link href="/2025/09/04/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B03%5DVRP%E6%A6%82%E5%BF%B5%E6%8C%87%E4%BB%A4%E5%8F%8ACLI%E7%95%8C%E9%9D%A2/"/>
+      <url>/2025/09/04/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B03%5DVRP%E6%A6%82%E5%BF%B5%E6%8C%87%E4%BB%A4%E5%8F%8ACLI%E7%95%8C%E9%9D%A2/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【绿衣】绿兮衣兮，绿衣黄里。心之忧矣，曷维其已！—诗经 [先秦]</strong></p></blockquote><h1 id="一、VRP路由平台"><a href="#一、VRP路由平台" class="headerlink" title="一、VRP路由平台"></a>一、VRP路由平台</h1><h2 id="1-1-基本概述"><a href="#1-1-基本概述" class="headerlink" title="1.1 基本概述"></a>1.1 基本概述</h2><h3 id="1-1-1-VRP概述"><a href="#1-1-1-VRP概述" class="headerlink" title="1.1.1 VRP概述"></a>1.1.1 VRP概述</h3><p><img src="https://i.postimg.cc/jSt6Cd1H/a1-VRP.png" alt="a1-VRP.png"></p><center>图1-1：VRP通用路由平台</center><p><img src="https://i.postimg.cc/gkvqY6gc/a2-VRP.png" alt="a2-VRP.png"></p><center>图1-2：什么是VRP</center><p><img src="https://i.postimg.cc/xTr3DPyF/a3-VRP.png" alt="a3-VRP.png"></p><center>图1-3：VRP的发展</center><p><img src="https://i.postimg.cc/dQZjxfdy/a4.png" alt="a4.png"></p><center>图1-4：文件系统</center><p><img src="https://i.postimg.cc/1XF0VgPH/a5.png" alt="a5.png"></p><center>图1-5：存储设备</center><p><img src="https://i.postimg.cc/V6pBN9yv/a6.png" alt="a6.png"></p><center>图1-6：设备初始化</center><p><img src="https://i.postimg.cc/HxV9HZhF/a7.png" alt="a7.png"></p><center>图1-7：设备管理</center><h2 id="1-2-界面及登录"><a href="#1-2-界面及登录" class="headerlink" title="1.2 界面及登录"></a>1.2 界面及登录</h2><h3 id="1-2-1-VRP界面及登录"><a href="#1-2-1-VRP界面及登录" class="headerlink" title="1.2.1 VRP界面及登录"></a>1.2.1 VRP界面及登录</h3><p><img src="https://i.postimg.cc/q7mxPVj8/a8-VRP.png" alt="a8-VRP.png"></p><center>图1-8：VRP用户界面</center><p><img src="https://i.postimg.cc/5t9mKNq4/a9-VRP.png" alt="a9-VRP.png"></p><center>图1-9：VRP用户级别</center><p><img src="https://i.postimg.cc/mgywSF9p/a10-WEB.png" alt="a10-WEB.png"></p><center>图1-10：WEB网管方式登录</center><p><img src="https://i.postimg.cc/JzLxJQsB/a11-1.png" alt="a11-1.png"></p><center>图1-11：命令行本地登录1</center><p><img src="https://i.postimg.cc/pV3qVvxC/a12-2.png" alt="a12-2.png"></p><center>图1-12：命令行本地登录2</center><p><img src="https://i.postimg.cc/y6DLzxqW/a12-1.png" alt="a12-1.png"></p><center>图1-13：远程登录1</center><h2 id="1-3-命令行指令"><a href="#1-3-命令行指令" class="headerlink" title="1.3 命令行指令"></a>1.3 命令行指令</h2><h3 id="1-3-1-命令行指令及配置"><a href="#1-3-1-命令行指令及配置" class="headerlink" title="1.3.1 命令行指令及配置"></a>1.3.1 命令行指令及配置</h3><p><img src="https://i.postimg.cc/Sj0XBVBL/a13.png" alt="a13.png"></p><center>图1-14：命令行界面</center><p><img src="https://i.postimg.cc/cCtgkPb4/a14.png" alt="a14.png"></p><center>图1-15：基本命令结构</center><p><img src="https://i.postimg.cc/B6VPgJNV/a15-1.png" alt="a15-1.png"></p><center>图1-16：命令行视图1</center><p><img src="https://i.postimg.cc/pTTnzmQj/a16-2.png" alt="a16-2.png"></p><center>图1-17：命令行视图2</center><p><img src="https://i.postimg.cc/tgDxs36y/a17-1.png" alt="a17-1.png"></p><center>图1-18：编辑命令行1</center><p><img src="https://i.postimg.cc/k57SM1Bf/a18-2.png" alt="a18-2.png"></p><center>图1-19：编辑命令行2</center><p><img src="https://i.postimg.cc/wj8JZTHK/a19.png" alt="a19.png"></p><center>图1-20：命令行在线帮助</center><p><img src="https://i.postimg.cc/8PrMZf2B/a20.png" alt="a20.png"></p><center>图1-21：命令行解读错误信息在线帮助</center><p><img src="https://i.postimg.cc/mkKMbTHH/a21-uddo.png" alt="a21-uddo.png"></p><center>图1-22：uddo命令行</center><p><img src="https://i.postimg.cc/Y0vYKvh7/a22.png" alt="a22.png"></p><center>图1-23：命令行快捷键</center><p><img src="https://i.postimg.cc/9MFyb82r/a23-1.png" alt="a23-1.png"></p><center>图1-24：命令行常见操作指令1</center><p><img src="https://i.postimg.cc/fbsctWg7/a24-2.png" alt="a24-2.png"></p><center>图1-25：命令行常见操作指令2</center><p><img src="https://i.postimg.cc/CxkCxnJL/a25-3.png" alt="a25-3.png"></p><center>图1-26：命令行常见操作指令3</center><p><img src="https://i.postimg.cc/KvdrbDPH/a26-1.png" alt="a26-1.png"></p><center>图1-27：基本配置命令1</center><p><img src="https://i.postimg.cc/xTkyB4zm/a27-2.png" alt="a27-2.png"></p><center>图1-28：基本配置命令2</center><p><img src="https://i.postimg.cc/zD2FtrV5/a28-3.png" alt="a28-3.png"></p><center>图1-29：基本配置命令3</center><p><img src="https://i.postimg.cc/x8ZGcKWq/a29-4.png" alt="a29-4.png"></p><center>图1-30：基本配置命令4</center><h3 id="1-3-2-指令配置案例"><a href="#1-3-2-指令配置案例" class="headerlink" title="1.3.2 指令配置案例"></a>1.3.2 指令配置案例</h3><p><img src="https://i.postimg.cc/QCCk86YR/a30-1.png" alt="a30-1.png"></p><center>图1-31：案例1</center><p><img src="https://i.postimg.cc/NMpkwhD6/a31-2.png" alt="a31-2.png"></p><center>图1-32：案例2</center><p><img src="https://i.postimg.cc/B6qByZTZ/a32-3.png" alt="a32-3.png"></p><center>图1-33：案例3</center><p><img src="https://i.postimg.cc/XvKgQByD/a33-3-1.png" alt="a33-3-1.png"></p><center>图1-34：案例3-1</center><p><img src="https://i.postimg.cc/bwtgSBYP/a34-3-2.png" alt="a34-3-2.png"></p><center>图1-35：案例3-2</center><p><img src="https://i.postimg.cc/8CgHRms6/a34-3-3.png" alt="a34-3-3.png"></p><center>图1-36：案例3-3</center><p><img src="https://i.postimg.cc/c4jTHSST/a35.png" alt="a35.png"></p><center>图1-37：更多信息</center><blockquote><p><strong>绿兮衣兮，绿衣黄里。心之忧矣，曷维其已！<br>绿兮衣兮，绿衣黄裳。心之忧矣，曷维其亡！<br>绿兮丝兮，女所治兮。我思古人，俾无訧兮！<br>絺兮绤兮，凄其以风。我思古人，实获我心！</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络工程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HCIA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[03]数据结构</title>
+      <link href="/2025/09/03/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B03%5D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <url>/2025/09/03/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B03%5D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【氓】氓之蚩蚩，抱布贸丝。匪来贸丝，来即我谋。—诗经 [先秦]</strong></p></blockquote><h1 id="一、S7-200-smart数据结构"><a href="#一、S7-200-smart数据结构" class="headerlink" title="一、S7-200 smart数据结构"></a>一、S7-200 smart数据结构</h1><h2 id="1-1-数据结构"><a href="#1-1-数据结构" class="headerlink" title="1.1 数据结构"></a>1.1 数据结构</h2><h3 id="1-1-1-数据寄存器及地址范围"><a href="#1-1-1-数据寄存器及地址范围" class="headerlink" title="1.1.1 数据寄存器及地址范围"></a>1.1.1 数据寄存器及地址范围</h3><p><img src="https://i.postimg.cc/yd1Sz6Rk/c01.png" alt="c01.png"></p><center>图1-1：数据寄存器及地址范围</center><h3 id="1-1-2-数据存储结构"><a href="#1-1-2-数据存储结构" class="headerlink" title="1.1.2 数据存储结构"></a>1.1.2 数据存储结构</h3><p><img src="https://i.postimg.cc/25fZ278d/c02-2.png" alt="c02-2.png"></p><center>图1-2：数据存储及结构</center><pre><code class="language-html">字母代表的数据类型：I Q M位  （ 0 或 1 ）B字节 W字D双字</code></pre><h3 id="1-1-3-数据存储结构示例"><a href="#1-1-3-数据存储结构示例" class="headerlink" title="1.1.3 数据存储结构示例"></a>1.1.3 数据存储结构示例</h3><p><img src="https://i.postimg.cc/Cx88GQYL/c03-3.png" alt="c03-3.png"></p><p><img src="https://i.postimg.cc/7LMTcJfF/c04-4.png" alt="c04-4.png"></p><center>图1-3：数据存储结构示例</center><h3 id="1-1-4-V区内部数据排列方式"><a href="#1-1-4-V区内部数据排列方式" class="headerlink" title="1.1.4 V区内部数据排列方式"></a>1.1.4 V区内部数据排列方式</h3><p><img src="https://i.postimg.cc/JnpH7w3K/c05-5.png" alt="c05-5.png"></p><center>图1-4：V区内部数据排列方式</center><h3 id="1-1-5-数据存储范围及符号位说明"><a href="#1-1-5-数据存储范围及符号位说明" class="headerlink" title="1.1.5 数据存储范围及符号位说明"></a>1.1.5 数据存储范围及符号位说明</h3><p><img src="https://i.postimg.cc/pXhqmvGm/c15%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E8%8C%83%E5%9B%B4.png" alt="c15数据存储范围.png"></p><center>图1-5：数据存储范围及符号位说明</center><h3 id="1-1-6-BCD码与十进制数之间的转换"><a href="#1-1-6-BCD码与十进制数之间的转换" class="headerlink" title="1.1.6 BCD码与十进制数之间的转换"></a>1.1.6 BCD码与十进制数之间的转换</h3><p><img src="https://i.postimg.cc/v8S08TzR/c14BCD%E7%A0%81%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6.png" alt="c14BCD码转十进制.png"></p><center>图1-6：BCD码与十进制数之间的转换</center><pre><code class="language-html">BCD码使用4位二进制数来表示十进制中0~9这10个数的数码。例如，十进制的237，其BCD码就是 0010_0011_0111 ，但是其二进制是 1110_1101 </code></pre><h3 id="1-1-7-CPU存储器范围和特性"><a href="#1-1-7-CPU存储器范围和特性" class="headerlink" title="1.1.7 CPU存储器范围和特性"></a>1.1.7 CPU存储器范围和特性</h3><p><img src="https://i.postimg.cc/sDkKSLqw/c16%E5%AD%98%E5%82%A8%E5%99%A8%E8%8C%83%E5%9B%B4%E5%92%8C%E7%89%B9%E6%80%A71.png" alt="c16存储器范围和特性1.png"></p><p><img src="https://i.postimg.cc/y80jTPzB/c17%E5%AD%98%E5%82%A8%E5%99%A8%E8%8C%83%E5%9B%B4%E5%92%8C%E7%89%B9%E6%80%A72.png" alt="c17存储器范围和特性2.png"></p><p><img src="https://i.postimg.cc/43Z529Jc/c18%E5%AD%98%E5%82%A8%E5%99%A8%E8%8C%83%E5%9B%B4%E5%92%8C%E7%89%B9%E6%80%A73.png" alt="c18存储器范围和特性3.png"></p><center>图1-7：CPU存储器范围和特性</center><h1 id="二、进制转换关系"><a href="#二、进制转换关系" class="headerlink" title="二、进制转换关系"></a>二、进制转换关系</h1><h2 id="2-1-进制转换"><a href="#2-1-进制转换" class="headerlink" title="2.1 进制转换"></a>2.1 进制转换</h2><h3 id="2-1-1-二进制转十进制"><a href="#2-1-1-二进制转十进制" class="headerlink" title="2.1.1 二进制转十进制"></a>2.1.1 二进制转十进制</h3><p><img src="https://i.postimg.cc/jdLkyP5d/c06.png" alt="c06.png"></p><center>图2-1：二进制转十进制</center><h3 id="2-1-2-十进制转二进制"><a href="#2-1-2-十进制转二进制" class="headerlink" title="2.1.2 十进制转二进制"></a>2.1.2 十进制转二进制</h3><p><img src="https://i.postimg.cc/wTZ42My5/c07.png" alt="c07.png"></p><center>图2-2：十进制转二进制</center><h3 id="2-1-3-二进制转八进制"><a href="#2-1-3-二进制转八进制" class="headerlink" title="2.1.3 二进制转八进制"></a>2.1.3 二进制转八进制</h3><p><img src="https://i.postimg.cc/43TLC01m/c08.png" alt="c08.png"></p><center>图2-3：二进制转八进制</center><h3 id="2-1-4-八进制转二进制"><a href="#2-1-4-八进制转二进制" class="headerlink" title="2.1.4 八进制转二进制"></a>2.1.4 八进制转二进制</h3><p><img src="https://i.postimg.cc/0ySWBvDT/c09.png" alt="c09.png"></p><center>图2-4：八进制转二进制</center><h3 id="2-1-5-二进制转十六进制"><a href="#2-1-5-二进制转十六进制" class="headerlink" title="2.1.5 二进制转十六进制"></a>2.1.5 二进制转十六进制</h3><p><img src="https://i.postimg.cc/YSfXtxX8/c10%E4%BA%8C%E8%BD%AC%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6.png" alt="c10二转十六进制.png"></p><center>图2-5：二进制转十六进制</center><h3 id="2-1-6-十六进制转二进制"><a href="#2-1-6-十六进制转二进制" class="headerlink" title="2.1.6 十六进制转二进制"></a>2.1.6 十六进制转二进制</h3><p><img src="https://i.postimg.cc/j5xM2JmT/c11%E5%8D%81%E5%85%AD%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6.png" alt="c11十六转二进制.png"></p><center>图2-6：六进制转二进制</center><h3 id="2-1-7-十进制转八进制或十六进制"><a href="#2-1-7-十进制转八进制或十六进制" class="headerlink" title="2.1.7 十进制转八进制或十六进制"></a>2.1.7 十进制转八进制或十六进制</h3><p><img src="https://i.postimg.cc/8cswBgTn/c12%E5%8D%81%E8%BD%AC%E5%85%AB%E6%88%96%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6.png" alt="c12十转八或十六进制.png"></p><center>图2-7：十进制转八进制或十六进制</center><h3 id="2-1-8-八进制转十六进制或十进制"><a href="#2-1-8-八进制转十六进制或十进制" class="headerlink" title="2.1.8 八进制转十六进制或十进制"></a>2.1.8 八进制转十六进制或十进制</h3><p><img src="https://i.postimg.cc/sXTwhgCh/c13%E5%85%AB%E6%88%96%E5%8D%81%E5%85%AD%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6.png" alt="c13八或十六转十进制.png"></p><center>图2-8：八进制或十六进制转十进制</center><pre><code class="language-html">标注：进制转换通过网页工具能够更快速进行转换</code></pre><blockquote><p><strong>氓之蚩蚩，抱布贸丝。匪来贸丝，来即我谋。送子涉淇，至于顿丘。匪我愆期，子无良媒。将子无怒，秋以为期。<br>乘彼垝垣，以望复关。不见复关，泣涕涟涟。既见复关，载笑载言。尔卜尔筮，体无咎言。以尔车来，以我贿迁。<br>桑之未落，其叶沃若。于嗟鸠兮，无食桑葚；于嗟女兮，无与士耽。士之耽兮，犹可说也；女之耽兮，不可说也。<br>桑之落矣，其黄而陨。自我徂尔，三岁食贫。淇水汤汤，渐车帷裳。女也不爽，士贰其行。士也罔极，二三其德。<br>三岁为妇，靡室劳矣；夙兴夜寐，靡有朝矣。言既遂矣，至于暴矣。兄弟不知，咥其笑矣。静言思之，躬自悼矣。<br>及尔偕老，老使我怨。淇则有岸，隰则有泮。总角之宴，言笑晏晏。信誓旦旦，不思其反。反是不思，亦已焉哉！</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HCIA[02]网络工具安装及ENSP使用</title>
+      <link href="/2025/09/03/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B02%5D%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8AENSP%E4%BD%BF%E7%94%A8/"/>
+      <url>/2025/09/03/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B02%5D%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8AENSP%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【十月之交】民莫不逸，我独不敢休。天命不彻，我不敢效我友自逸。—诗经 [先秦]</strong></p></blockquote><h1 id="一、网络工具"><a href="#一、网络工具" class="headerlink" title="一、网络工具"></a>一、网络工具</h1><h2 id="1-1-网络工具安装"><a href="#1-1-网络工具安装" class="headerlink" title="1.1 网络工具安装"></a>1.1 网络工具安装</h2><h3 id="1-1-1-常用工具"><a href="#1-1-1-常用工具" class="headerlink" title="1.1.1 常用工具"></a>1.1.1 常用工具</h3><p><img src="https://i.postimg.cc/HLNMXrbR/A1-wincap.png" alt="A1-wincap.png"></p><center>图1-1：wincap网络抓包库</center><p><img src="https://i.postimg.cc/8CcW7RfL/A2-wincap.png" alt="A2-wincap.png"></p><center>图1-2：wincap安装.</center><p><img src="https://i.postimg.cc/sXZhc3cX/A3-Wireshark.png" alt="A3-Wireshark.png"></p><center>图1-3：Wireshark简介</center><p><img src="https://i.postimg.cc/8ztMkKc1/A4-Wireshark.png" alt="A4-Wireshark.png"></p><center>图1-4：Wireshark安装</center><p><img src="https://i.postimg.cc/J0NHfKSC/A5-Virtual-Box.png" alt="A5-Virtual-Box.png"></p><center>图1-5：VirtualBox简介.</center><p><img src="https://i.postimg.cc/SN4M6FzS/A6-Virtual-Box.png" alt="A6-Virtual-Box.png"></p><center>图1-6：VirtualBox安装.</center><h3 id="1-1-2-ENSP安装测试"><a href="#1-1-2-ENSP安装测试" class="headerlink" title="1.1.2 ENSP安装测试"></a>1.1.2 ENSP安装测试</h3><p><img src="https://i.postimg.cc/Dwy4NrgR/A7-ENSP.png" alt="A7-ENSP.png"></p><center>图1-7：完成ENSP安装</center><p><img src="https://i.postimg.cc/KcBT3vjp/A8-ENSP.png" alt="A8-ENSP.png"></p><center>图1-8：ENSP允许通过防火墙</center><p><img src="https://i.postimg.cc/Hst73ZQQ/A9-ENSP.png" alt="A9-ENSP.png"></p><center>图1-9：ENSP使用前注册</center><p><img src="https://i.postimg.cc/NjJ2vKCF/A10-ENSP.png" alt="A10-ENSP.png"></p><center>图1-10：NSP完成安装测试</center><p><img src="https://i.postimg.cc/d0hksJgB/A11-CRT.png" alt="A11-CRT.png"></p><center>图1-11：连接交换机CRT设置</center><p><img src="https://i.postimg.cc/N0ZyLWcw/A12-CRT.png" alt="A12-CRT.png"></p><center>图1-12：CRT连接交换机</center><p><img src="https://i.postimg.cc/7675zmHJ/A13-USG6000-V.png" alt="A13-USG6000-V.png"></p><center>图1-13：配置USG6000V</center><p><img src="https://i.postimg.cc/BbBtYb1q/A14-ping.png" alt="A14-ping.png"></p><center>图1-14：ping连通检测</center><p><img src="https://i.postimg.cc/Vv8dWnvG/A15-MAC.png" alt="A15-MAC.png"></p><center>图1-15：MAC地址解析</center><p><img src="https://i.postimg.cc/05Y62WXL/A16-MAC.png" alt="A16-MAC.png"></p><center>图1-16：显示所有MAC地址</center><blockquote><p><strong>十月之交，朔月辛卯。日有食之，亦孔之丑。彼月而微，此日而微；今此下民，亦孔之哀。<br>日月告凶，不用其行。四国无政，不用其良。彼月而食，则维其常；此日而食，于何不臧。<br>烨烨震电，不宁不令。百川沸腾，山冢崒崩。高岸为谷，深谷为陵。哀矜之人，胡憯莫惩？<br>皇父卿士，番维司徒。家伯维宰，仲允膳夫。棸子内史，蹶维趣马。楀维师氏，醘妻煽方处。<br>抑此皇父，岂曰不时？胡为我作，不即我谋？彻我墙屋，田卒污莱。曰予不戕，礼则然矣。<br>皇父孔圣，作都于向。择三有事，亶侯多藏。不慭遗一老，俾守我王。择有车马，以居徂向。<br>黾勉从事，不敢告劳。无罪无辜，谗口嚣嚣。下民之孽，匪降自天。噂沓背憎，职竞由人。<br>悠悠我里，亦孔之痗。四方有羡，我独居忧。民莫不逸，我独不敢休。天命不彻，我不敢效我友自逸。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络工程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HCIA </tag>
+            
+            <tag> 网络工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网络工程ARP知识攻防汇总</title>
+      <link href="/2025/09/03/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81%5D_%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8BARP%E7%9F%A5%E8%AF%86%E6%94%BB%E9%98%B2%E6%B1%87%E6%80%BB/"/>
+      <url>/2025/09/03/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81%5D_%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8BARP%E7%9F%A5%E8%AF%86%E6%94%BB%E9%98%B2%E6%B1%87%E6%80%BB/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【缁衣】缁衣之蓆兮，敝予又改作兮。适子之馆兮，还予授子之粲兮—诗经 [先秦]</strong></p></blockquote><h1 id="一、Address-Resolution-Protocol"><a href="#一、Address-Resolution-Protocol" class="headerlink" title="一、Address Resolution Protocol"></a>一、Address Resolution Protocol</h1><h2 id="1-1-ARP基础"><a href="#1-1-ARP基础" class="headerlink" title="1.1 ARP基础"></a>1.1 ARP基础</h2><h3 id="1-1-1-ARP概念"><a href="#1-1-1-ARP概念" class="headerlink" title="1.1.1 ARP概念"></a>1.1.1 ARP概念</h3><p><img src="https://i.postimg.cc/MGyHGBfD/38-ARP.png" alt="38-ARP.png"></p><center>图1-1：地址解析ARP</center><p><strong>核心作用：ARP（地址解析协议，Address Resolution Protocol）是将 IP 地址（逻辑地址）转换为 MAC 地址（物理地址）的网络协议。</strong></p><h3 id="1-1-2-ARP工作原理"><a href="#1-1-2-ARP工作原理" class="headerlink" title="1.1.2 ARP工作原理"></a>1.1.2 ARP工作原理</h3><p><img src="https://i.postimg.cc/SsksYKWp/39-ARP-1.png" alt="39-ARP-1.png"></p><center>图1-2：ARP工作原理1</center><p><img src="https://i.postimg.cc/x8d1gFxx/40-ARP-2.png" alt="40-ARP-2.png"></p><center>图1-3：ARP工作原理2</center><p><img src="https://i.postimg.cc/sx0DL9bV/41-ARP-3.png" alt="41-ARP-3.png"></p><center>图1-4：ARP工作原理3</center><p><img src="https://i.postimg.cc/Wp93tTzQ/42-ARP-4.png" alt="42-ARP-4.png"></p><center>图1-5：ARP工作原理4</center><p><img src="https://i.postimg.cc/kXB5bztD/43-ARP-5.png" alt="43-ARP-5.png"></p><center>图1-6：ARP工作原理5</center><h3 id="1-1-3-ARP请求与响应"><a href="#1-1-3-ARP请求与响应" class="headerlink" title="1.1.3 ARP请求与响应"></a>1.1.3 ARP请求与响应</h3><p><img src="https://i.postimg.cc/JzJCMZtz/B1-ARP.png" alt="B1-ARP.png"></p><center>图1-7：ARP工作原理5</center><blockquote><p><strong>缁衣之宜兮，敝予又改为兮。<br>适子之馆兮，还予授子之粲兮。<br>缁衣之好兮，敝予又改造兮。<br>适子之馆兮，还予授子之粲兮。<br>缁衣之蓆兮，敝予又改作兮。<br>适子之馆兮，还予授子之粲兮。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络工程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术支持 </tag>
+            
+            <tag> ARP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[02]基础指令</title>
+      <link href="/2025/09/02/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B02%5D%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/"/>
+      <url>/2025/09/02/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B02%5D%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【蒹葭】蒹葭苍苍，白露为霜。所谓伊人，在水一方。—诗经 [先秦]</strong> </p></blockquote><h1 id="一、S7-200-smart-基础指令"><a href="#一、S7-200-smart-基础指令" class="headerlink" title="一、S7-200 smart 基础指令"></a>一、S7-200 smart 基础指令</h1><h2 id="1-1-基础指令"><a href="#1-1-基础指令" class="headerlink" title="1.1 基础指令"></a>1.1 基础指令</h2><h3 id="1-1-1-常开、常闭、线圈"><a href="#1-1-1-常开、常闭、线圈" class="headerlink" title="1.1.1 常开、常闭、线圈"></a>1.1.1 常开、常闭、线圈</h3><p><img src="https://i.postimg.cc/ydrLtbG3/b01.png" alt="b01.png"></p><center>图1-1：常开、常闭、线圈指令</center><h3 id="1-1-2-上升沿、下降沿指令"><a href="#1-1-2-上升沿、下降沿指令" class="headerlink" title="1.1.2 上升沿、下降沿指令"></a>1.1.2 上升沿、下降沿指令</h3><p><img src="https://i.postimg.cc/rs0fk96n/b02.png" alt="b02.png"></p><center>图1-2：上升沿、下降沿指令</center><h3 id="1-1-3-置位、复位指令"><a href="#1-1-3-置位、复位指令" class="headerlink" title="1.1.3 置位、复位指令"></a>1.1.3 置位、复位指令</h3><p><img src="https://i.postimg.cc/QNFDCGhP/b03.png" alt="b03.png"></p><center>图1-3：置位与复位指令</center><h3 id="1-1-4-取反指令"><a href="#1-1-4-取反指令" class="headerlink" title="1.1.4 取反指令"></a>1.1.4 取反指令</h3><p><img src="https://i.postimg.cc/br73N2pz/b04.png" alt="b04.png"></p><center>图1-4：取反指令</center><h3 id="1-1-5-特殊继电器SM0-0-SM0-1"><a href="#1-1-5-特殊继电器SM0-0-SM0-1" class="headerlink" title="1.1.5 特殊继电器SM0.0 SM0.1"></a>1.1.5 特殊继电器SM0.0 SM0.1</h3><p><img src="https://i.postimg.cc/T2B6W7PP/b05.png" alt="b05.png"></p><center>图1-5：特殊继电器指令</center><p><strong>还有其他特殊指令如:SM0.5（0.5s闪烁）等，具体根据实际情况使用。</strong></p><h1 id="二、PLC的工作原理"><a href="#二、PLC的工作原理" class="headerlink" title="二、PLC的工作原理"></a>二、PLC的工作原理</h1><h2 id="2-1-工作原理示意图"><a href="#2-1-工作原理示意图" class="headerlink" title="2.1 工作原理示意图"></a>2.1 工作原理示意图</h2><p><img src="https://i.postimg.cc/4NtTv6KQ/b06-PLC.png" alt="b06-PLC.png"></p><center>图2-1：PLC工作原理图</center><h1 id="三、PLC程序控制"><a href="#三、PLC程序控制" class="headerlink" title="三、PLC程序控制"></a>三、PLC程序控制</h1><h2 id="3-1-PLC中的定时器"><a href="#3-1-PLC中的定时器" class="headerlink" title="3.1 PLC中的定时器"></a>3.1 PLC中的定时器</h2><h3 id="3-1-1-定时器指令及应用"><a href="#3-1-1-定时器指令及应用" class="headerlink" title="3.1.1 定时器指令及应用"></a>3.1.1 定时器指令及应用</h3><p><img src="https://i.postimg.cc/t4NQw9N1/b07-1.png" alt="b07-1.png"></p><center>图3-1：定时器指令及应用</center><h3 id="3-1-2-定时器指令及应用"><a href="#3-1-2-定时器指令及应用" class="headerlink" title="3.1.2 定时器指令及应用"></a>3.1.2 定时器指令及应用</h3><p><img src="https://i.postimg.cc/CxgpcRkT/b08-2.png" alt="b08-2.png"></p><center>图3-2：定时器类型及编号</center><h3 id="3-1-3-接通延时定时器TON"><a href="#3-1-3-接通延时定时器TON" class="headerlink" title="3.1.3 接通延时定时器TON"></a>3.1.3 接通延时定时器TON</h3><p><img src="https://i.postimg.cc/1zRhZbvv/B09-TON.png" alt="B09-TON.png"></p><center>图3-3：接通延时定时器TON</center><h3 id="3-1-4-关断延时定时器TOF"><a href="#3-1-4-关断延时定时器TOF" class="headerlink" title="3.1.4 关断延时定时器TOF"></a>3.1.4 关断延时定时器TOF</h3><p><img src="https://i.postimg.cc/3wLMr96Y/b10-TOF.png" alt="b10-TOF.png"></p><center>图3-4：关断延时定时器TOF</center><h3 id="3-1-5-记忆接通延时定时器TONR"><a href="#3-1-5-记忆接通延时定时器TONR" class="headerlink" title="3.1.5 记忆接通延时定时器TONR"></a>3.1.5 记忆接通延时定时器TONR</h3><p><img src="https://i.postimg.cc/FR1MY35c/b11-TONR.png" alt="b11-TONR.png"></p><center>图3-5：记忆接通延时定时器TONR</center><h2 id="3-2-PLC中的计数器"><a href="#3-2-PLC中的计数器" class="headerlink" title="3.2 PLC中的计数器"></a>3.2 PLC中的计数器</h2><h3 id="3-2-1-增计数器CTU"><a href="#3-2-1-增计数器CTU" class="headerlink" title="3.2.1 增计数器CTU"></a>3.2.1 增计数器CTU</h3><p><img src="https://i.postimg.cc/vBjpfTbK/b12-CTU.png" alt="b12-CTU.png"></p><center>图3-6：增计数器CTU</center><h3 id="3-2-2-减计数器CTD"><a href="#3-2-2-减计数器CTD" class="headerlink" title="3.2.2 减计数器CTD"></a>3.2.2 减计数器CTD</h3><p><img src="https://i.postimg.cc/WzkxnV41/b13-CTD.png" alt="b13-CTD.png"></p><center>图3-7：减计数器CTD</center><h3 id="3-2-3-增减计数器CTUD"><a href="#3-2-3-增减计数器CTUD" class="headerlink" title="3.2.3 增减计数器CTUD"></a>3.2.3 增减计数器CTUD</h3><p><img src="https://i.postimg.cc/pV5NxfBM/b14-CTUD.png" alt="b14-CTUD.png"></p><center>图3-8：增减计数器CTUD</center><h1 id="四、PLC基础程序案例"><a href="#四、PLC基础程序案例" class="headerlink" title="四、PLC基础程序案例"></a>四、PLC基础程序案例</h1><h2 id="4-1-PLC简单程序"><a href="#4-1-PLC简单程序" class="headerlink" title="4.1 PLC简单程序"></a>4.1 PLC简单程序</h2><h3 id="4-1-1-起保停程序"><a href="#4-1-1-起保停程序" class="headerlink" title="4.1.1 起保停程序"></a>4.1.1 起保停程序</h3><p><img src="https://i.postimg.cc/2jss51Hb/b15.png" alt="b15.png">](h</p><center>图4-1：PLC程序起保停</center><h3 id="4-1-2-电机正停正启"><a href="#4-1-2-电机正停正启" class="headerlink" title="4.1.2 电机正停正启"></a>4.1.2 电机正停正启</h3><p><img src="https://i.postimg.cc/Dy1t47DC/b16.png" alt="b16.png"></p><p><img src="https://i.postimg.cc/2Smg4PNC/b17-2.png" alt="b17-2.png"></p><center>图4-2：电机正停正启反停反启</center><blockquote><p><strong>蒹葭苍苍，白露为霜。所谓伊人，在水一方。<br>溯洄从之，道阻且长；溯游从之，宛在水中央。<br>蒹葭凄凄，白露未晞。所谓伊人，在水之湄。<br>溯洄从之，道阻且跻；溯游从之，宛在水中坻。<br>蒹葭采采，白露未已，所谓伊人，在水之涘。<br>溯洄从之，道阻且右；溯游从之，宛在水中沚。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HCIA[01]网络工程概述及模型认识</title>
+      <link href="/2025/09/02/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B01%5D%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%A8%A1%E5%9E%8B%E8%AE%A4%E8%AF%86/"/>
+      <url>/2025/09/02/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B01%5D%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%A8%A1%E5%9E%8B%E8%AE%A4%E8%AF%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【黍离】知我者谓我心忧，不知我者谓我何求。悠悠苍天！此何人哉？—诗经 [先秦]</strong></p></blockquote><h1 id="一、网络工程"><a href="#一、网络工程" class="headerlink" title="一、网络工程"></a>一、网络工程</h1><h2 id="1-1-网络通信概念及设备"><a href="#1-1-网络通信概念及设备" class="headerlink" title="1.1 网络通信概念及设备"></a>1.1 网络通信概念及设备</h2><h3 id="1-1-1-网络通信概念"><a href="#1-1-1-网络通信概念" class="headerlink" title="1.1.1 网络通信概念"></a>1.1.1 网络通信概念</h3><p><img src="https://i.postimg.cc/5tk76HcX/1.png" alt="1.png"></p><center>图1-1：华为设备图标简介</center><p><img src="https://i.postimg.cc/nzjd7HZ0/2.png" alt="2.png"></p><center>图1-2：网络通信基本概念</center><p><img src="https://i.postimg.cc/8CCXpRY8/3.png" alt="3.png"></p><center>图1-3：信息传递过程</center><p><img src="https://i.postimg.cc/8cLtKt7v/4.png" alt="4.png"></p><center>图1-4：常见术语</center><p><img src="https://i.postimg.cc/28fHbRt7/5.png" alt="5.png"></p><center>图1-5：网络设备交换机</center><h3 id="1-1-2-网络通信设备"><a href="#1-1-2-网络通信设备" class="headerlink" title="1.1.2 网络通信设备"></a>1.1.2 网络通信设备</h3><p><img src="https://i.postimg.cc/28F0n9RR/6.png" alt="6.png"></p><center>图1-6：网络设备交换机</center><p><img src="https://i.postimg.cc/FHrDpbNf/7.png" alt="7.png"></p><center>图1-7：.网络设备路由器</center><p><img src="https://i.postimg.cc/RZgGD3Zg/8.png" alt="8.png"></p><center>图1-8：网络设备防火墙</center><p><img src="https://i.postimg.cc/TPhQMRyf/9.png" alt="9.png"></p><center>图1-9：无线设备</center><h2 id="1-2-网络及工程师发展"><a href="#1-2-网络及工程师发展" class="headerlink" title="1.2 网络及工程师发展"></a>1.2 网络及工程师发展</h2><h3 id="1-2-1-网络类型"><a href="#1-2-1-网络类型" class="headerlink" title="1.2.1 网络类型"></a>1.2.1 网络类型</h3><p><img src="https://i.postimg.cc/hjdrvpbY/10.png" alt="10.png"></p><center>图1-10：局域网、城域网、广域网</center><p><img src="https://i.postimg.cc/RhxTHKgZ/11-2.png" alt="11-2.png"></p><center>图1-11：局域网、城域网、广域网示例</center><h3 id="1-2-2-网络拓扑"><a href="#1-2-2-网络拓扑" class="headerlink" title="1.2.2 网络拓扑"></a>1.2.2 网络拓扑</h3><p><img src="https://i.postimg.cc/h4VsqZGz/12.png" alt="12.png"></p><center>图1-12：网络拓扑</center><p><img src="https://i.postimg.cc/GhrQ3PBM/13.png" alt="13.png"></p><center>图1-13：网络拓扑形态</center><h3 id="1-2-3-网络工程师发展"><a href="#1-2-3-网络工程师发展" class="headerlink" title="1.2.3 网络工程师发展"></a>1.2.3 网络工程师发展</h3><p><img src="https://i.postimg.cc/Pr4MCLYd/14.png" alt="14.png"></p><center>图1-14：网络工程</center><p><img src="https://i.postimg.cc/wjjQL6QL/15.png" alt="15.png"></p><center>图1-15：网络工程师</center><p><img src="https://i.postimg.cc/4x2b1rWM/16.png" alt="16.png"></p><center>图1-16：技术成长之路</center><p><img src="https://i.postimg.cc/KYdP6tSD/17.png" alt="17.png"></p><center>图1-17：华为认证</center><h1 id="二、网络模型及协议"><a href="#二、网络模型及协议" class="headerlink" title="二、网络模型及协议"></a>二、网络模型及协议</h1><h2 id="2-1-网络通信模型"><a href="#2-1-网络通信模型" class="headerlink" title="2.1 网络通信模型"></a>2.1 网络通信模型</h2><h3 id="2-1-1-网络模型"><a href="#2-1-1-网络模型" class="headerlink" title="2.1.1 网络模型"></a>2.1.1 网络模型</h3><p><img src="https://i.postimg.cc/25qd92J5/18.png" alt="18.png"></p><center>图2-1：应用的实现数据</center><p><img src="https://i.postimg.cc/MHwyTxGc/19.png" alt="19.png"></p><center>图2-2：七层模型</center><p><img src="https://i.postimg.cc/PJM1vcLS/20-TCPIP.png" alt="20-TCPIP.png"></p><center>图2-3：TCPIP模型</center><h3 id="2-1-2-网络协议"><a href="#2-1-2-网络协议" class="headerlink" title="2.1.2 网络协议"></a>2.1.2 网络协议</h3><p><img src="https://i.postimg.cc/qBcsFtm2/21.png" alt="21.png"></p><center>图2-4：常见协议</center><p><img src="https://i.postimg.cc/CLFGpFtX/22.png" alt="22.png"></p><center>图2-5：协议标准化组织</center><h3 id="2-1-3-应用层"><a href="#2-1-3-应用层" class="headerlink" title="2.1.3 应用层"></a>2.1.3 应用层</h3><p><img src="https://i.postimg.cc/dt48qbc1/23.png" alt="23.png"></p><center>图2-6：应用层</center><p><img src="https://i.postimg.cc/0yj7rV9C/24-FTP.png" alt="24-FTP.png"></p><center>图2-7：FTP协议</center><p><img src="https://i.postimg.cc/P57YD1xn/25-Telnet.png" alt="25-Telnet.png"></p><center>图2-8：Telnet登录协议</center><p><img src="https://i.postimg.cc/0QRSWxDt/26-HTTP.png" alt="26-HTTP.png"></p><center>图2-9：HTTP超文本传输协议</center><h3 id="2-1-4-传输层"><a href="#2-1-4-传输层" class="headerlink" title="2.1.4 传输层"></a>2.1.4 传输层</h3><p><img src="https://i.postimg.cc/5ypF2CGG/27.png" alt="27.png"></p><center>图2-10：传输层协议</center><p><img src="https://i.postimg.cc/mZS9wvDw/28-TCPUDP.png" alt="28-TCPUDP.png"></p><center>图2-11：TCPUDP报文格式</center><p><img src="https://i.postimg.cc/J44kdpHW/29-TCPUDP.png" alt="29-TCPUDP.png"></p><center>图2-12：TCPUDP端口号</center><p><img src="https://i.postimg.cc/fT294YYS/30.png" alt="30.png"></p><center>图2-13：三次握手</center><p><img src="https://i.postimg.cc/cLv8d6c9/31.png" alt="31.png"></p><center>图2-14：序列号与确认序列号</center><p><img src="https://i.postimg.cc/MpgfHxPW/32-TCP.png" alt="32-TCP.png"></p><center>图2-15：TCP滑动机制</center><p><img src="https://i.postimg.cc/vm9g6jk5/33-TCP.png" alt="33-TCP.png"></p><center>图2-16：TCP四次挥手</center><h3 id="2-1-5-网络层"><a href="#2-1-5-网络层" class="headerlink" title="2.1.5 网络层"></a>2.1.5 网络层</h3><p><img src="https://i.postimg.cc/kGMBz54y/34.png" alt="34.png"></p><center>图2-17：网络层</center><p><img src="https://i.postimg.cc/ZKMCs4hr/35.png" alt="35.png"></p><center>图2-18：网络层工作</center><h3 id="2-1-6-链路层"><a href="#2-1-6-链路层" class="headerlink" title="2.1.6 链路层"></a>2.1.6 链路层</h3><p><img src="https://i.postimg.cc/bwSdKWz4/36.png" alt="36.png"></p><center>图2-19：数据链路层</center><p><img src="https://i.postimg.cc/DzVmF600/37-MAC.png" alt="37-MAC.png"></p><center>图2-20：以太网与MAC地址</center><h3 id="2-1-7-物理层"><a href="#2-1-7-物理层" class="headerlink" title="2.1.7 物理层"></a>2.1.7 物理层</h3><p><img src="https://i.postimg.cc/SN3x7dWd/44.png" alt="44.png"></p><center>图2-21：物理层</center><p><img src="https://i.postimg.cc/Z5NKfNHS/45.png" alt="45.png"></p><center>图2-22：常见传输介质</center><h3 id="2-1-8-数据封装"><a href="#2-1-8-数据封装" class="headerlink" title="2.1.8 数据封装"></a>2.1.8 数据封装</h3><p><img src="https://i.postimg.cc/SKpQHK1z/46.png" alt="46.png"></p><center>图2-23：数据封装</center><p><img src="https://i.postimg.cc/xdyjQSBp/47.png" alt="47.png"></p><center>图2-24：中间网络数据传输</center><p><img src="https://i.postimg.cc/521W9jz5/C1.png" alt="C1.png"></p><center>图2-25：接收方数据解封装</center><blockquote><p><strong>彼黍离离，彼稷之苗。行迈靡靡，中心摇摇。<br>知我者谓我心忧，不知我者谓我何求。<br>悠悠苍天！此何人哉？<br>彼黍离离，彼稷之穗。行迈靡靡，中心如醉。<br>知我者谓我心忧，不知我者谓我何求。<br>悠悠苍天！此何人哉？<br>彼黍离离，彼稷之实。行迈靡靡，中心如噎。<br>知我者谓我心忧，不知我者谓我何求。<br>悠悠苍天！此何人哉？</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络工程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HCIA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>S7-200系列[01]知识入门</title>
+      <link href="/2025/09/01/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B01%5D%E7%9F%A5%E8%AF%86%E5%85%A5%E9%97%A8/"/>
+      <url>/2025/09/01/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B01%5D%E7%9F%A5%E8%AF%86%E5%85%A5%E9%97%A8/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【关雎】关关雎鸠，在河之洲。窈窕淑女，君子好逑。—诗经 [先秦]</strong></p></blockquote><h1 id="一、西门子S7-200smart基础"><a href="#一、西门子S7-200smart基础" class="headerlink" title="一、西门子S7-200smart基础"></a>一、西门子S7-200smart基础</h1><h2 id="1-1-S7-200-smart"><a href="#1-1-S7-200-smart" class="headerlink" title="1.1 S7-200 smart"></a>1.1 S7-200 smart</h2><h3 id="1-1-1-S7-200smart扩展参数"><a href="#1-1-1-S7-200smart扩展参数" class="headerlink" title="1.1.1 S7-200smart扩展参数"></a>1.1.1 S7-200smart扩展参数</h3><p><img src="https://i.postimg.cc/v85yShYx/a01.png" alt="a01.png"></p><center>图1-1：S7-200smart扩展模块参数</center><p><img src="https://i.postimg.cc/Xq6bYG8v/a02.png" alt="a02.png"></p><center>图1-2：S7-200smat扩展信号板的参数</center><p><img src="https://i.postimg.cc/5N1Jczy7/a03.png" alt="a03.png"></p><center>图1-3：S7-200smat集成以太网口和RS485串口</center><p><img src="https://i.postimg.cc/fTKNMb0w/a04.png" alt="a04.png"></p><center>图1-4：S7-200smat三轴脉冲输出端</center><pre><code class="language-html">CPU本体三轴脉冲输出端：Q0.0Q0.1Q0.3</code></pre><h3 id="1-1-2-S7-200smart的硬件组成"><a href="#1-1-2-S7-200smart的硬件组成" class="headerlink" title="1.1.2 S7-200smart的硬件组成"></a>1.1.2 S7-200smart的硬件组成</h3><p><img src="https://i.postimg.cc/CxxV5Vjb/a05.png" alt="a05.png"></p><center>图1-5：S7-200smat硬件组成</center><h3 id="1-1-3-S7-200smart-PLC的订货号"><a href="#1-1-3-S7-200smart-PLC的订货号" class="headerlink" title="1.1.3 S7-200smart PLC的订货号"></a>1.1.3 S7-200smart PLC的订货号</h3><p><img src="https://i.postimg.cc/9f45PtgM/a06.png" alt="a06.png"></p><center>图1-6：S7-200smat的订货号</center><h3 id="1-1-4-S7-200smart-CPU选型"><a href="#1-1-4-S7-200smart-CPU选型" class="headerlink" title="1.1.4 S7-200smart CPU选型"></a>1.1.4 S7-200smart CPU选型</h3><p><img src="https://i.postimg.cc/MGhk9MgY/a07CPU.png" alt="a07CPU.png"></p><center>图1-7：S7-200smatCPU的选型</center><h3 id="1-1-5-S7-200smart-扩展参数"><a href="#1-1-5-S7-200smart-扩展参数" class="headerlink" title="1.1.5 S7-200smart 扩展参数"></a>1.1.5 S7-200smart 扩展参数</h3><p><img src="https://i.postimg.cc/RFfkyCBx/a08.png" alt="a08.png"></p><p><img src="https://i.postimg.cc/wx5KkB2h/a09.png" alt="a09.png"></p><p><img src="https://i.postimg.cc/MHmhZsHs/a10.png" alt="a10.png"></p><center>图1-8：S7-200smat扩展参数</center><h1 id="二、S7-200smart接线方式"><a href="#二、S7-200smart接线方式" class="headerlink" title="二、S7-200smart接线方式"></a>二、S7-200smart接线方式</h1><h2 id="2-1-S7-200smart接线"><a href="#2-1-S7-200smart接线" class="headerlink" title="2.1 S7-200smart接线"></a>2.1 S7-200smart接线</h2><h3 id="2-1-1-S7-200smart硬件接线"><a href="#2-1-1-S7-200smart硬件接线" class="headerlink" title="2.1.1 S7-200smart硬件接线"></a>2.1.1 S7-200smart硬件接线</h3><p><img src="https://i.postimg.cc/sgNb2GfR/a11.png" alt="a11.png"></p><center>图2-1：S7-200smart输入端子接线方式</center><p><img src="https://i.postimg.cc/cLHVZBSm/a12.png" alt="a12.png"></p><center>图2-2：S7-200smart两线制传感器共阳极接线方式</center><p><img src="https://i.postimg.cc/PxGcWG83/a13.png" alt="a13.png"></p><center>图2-3：S7-200smart两线制传感器共阴极接线方式</center><h3 id="2-1-2-传感器与PLC硬件接线"><a href="#2-1-2-传感器与PLC硬件接线" class="headerlink" title="2.1.2 传感器与PLC硬件接线"></a>2.1.2 传感器与PLC硬件接线</h3><p><img src="https://i.postimg.cc/yxsbGFj0/a14-NPN-PNP.png" alt="a14-NPN-PNP.png"></p><center>图2-4：NPN型与PNP型传感器接线方式</center><p><strong>有的四线制传感器，只是将输出信号分为了常开和常闭两种信号。</strong></p><p><img src="https://i.postimg.cc/2yGKNV9M/a15NPN.png" alt="a15NPN.png"></p><center>图2-5：NPN型与PNP型传感器接线方式</center><p><img src="https://i.postimg.cc/5N9rqS6V/a16PNP.png" alt="a16PNP.png"></p><center>图2-6：PNP型开关接线方式</center><h1 id="三、输出信号的接线类型"><a href="#三、输出信号的接线类型" class="headerlink" title="三、输出信号的接线类型"></a>三、输出信号的接线类型</h1><h2 id="3-1-继电器与晶体管输出接线"><a href="#3-1-继电器与晶体管输出接线" class="headerlink" title="3.1 继电器与晶体管输出接线"></a>3.1 继电器与晶体管输出接线</h2><h3 id="3-1-1-继电器与晶体管接线"><a href="#3-1-1-继电器与晶体管接线" class="headerlink" title="3.1.1 继电器与晶体管接线"></a>3.1.1 继电器与晶体管接线</h3><p><img src="https://i.postimg.cc/VNtZL7Hj/a17.png" alt="a17.png"></p><center>图3-1：S7-200smart继电器与晶体管输出</center><h3 id="3-1-2-晶体管输出端子接线方式"><a href="#3-1-2-晶体管输出端子接线方式" class="headerlink" title="3.1.2 晶体管输出端子接线方式"></a>3.1.2 晶体管输出端子接线方式</h3><p><img src="https://i.postimg.cc/Z5CDXY8s/a18.png" alt="a18.png"></p><center>图3-2：S7-200smart晶体管输出端子接线方式</center><h3 id="3-1-3-继电器输出端子接线方式"><a href="#3-1-3-继电器输出端子接线方式" class="headerlink" title="3.1.3 继电器输出端子接线方式"></a>3.1.3 继电器输出端子接线方式</h3><p><img src="https://i.postimg.cc/T3FHx8Qd/a19.png" alt="a19.png"></p><center>图3-2：S7-200smart晶体管输出端子接线方式</center><h1 id="四、S7-200smart软件相关"><a href="#四、S7-200smart软件相关" class="headerlink" title="四、S7-200smart软件相关"></a>四、S7-200smart软件相关</h1><h2 id="4-1-PLC通信相关"><a href="#4-1-PLC通信相关" class="headerlink" title="4.1 PLC通信相关"></a>4.1 PLC通信相关</h2><h3 id="4-1-1-软件无法与PLC通信处理"><a href="#4-1-1-软件无法与PLC通信处理" class="headerlink" title="4.1.1 软件无法与PLC通信处理"></a>4.1.1 软件无法与PLC通信处理</h3><p><img src="https://i.postimg.cc/fLjHYVsy/a20.png" alt="a20.png"></p><center>图4-1：S7-200smart软件与PLC无法进行通信处理</center><h2 id="4-2-PLC编程相关"><a href="#4-2-PLC编程相关" class="headerlink" title="4.2 PLC编程相关"></a>4.2 PLC编程相关</h2><h3 id="4-2-1-S7-200smart编程常用快捷键"><a href="#4-2-1-S7-200smart编程常用快捷键" class="headerlink" title="4.2.1 S7-200smart编程常用快捷键"></a>4.2.1 S7-200smart编程常用快捷键</h3><p><strong>F1 : 帮助文件的调用</strong></p><p><strong>F3 : 插入一行程序编辑栏</strong></p><p><strong>F4: 触点指令快捷键</strong></p><p><strong>F6 : 线圈指令快捷键</strong></p><p><strong>F9 : 功能指令快捷键</strong></p><p><strong>Ctrl + 方向键 : 改变连接线的位置</strong></p><h3 id="4-2-2-项目程序的加密及解除"><a href="#4-2-2-项目程序的加密及解除" class="headerlink" title="4.2.2 项目程序的加密及解除"></a>4.2.2 项目程序的加密及解除</h3><p><img src="https://i.postimg.cc/wMw0bn7d/a22.png" alt="a22.png"></p><center>图4-2：项目程序的加密及解除处理</center><h3 id="4-2-3-S7-200smart程序转S7-200程序"><a href="#4-2-3-S7-200smart程序转S7-200程序" class="headerlink" title="4.2.3 S7-200smart程序转S7-200程序"></a>4.2.3 S7-200smart程序转S7-200程序</h3><p><strong>smart后缀文件，需要先下载一个200smart软件。</strong></p><p><strong>打开软件后将程序与IO表依次复制到S7-200软件里即可。</strong></p><blockquote><p><strong>关关雎鸠，在河之洲。窈窕淑女，君子好逑。<br>参差荇菜，左右流之。窈窕淑女，寤寐求之。<br>求之不得，寤寐思服。悠哉悠哉，辗转反侧。<br>参差荇菜，左右采之。窈窕淑女，琴瑟友之。<br>参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工控学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 西门子 </tag>
+            
+            <tag> S7-200系列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>WIN11专业版电脑重装配置</title>
+      <link href="/2025/09/01/%5B%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F%5D%5B%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%5D_WIN11%E4%B8%93%E4%B8%9A%E7%89%88%E7%94%B5%E8%84%91%E9%87%8D%E8%A3%85%E9%85%8D%E7%BD%AE/"/>
+      <url>/2025/09/01/%5B%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F%5D%5B%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%5D_WIN11%E4%B8%93%E4%B8%9A%E7%89%88%E7%94%B5%E8%84%91%E9%87%8D%E8%A3%85%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【子衿】青青子衿，悠悠我心。纵我不往，子宁不嗣音？—诗经 [先秦]]</strong></p></blockquote><h1 id="一、电脑重装"><a href="#一、电脑重装" class="headerlink" title="一、电脑重装"></a>一、电脑重装</h1><h2 id="1-1-电脑优化"><a href="#1-1-电脑优化" class="headerlink" title="1.1 电脑优化"></a>1.1 电脑优化</h2><h3 id="1-1-1-电脑盖子电源"><a href="#1-1-1-电脑盖子电源" class="headerlink" title="1.1.1 电脑盖子电源"></a>1.1.1 电脑盖子电源</h3><p><img src="https://i.postimg.cc/sDQM4jcW/1.png" alt="1.png"></p><center>图1-1：电脑盖子设置不采取操作</center><p><img src="https://i.postimg.cc/8P2jy2K0/2.png" alt="2.png"></p><center>图1-2：电脑电源设置硬盘运行</center><h3 id="1-1-2-电脑桌面"><a href="#1-1-2-电脑桌面" class="headerlink" title="1.1.2 电脑桌面"></a>1.1.2 电脑桌面</h3><p><img src="https://i.postimg.cc/kMhVS6x9/3.png" alt="3.png"></p><center>图1-3：任务栏显示设置</center><p><img src="https://i.postimg.cc/P51N0S0r/4.png" alt="4.png"></p><center>图1-4：电脑桌面图标设置</center><h3 id="1-1-3-电脑性能及便捷性"><a href="#1-1-3-电脑性能及便捷性" class="headerlink" title="1.1.3 电脑性能及便捷性"></a>1.1.3 电脑性能及便捷性</h3><p><img src="https://i.postimg.cc/xdYqQKSG/5.png" alt="5.png"></p><center>图1-5：电脑显卡策略设置</center><pre><code class="language-html">win11系统右键改win10 执行指令后重启 cmd指令： reg add &quot;HKCU\Software\Classes\CLSID\&#123;86ca1aa0-34aa-4e8b-a509-50c905bae2a2&#125;\InprocServer32&quot; /f /ve</code></pre><h3 id="1-1-4-禁用自动更新"><a href="#1-1-4-禁用自动更新" class="headerlink" title="1.1.4 禁用自动更新"></a>1.1.4 禁用自动更新</h3><pre><code class="language-html">方法1：按下 Win + R 键，输入 gpedit.msc，然后按下回车键打开本地组策略编辑器。修改后重启PC</code></pre><p><img src="https://i.postimg.cc/MTpTMqHv/6.png" alt="6.png"></p><center>图1-6：配置自动更新</center><p><img src="https://i.postimg.cc/MT3G1Nft/7.png" alt="7.png"></p><center>图1-7：删除自动更新权限</center><pre><code class="language-html">方法2：按下 Win + R 键，输入 services.msc，打开服务窗口禁用 Windows Update 修改后重启PC</code></pre><p><img src="https://i.postimg.cc/SRwNv9rM/8.png" alt="8.png"></p><center>图1-8：禁用系统更新服务</center><h3 id="1-1-5-软件卸载及启动项"><a href="#1-1-5-软件卸载及启动项" class="headerlink" title="1.1.5 软件卸载及启动项"></a>1.1.5 软件卸载及启动项</h3><p><img src="https://i.postimg.cc/NGVMFhcj/9.png" alt="9.png"></p><center>图1-9：卸载软件及系统自带应用</center><p><img src="https://i.postimg.cc/J4khBTrc/10.png" alt="10.png"></p><center>图1-10：电脑启动项设置</center><blockquote><p><strong>青青子衿，悠悠我心。纵我不往，子宁不嗣音？<br>青青子佩，悠悠我思。纵我不往，子宁不来？<br>挑兮达兮，在城阙兮。一日不见，如三月兮。</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电脑系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电脑性能 </tag>
+            
+            <tag> 电脑设置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>东方既白网站功能使用说明</title>
+      <link href="/2025/09/01/%5B%E7%BB%BC%E5%90%88%E8%B5%84%E6%96%99%5D%5B%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%5D_%E4%B8%9C%E6%96%B9%E6%97%A2%E7%99%BD%E7%BD%91%E7%AB%99%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
+      <url>/2025/09/01/%5B%E7%BB%BC%E5%90%88%E8%B5%84%E6%96%99%5D%5B%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%5D_%E4%B8%9C%E6%96%B9%E6%97%A2%E7%99%BD%E7%BD%91%E7%AB%99%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
+      
+        <content type="html"><![CDATA[<script>  // 单次会话 文档访问密码if (sessionStorage.getItem('unlocked') !== 'true') {  const pass = prompt("首次访问需输入密码：");  if (pass === "none") {    sessionStorage.setItem('unlocked', 'true');  } else {    window.location.href = "/index.html";  }}</script><h1 id="📜-博客网站功能使用手册-v1-0"><a href="#📜-博客网站功能使用手册-v1-0" class="headerlink" title="📜 博客网站功能使用手册 [v1.0]"></a>📜 博客网站功能使用手册 [v1.0]</h1><blockquote><p><strong>温馨提示</strong>：本文档包含常用的Markdown语法示例与现代化排版技巧，通过<code>[▶]</code>符号可展开代码示例</p></blockquote><div align="center">  <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" width="200">  <p><sup>✨ 支持深色/浅色模式 | 响应式布局 | 交互元素</sup></p></div><h2 id="📖-博客站点搭建"><a href="#📖-博客站点搭建" class="headerlink" title="📖 博客站点搭建"></a>📖 博客站点搭建</h2><h3 id="1-1-Hexo安装"><a href="#1-1-Hexo安装" class="headerlink" title="1.1 Hexo安装"></a>1.1 Hexo安装</h3><p><strong>1. 下载  Git  获取  hexo    最好挂梯子方便下载后续依赖</strong>  </p><p><strong>2. 下载对应的  Node.js</strong></p><p><strong>3. 首先定位到该目录下，最好是空文件夹 输入  <code>npm i hexo-cli -g</code>  安装Hexo。</strong></p><p><strong>4. 安装完后输入  <code>hexo -v</code>  验证是否安装成功。</strong></p><p><strong>5. 输入  <code>hexo init</code>  初始化文件夹   网络不好选择国内</strong></p><p><strong>6.接着输入  <code>npm install</code>  安装必备的组件。  将源文件复制并替换</strong></p><p><strong>7. 输入  <code>hexo g</code>  生成静态网页，然后输入   <code>hexo s</code>  打开本地服务器</strong></p><p><strong>8. 然后浏览器打开 <a href="http://localhost:4000/">http://localhost:4000/</a>  <code>ctrl+c</code>  关闭本地服务器</strong>  </p><p><strong>9. Hexo 服务运行指令集合   <code>  hexo clean&amp;&amp;hexo g&amp;&amp;hexo s</code></strong></p><h3 id="1-2-部署指令"><a href="#1-2-部署指令" class="headerlink" title="1.2 部署指令"></a>1.2 部署指令</h3><p><strong>若是复制原项目则不需要进行部署</strong></p><p><strong>1. 安装   <code>npm i hexo-wordcount --save</code>   安装字符统计（注：防止报错）</strong></p><p><strong>2. 执行  <code>npm install hexo-generator-search --save</code>   安装搜索插件</strong></p><p><strong>3. 执行  <code>npm install hexo-deployer-git --save</code>   仓库链接相关</strong> </p><p><strong>4. 执行  <code>npm install hexo-generator-sitemap --save</code>   添加站点地图</strong></p><p><strong>5. 执行  <code>npm install hexo-generator-feed --save</code>   博客网站订阅功能</strong></p><h2 id="📖-Markdown功能"><a href="#📖-Markdown功能" class="headerlink" title="📖 Markdown功能"></a>📖 Markdown功能</h2><p>[TOC]  <!-- 部分平台支持自动生成目录 --></p><h3 id="2-1-代码相关"><a href="#2-1-代码相关" class="headerlink" title="2.1 代码相关"></a>2.1 代码相关</h3><pre><code class="language-HTML">$ hexo clean&amp;&amp;hexo g&amp;&amp;hexo s</code></pre><h3 id="2-2-折叠内容"><a href="#2-2-折叠内容" class="headerlink" title="2.2 折叠内容"></a>2.2 折叠内容</h3><details> <summary>点击展开秘笈</summary>    🎁 隐藏内容示例：    </details><h3 id="2-3-数学公式"><a href="#2-3-数学公式" class="headerlink" title="2.3 数学公式"></a>2.3 数学公式</h3><p>$$<br>\Gamma(z) &#x3D; \int_0^\infty t^{z-1}e^{-t}dt<br>$$</p><h3 id="2-4-任务列表"><a href="#2-4-任务列表" class="headerlink" title="2.4 任务列表"></a>2.4 任务列表</h3><ul><li><input checked="" disabled="" type="checkbox"> 已完成任务<ul><li><input checked="" disabled="" type="checkbox"> 子任务 Tab</li></ul></li></ul><h3 id="2-5-实时时间"><a href="#2-5-实时时间" class="headerlink" title="2.5 实时时间"></a>2.5 实时时间</h3><div id="live-clock"></div> <script>  setInterval(() => {    document.getElementById('live-clock').innerHTML = new Date().toLocaleTimeString();  }, 1000);</script><div id="section1"></div><h3 id="2-6-图片相关"><a href="#2-6-图片相关" class="headerlink" title="2.6 图片相关"></a>2.6 图片相关</h3><p><img src="https://picsum.photos/200" alt="替代文字" title="悬停提示">                              指定宽高：<img src="https://picsum.photos/200" width="100" height="50"></p><h3 id="2-7-音乐相关"><a href="#2-7-音乐相关" class="headerlink" title="2.7 音乐相关"></a>2.7 音乐相关</h3><iframe frameborder="yes" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1091088&auto=1&height=66"></iframe><audio controls>  <source src="/music/卡农.mp3" type="audio/mpeg"></audio><h3 id="2-8-PDF预览"><a href="#2-8-PDF预览" class="headerlink" title="2.8 PDF预览"></a>2.8 PDF预览</h3><iframe   src="/file/牛津英汉.pdf"  width="100%"  height="600"  frameborder="0"></iframe><video controls width="100%">  <source src="/video/avi.mp4" type="video/mp4"></video>]]></content>
+      
+      
+      <categories>
+          
+          <category> 综合资料 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 使用说明 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MatlabR2023a软件教程</title>
+      <link href="/2025/09/01/%5B%E7%BB%BC%E5%90%88%E8%B5%84%E6%96%99%5D%5B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%5D_MatlabR2023a%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/"/>
+      <url>/2025/09/01/%5B%E7%BB%BC%E5%90%88%E8%B5%84%E6%96%99%5D%5B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%5D_MatlabR2023a%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p><strong>【七月】七月流火，九月授衣。春日载阳，有鸣仓庚。—诗经 [先秦]</strong></p></blockquote><h1 id="一、MatlabR2023a软件教程"><a href="#一、MatlabR2023a软件教程" class="headerlink" title="一、MatlabR2023a软件教程"></a>一、MatlabR2023a软件教程</h1><h2 id="1-1-安装说明"><a href="#1-1-安装说明" class="headerlink" title="1.1 安装说明"></a>1.1 安装说明</h2><p><strong>1. 下载好的文件夹如下图1，右击解压后打开如图2</strong></p><p><img src="https://i.postimg.cc/pL54Z2Ph/1.png" alt="1.png"><img src="https://i.postimg.cc/8P0xMFgg/2.png" alt="2.png"></p><p><strong>2.打开后可以看到Setup，鼠标双击打开</strong></p><p><img src="https://i.postimg.cc/1zxT7LzW/3.png" alt="3.png"></p><p><strong>3.打开后点击右上角高级选项，选择密钥安装（注意：不要去输电子邮件）。</strong></p><p><img src="https://i.postimg.cc/wBhrC0y9/4.png" alt="4.png"></p><p><strong>4.然后点下一步，就会出现下面的画面，选择是，继续点下一步。</strong></p><p><img src="https://i.postimg.cc/mDj5Dkyq/5.png" alt="5.png"></p><p><strong>5.输入文件安装秘钥，然后点击【下一步】。</strong> </p><p>17704-65516-28949-05196-27677-58153-52675-25427-40932-65107-12325-01750-10518-09536-46547-49184-48288-09956-47596-00605-62383-55525-24311-34288-36021-37745</p><p><img src="https://i.postimg.cc/HxdNdXXX/6.png" alt="6.png"></p><p><strong>6.然后下一步点击后面的浏览。</strong></p><p><img src="https://i.postimg.cc/gjBtV75H/7.png" alt="7.png"></p><p><strong>7.浏览导入license.lic这个许可证文件（和安装包一起下载的2023-crack文件夹里），找到后点打开，然后点击【下一步】。</strong></p><p><img src="https://i.postimg.cc/kG5htCj5/8.png" alt="8.png"></p><p><strong>8.这里设置你安装文件路径，系统默认是在C盘的，想装在别的盘，只要把前面的C盘改一下就可以，选好路径后点【下一步】。</strong></p><p><img src="https://i.postimg.cc/YqhsrpGn/9.png" alt="9.png"></p><p><strong>9.这里建议全选，不然后面工具包可能会不完整，下一步</strong></p><p><img src="https://i.postimg.cc/ZYfQz9Rv/10.png" alt="10.png"></p><p><strong>10.选择【将快捷方式添加到桌面】，然后点击【下一步】，下面的勾取消。</strong></p><p><img src="https://i.postimg.cc/Pr9FNB1t/11.png" alt="11.png"></p><p><strong>11.点开始开装。</strong></p><p><img src="https://i.postimg.cc/sgWHWwJ5/12.png" alt="12.png"></p><p><strong>12.点击【开始安装】。这里速度有快有慢，和电脑硬盘有关，耐心等待。</strong></p><p><img src="https://i.postimg.cc/MGbsPHNT/13.png" alt="13.png"></p><p><strong>13.安装完毕，点击【关闭】，但还没有最终完成，还需要执行后续步骤。</strong></p><p><img src="https://i.postimg.cc/sXTTz8VC/14.png" alt="14.png"></p><p><strong>14.安装完成后，回到下载文件夹2023-crack这个文件夹，看到libmwlmgrimpl.dll这个文件，复制。</strong></p><p><img src="https://i.postimg.cc/jjrg4P8m/15.png" alt="15.png"></p><p><strong>15. 将libmwlmgrimpl.dll文件粘贴到安装目录下的d:\program files\r2023a\bin\win64\matlab_startup_plugins\lmgrimpl文件夹中，点替换目标中的文件</strong></p><p><img src="https://i.postimg.cc/B6SmdsfC/16.png" alt="16.png"></p><p><strong>15. 最后回到桌面打开生成的图标matlab.exe即可打开它，安装完成，打开软件界面如下</strong></p><p><img src="https://i.postimg.cc/6qTYp032/17.png" alt="17.png"></p><blockquote><p><strong>七月流火，九月授衣。一之日觱发，二之日栗烈。<br>无衣无褐，何以卒岁？三之日于耜，四之日举趾。<br>同我妇子，馌彼南亩，田畯至喜。<br>七月流火，九月授衣。春日载阳，有鸣仓庚。<br>女执懿筐，遵彼微行，爰求柔桑。春日迟迟，采蘩祁祁。<br>女心伤悲，殆及公子同归。<br>七月流火，八月萑苇。蚕月条桑，取彼斧斨。<br>以伐远扬，猗彼女桑。<br>七月鸣鵙，八月载绩。载玄载黄，我朱孔阳，为公子裳。<br>四月秀葽，五月鸣蜩。<br>八月其获，十月陨萚。一之日于貉，取彼狐狸，为公子裘。<br>二之日其同，载缵武功，言私其豵，献豣于公。<br>五月斯螽动股，六月莎鸡振羽。<br>七月在野，八月在宇，九月在户，十月蟋蟀入我床下。<br>穹窒熏鼠，塞向墐户。嗟我妇子，曰为改岁，入此室处。<br>六月食郁及薁，七月亨葵及菽。<br>八月剥枣，十月获稻。为此春酒，以介眉寿。<br>七月食瓜，八月断壶，九月叔苴，采荼薪樗，食我农夫。<br>九月筑场圃，十月纳禾稼。黍稷重穋，禾麻菽麦。<br>嗟我农夫，我稼既同，上入执宫功。昼尔于茅，宵尔索绹。<br>亟其乘屋，其始播百谷。<br>二之日凿冰冲冲，三之日纳于凌阴。四之日其蚤，献羔祭韭。<br>九月肃霜，十月涤场。朋酒斯飨，曰杀羔羊，跻彼公堂，称彼兕觥，万寿无疆！</strong></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 综合资料 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 安装教程 </tag>
+            
+            <tag> Matlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>新东方考研词汇乱序版1</title>
+      <link href="/2025/09/01/%5B%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%5D%5B%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%5D_%E6%96%B0%E4%B8%9C%E6%96%B9%E8%80%83%E7%A0%94%E8%AF%8D%E6%B1%87%E4%B9%B1%E5%BA%8F%E7%89%88/"/>
+      <url>/2025/09/01/%5B%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%5D%5B%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%5D_%E6%96%B0%E4%B8%9C%E6%96%B9%E8%80%83%E7%A0%94%E8%AF%8D%E6%B1%87%E4%B9%B1%E5%BA%8F%E7%89%88/</url>
+      
+        <content type="html"><![CDATA[<h1 id="新东方考研词汇乱序版"><a href="#新东方考研词汇乱序版" class="headerlink" title="新东方考研词汇乱序版"></a>新东方考研词汇乱序版</h1><h2 id="第1节"><a href="#第1节" class="headerlink" title="第1节"></a>第1节</h2><h3 id="1-1-学习阶段1"><a href="#1-1-学习阶段1" class="headerlink" title="1-1 学习阶段1"></a>1-1 学习阶段1</h3><blockquote><p><strong>challenge n.挑战(书);艰巨任务,难题 v.向…挑战<br>furnish v.供应,提供;装备,布置<br>establish v.建立,设立;安置,使定居<br>intellectual n.知识分子 a.智力的，理智的，有理解力的<br>qualification n.资格,合格;限定,条件;合格证<br>worthy a.(of)值得…的,配得上…的;有价值的<br>appearance n.出现，露面；外表；(在会议等)作短暂露面<br>aspect n.样子, 外表, 面貌, (问题等的)方面<br>liquid n.液体 a.液体的,液态的<br>sword n.剑，刀<br>lad n.男孩；少年；男青年；小伙子</strong></p></blockquote><blockquote><p><strong>apply vi.(以书面形式)申请；请求 vt.应用,实施</strong></p><p><strong>exterior a.外部的,外面的 n.外部<br>preference n.(for,to)偏爱,喜爱;优惠;优先选择<br>elbow n.肘，(衣服的)肘部vt.用肘推，用肘挤<br>discipline n.纪律,学科<br>terrific a.极好的,非常的,极度的<br>thrill n.一阵激动(恐惧) v.激动；(使)毛骨悚然<br>flu n.(influenza)流行性感冒<br>replacement n.取代,替换,替换物,代替物<br>edition n.版次, 版本,（出版形式）<br>triumph n.胜利,成功 v.得胜,战胜<br>hostage n.人质<br>loaf n.一个面包</strong></p></blockquote><blockquote><p><strong>applicable a.可应用(实施)的；适当的,合适的<br>motion n. 运动，提议<br>diploma n.毕业文凭,学位证书<br>dragon n.龙<br>contrast n.对比，对照 vi.形成对比 vt.把…与…对比<br>trend n.倾向,趋势 vi.伸向,倾向<br>honorable a.(honourable)可敬的;荣誉的,光荣的<br>transition n.转变，变迁，过渡(时期)<br>appendix n.附录，附属物；阑尾，盲肠<br>objection n.(to)反对,异议,不喜欢,反对的理由<br>inflation n.通货膨胀<br>substantial a.实质的;相当的;显著的;坚固的;富裕的</strong></p></blockquote><blockquote><p><strong>hasty a.匆忙的,仓促的;草率的<br>interpret vt.解释,说明;口译<br>fraction n.碎片,小部分,一点儿;分数<br>romance n.传奇,爱情故事<br>rectangle n.长方形，矩形<br>owl n.猫头鹰<br>denote vt.表示,意味着<br>editor n.编辑，编者<br>fruitful a.多产的;果实累累的,富有成效的<br>startle v.惊吓,使吃惊<br>inlet n.水湾,小湾;进口,入口<br>system n.系统，体系；制度；方法，方式，步聚<br>concede vt.承认；容许；(比赛结束前)认输；退让<br>jewelry n.珠宝<br>dictate v.口授;(使)听写;指令,指示,命令;</strong></p></blockquote><blockquote><p><strong>lame a.跛的,(辩解、论据等)无说服力的<br>exhaust v.使筋疲力尽,耗尽;抽完 n.排气装置;废气<br>stiff a.硬的,僵直的;拘谨的;呆板的;艰难的<br>pinch v.捏,掐,拧;收缩;紧急关头;匮乏;压力<br>pants n.长裤，宽松的便裤，内裤<br>remnant n.剩余(物),零料,遗迹<br>projector n.放映机,幻灯机,投影仪<br>torrent n.激流，洪流；爆发，(话语等的)连发<br>crisp a.脆的，易碎的<br>tag n.标签，货签，v 贴标签于<br>duration n.持久;期间;持续时间<br>dealer n.商人<br>incident n.事件,事变<br>zeal n.热心，热忱，热情<br>rhythm n.节奏,韵律</strong></p></blockquote><h3 id="1-2-学习阶段2"><a href="#1-2-学习阶段2" class="headerlink" title="1-2 学习阶段2"></a>1-2 学习阶段2</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 英语学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 英语单词 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>S7-200系列[01]知识入门 | 东方既白 Eastdawns</title>
+  <meta name="baidu-site-verification" content="codeva-Xt5AHDJkfA" />
+  <meta name="google-adsense-account" content="ca-pub-6050600433044906">
+  <meta name="keywords" content="东方既白博客,east,dawns,danw,工控技术,工控学习,自动化,PLC,人工智能,AI,培训教育,网站建设">
+  <meta name="description" content="东方既白(eastdawns.com)是一个专注于互联网技术学习与资源共享的综合站点。内容涵盖前沿技术解析、实用开发工具、精选教程及行业资讯，所有资源均源自互联网并持续更新，助力开发者成长与技术探索。">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="🌅 缘起·熹微初醒东方既白，其名溯源于《诗经·齐风·鸡鸣》“东方明矣，朝既昌矣”之千古意象，远非寻常名谓，实为一种哲学宣言。它喻示的不仅是天地交割时分的光影之变，更是人类认知进程中由晦暗走向澄明的永恒瞬间——此即“智慧启明、知识破晓”的深层哲思。本站承东方木德生发之气，木主仁，亦主文曲，故其运作不取峻厉之争辩，而循“生生”之道，如林木般无言地生长、延展、滋养。所谓汇聚古今智慧，非为简单的知识堆砌">
+<meta property="og:type" content="website">
+<meta property="og:title" content="东方既白 Eastdawns">
+<meta property="og:url" content="https://eastdawns.com/about/index.html">
+<meta property="og:site_name" content="东方既白 Eastdawns">
+<meta property="og:description" content="🌅 缘起·熹微初醒东方既白，其名溯源于《诗经·齐风·鸡鸣》“东方明矣，朝既昌矣”之千古意象，远非寻常名谓，实为一种哲学宣言。它喻示的不仅是天地交割时分的光影之变，更是人类认知进程中由晦暗走向澄明的永恒瞬间——此即“智慧启明、知识破晓”的深层哲思。本站承东方木德生发之气，木主仁，亦主文曲，故其运作不取峻厉之争辩，而循“生生”之道，如林木般无言地生长、延展、滋养。所谓汇聚古今智慧，非为简单的知识堆砌">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-01T01:40:21.684Z">
+<meta property="article:author" content="Eastdawns">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/Eastdawns.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="东方既白 Eastdawns" type="application/atom+xml">
+</head>
+
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/Eastdawns.jpg"/>
+</a>
+<div class="author">
+    <span>Eastdawns</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(21)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="电脑系统">
+            
+            电脑系统
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="工控学习">
+            
+            工控学习
+            <small>(11)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="网络工程">
+            
+            网络工程
+            <small>(5)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="英语学习">
+            
+            英语学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="综合资料">
+            
+            综合资料
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about/index.html">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="21">
+<input type="hidden" id="yelog_site_word_count" value="10.5k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://eastdawns.com">东方既白 Eastdawns</a></li>
+            
+            <li><a target="_blank" href="https://www.gov.cn">中国政府网</a></li>
+            
+            <li><a target="_blank" href="https://www.forbes.com">Forbes</a></li>
+            
+            <li><a target="_blank" href="https://www.linkedin.com">LinkedIn</a></li>
+            
+            <li><a target="_blank" href="https://www.quora.com">Quora</a></li>
+            
+            <li><a target="_blank" href="https://www.csdn.net">CSDN</a></li>
+            
+            <li><a target="_blank" href="https://www.zhihu.com">知乎</a></li>
+            
+            <li><a target="_blank" href="https://www.douban.com">豆瓣</a></li>
+            
+            <li><a target="_blank" href="https://zhuanlan.bilibili.com">Bilibili专栏</a></li>
+            
+            <li><a target="_blank" href="https://medium.com">Medium</a></li>
+            
+            <li><a target="_blank" href="https://wordpress.com">WordPress.com</a></li>
+            
+            <li><a target="_blank" href="https://github.com">GitHub</a></li>
+            
+            <li><a target="_blank" href="https://link.chinaz.com/">站长之家友情链接平台</a></li>
+            
+            <li><a target="_blank" href="http://www.go9go.cn/">Go9Go友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://bbs.aizhan.com/">爱站网友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://link.admin5.com/">站长工具友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://www.tuizhan.com/">推站</a></li>
+            
+            <li><a target="_blank" href="http://www.yqlj.net/">友情链接网</a></li>
+            
+            <li><a target="_blank" href="https://www.lianzhan.com/">链站</a></li>
+            
+            <li><a target="_blank" href="https://www.lianling.cn/">链灵友情链接</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>安装教程</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>电脑设置</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>电脑性能</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>技术支持</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>使用说明</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>网络安全</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>网络工具</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>网络攻防</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>西门子</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>英语单词</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ARP</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HCIA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Matlab</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>S7-200系列</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 英语学习 "
+           href="/2025/09/01/%5B%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%5D%5B%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D%5D_%E6%96%B0%E4%B8%9C%E6%96%B9%E8%80%83%E7%A0%94%E8%AF%8D%E6%B1%87%E4%B9%B1%E5%BA%8F%E7%89%88/"
+           data-tag="英语单词"
+           data-author="" >
+            <span class="post-title" title="新东方考研词汇乱序版1">新东方考研词汇乱序版1</span>
+            <span class="post-date" title="2025-09-01 00:00:00">2025/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/11/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B11%5D%E9%AB%98%E9%80%9F%E8%84%89%E5%86%B2GETPUT/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[11]高速脉冲GETPUT">S7-200系列[11]高速脉冲GETPUT</span>
+            <span class="post-date" title="2025-09-11 00:00:00">2025/09/11</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/10/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B10%5D%E9%AB%98%E9%80%9F%E8%84%89%E5%86%B2/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[10]高速脉冲">S7-200系列[10]高速脉冲</span>
+            <span class="post-date" title="2025-09-10 00:00:00">2025/09/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/09/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B09%5D%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[09]高速计数器">S7-200系列[09]高速计数器</span>
+            <span class="post-date" title="2025-09-09 00:00:00">2025/09/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/08/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B08%5D%E4%B9%8BPID%E8%B0%83%E8%8A%82/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[08]之PID调节.">S7-200系列[08]之PID调节.</span>
+            <span class="post-date" title="2025-09-08 00:00:00">2025/09/08</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/07/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B07%5D%E8%AE%A4%E8%AF%86%E6%A8%A1%E6%8B%9F%E9%87%8F/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[07]认识模拟量">S7-200系列[07]认识模拟量</span>
+            <span class="post-date" title="2025-09-07 00:00:00">2025/09/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 综合资料 "
+           href="/2025/09/07/%5B%E7%BB%BC%E5%90%88%E8%B5%84%E6%96%99%5D%5B%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%5D_%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E6%94%BB%E9%98%B2%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7/"
+           data-tag="网络安全,网络攻防"
+           data-author="" >
+            <span class="post-title" title="网络数据攻防及相关工具">网络数据攻防及相关工具</span>
+            <span class="post-date" title="2025-09-07 00:00:00">2025/09/07</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/06/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B06%5D%E7%AE%80%E5%8D%95%E7%A8%8B%E5%BA%8F%E6%A1%88%E4%BE%8B/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[06]简单程序案例">S7-200系列[06]简单程序案例</span>
+            <span class="post-date" title="2025-09-06 00:00:00">2025/09/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2025/09/06/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B04%E7%BD%91%E7%BB%9C%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%8F%8AIP%E5%9C%B0%E5%9D%80/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA[04网络层协议及IP地址">HCIA[04网络层协议及IP地址</span>
+            <span class="post-date" title="2025-09-06 00:00:00">2025/09/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/05/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B05%5D%E4%B8%AD%E6%96%AD%E5%AD%90%E7%A8%8B%E5%BA%8F/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[05]中断子程序">S7-200系列[05]中断子程序</span>
+            <span class="post-date" title="2025-09-05 00:00:00">2025/09/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/04/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B04%5D%E8%BF%9B%E9%98%B6%E6%8C%87%E4%BB%A4/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[04]进阶指令">S7-200系列[04]进阶指令</span>
+            <span class="post-date" title="2025-09-04 00:00:00">2025/09/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2025/09/04/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B03%5DVRP%E6%A6%82%E5%BF%B5%E6%8C%87%E4%BB%A4%E5%8F%8ACLI%E7%95%8C%E9%9D%A2/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA[03]VRP概念指令及CLI界面">HCIA[03]VRP概念指令及CLI界面</span>
+            <span class="post-date" title="2025-09-04 00:00:00">2025/09/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/03/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B03%5D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[03]数据结构">S7-200系列[03]数据结构</span>
+            <span class="post-date" title="2025-09-03 00:00:00">2025/09/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2025/09/03/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B02%5D%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85%E5%8F%8AENSP%E4%BD%BF%E7%94%A8/"
+           data-tag="HCIA,网络工具"
+           data-author="" >
+            <span class="post-title" title="HCIA[02]网络工具安装及ENSP使用">HCIA[02]网络工具安装及ENSP使用</span>
+            <span class="post-date" title="2025-09-03 00:00:00">2025/09/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2025/09/03/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81%5D_%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8BARP%E7%9F%A5%E8%AF%86%E6%94%BB%E9%98%B2%E6%B1%87%E6%80%BB/"
+           data-tag="技术支持,ARP"
+           data-author="" >
+            <span class="post-title" title="网络工程ARP知识攻防汇总">网络工程ARP知识攻防汇总</span>
+            <span class="post-date" title="2025-09-03 00:00:00">2025/09/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/02/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B02%5D%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[02]基础指令">S7-200系列[02]基础指令</span>
+            <span class="post-date" title="2025-09-02 00:00:00">2025/09/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2025/09/02/%5B%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%5D%5BHCIA%5D_HCIA%5B01%5D%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%A8%A1%E5%9E%8B%E8%AE%A4%E8%AF%86/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA[01]网络工程概述及模型认识">HCIA[01]网络工程概述及模型认识</span>
+            <span class="post-date" title="2025-09-02 00:00:00">2025/09/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2025/09/01/%5B%E5%B7%A5%E6%8E%A7%E5%AD%A6%E4%B9%A0%5D%5B%E8%A5%BF%E9%97%A8%E5%AD%90%5D_S7-200%E7%B3%BB%E5%88%97%5B01%5D%E7%9F%A5%E8%AF%86%E5%85%A5%E9%97%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列[01]知识入门">S7-200系列[01]知识入门</span>
+            <span class="post-date" title="2025-09-01 00:00:00">2025/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 电脑系统 "
+           href="/2025/09/01/%5B%E7%94%B5%E8%84%91%E7%B3%BB%E7%BB%9F%5D%5B%E9%85%8D%E7%BD%AE%E4%BC%98%E5%8C%96%5D_WIN11%E4%B8%93%E4%B8%9A%E7%89%88%E7%94%B5%E8%84%91%E9%87%8D%E8%A3%85%E9%85%8D%E7%BD%AE/"
+           data-tag="电脑性能,电脑设置"
+           data-author="" >
+            <span class="post-title" title="WIN11专业版电脑重装配置">WIN11专业版电脑重装配置</span>
+            <span class="post-date" title="2025-09-01 00:00:00">2025/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 综合资料 "
+           href="/2025/09/01/%5B%E7%BB%BC%E5%90%88%E8%B5%84%E6%96%99%5D%5B%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%5D_%E4%B8%9C%E6%96%B9%E6%97%A2%E7%99%BD%E7%BD%91%E7%AB%99%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"
+           data-tag="使用说明"
+           data-author="" >
+            <span class="post-title" title="东方既白网站功能使用说明">东方既白网站功能使用说明</span>
+            <span class="post-date" title="2025-09-01 00:00:00">2025/09/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 综合资料 "
+           href="/2025/09/01/%5B%E7%BB%BC%E5%90%88%E8%B5%84%E6%96%99%5D%5B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%5D_MatlabR2023a%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/"
+           data-tag="安装教程,Matlab"
+           data-author="" >
+            <span class="post-title" title="MatlabR2023a软件教程">MatlabR2023a软件教程</span>
+            <span class="post-date" title="2025-09-01 00:00:00">2025/09/01</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-[工控学习][西门子]_S7-200系列[01]知识入门" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">S7-200系列[01]知识入门</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="工控学习">工控学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">西门子</a>
+            
+            <a class="color4">S7-200系列</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2025-08-30 02:38:19'>2025-09-01 00:00</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:703</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%A5%BF%E9%97%A8%E5%AD%90S7-200smart%E5%9F%BA%E7%A1%80"><span class="toc-text">一、西门子S7-200smart基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-S7-200-smart"><span class="toc-text">1.1 S7-200 smart</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-S7-200smart%E6%89%A9%E5%B1%95%E5%8F%82%E6%95%B0"><span class="toc-text">1.1.1 S7-200smart扩展参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-S7-200smart%E7%9A%84%E7%A1%AC%E4%BB%B6%E7%BB%84%E6%88%90"><span class="toc-text">1.1.2 S7-200smart的硬件组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-S7-200smart-PLC%E7%9A%84%E8%AE%A2%E8%B4%A7%E5%8F%B7"><span class="toc-text">1.1.3 S7-200smart PLC的订货号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-4-S7-200smart-CPU%E9%80%89%E5%9E%8B"><span class="toc-text">1.1.4 S7-200smart CPU选型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-5-S7-200smart-%E6%89%A9%E5%B1%95%E5%8F%82%E6%95%B0"><span class="toc-text">1.1.5 S7-200smart 扩展参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81S7-200smart%E6%8E%A5%E7%BA%BF%E6%96%B9%E5%BC%8F"><span class="toc-text">二、S7-200smart接线方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-S7-200smart%E6%8E%A5%E7%BA%BF"><span class="toc-text">2.1 S7-200smart接线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-S7-200smart%E7%A1%AC%E4%BB%B6%E6%8E%A5%E7%BA%BF"><span class="toc-text">2.1.1 S7-200smart硬件接线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%8EPLC%E7%A1%AC%E4%BB%B6%E6%8E%A5%E7%BA%BF"><span class="toc-text">2.1.2 传感器与PLC硬件接线</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BE%93%E5%87%BA%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%8E%A5%E7%BA%BF%E7%B1%BB%E5%9E%8B"><span class="toc-text">三、输出信号的接线类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E7%BB%A7%E7%94%B5%E5%99%A8%E4%B8%8E%E6%99%B6%E4%BD%93%E7%AE%A1%E8%BE%93%E5%87%BA%E6%8E%A5%E7%BA%BF"><span class="toc-text">3.1 继电器与晶体管输出接线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E7%BB%A7%E7%94%B5%E5%99%A8%E4%B8%8E%E6%99%B6%E4%BD%93%E7%AE%A1%E6%8E%A5%E7%BA%BF"><span class="toc-text">3.1.1 继电器与晶体管接线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E6%99%B6%E4%BD%93%E7%AE%A1%E8%BE%93%E5%87%BA%E7%AB%AF%E5%AD%90%E6%8E%A5%E7%BA%BF%E6%96%B9%E5%BC%8F"><span class="toc-text">3.1.2 晶体管输出端子接线方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-%E7%BB%A7%E7%94%B5%E5%99%A8%E8%BE%93%E5%87%BA%E7%AB%AF%E5%AD%90%E6%8E%A5%E7%BA%BF%E6%96%B9%E5%BC%8F"><span class="toc-text">3.1.3 继电器输出端子接线方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81S7-200smart%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3"><span class="toc-text">四、S7-200smart软件相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-PLC%E9%80%9A%E4%BF%A1%E7%9B%B8%E5%85%B3"><span class="toc-text">4.1 PLC通信相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-1-%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E4%B8%8EPLC%E9%80%9A%E4%BF%A1%E5%A4%84%E7%90%86"><span class="toc-text">4.1.1 软件无法与PLC通信处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-PLC%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3"><span class="toc-text">4.2 PLC编程相关</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-S7-200smart%E7%BC%96%E7%A8%8B%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">4.2.1 S7-200smart编程常用快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-%E9%A1%B9%E7%9B%AE%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%8A%A0%E5%AF%86%E5%8F%8A%E8%A7%A3%E9%99%A4"><span class="toc-text">4.2.2 项目程序的加密及解除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-3-S7-200smart%E7%A8%8B%E5%BA%8F%E8%BD%ACS7-200%E7%A8%8B%E5%BA%8F"><span class="toc-text">4.2.3 S7-200smart程序转S7-200程序</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>【关雎】关关雎鸠，在河之洲。窈窕淑女，君子好逑。—诗经 [先秦]</strong></p>
+</blockquote>
+<h1 id="一、西门子S7-200smart基础"><a href="#一、西门子S7-200smart基础" class="headerlink" title="一、西门子S7-200smart基础"></a>一、西门子S7-200smart基础</h1><h2 id="1-1-S7-200-smart"><a href="#1-1-S7-200-smart" class="headerlink" title="1.1 S7-200 smart"></a>1.1 S7-200 smart</h2><h3 id="1-1-1-S7-200smart扩展参数"><a href="#1-1-1-S7-200smart扩展参数" class="headerlink" title="1.1.1 S7-200smart扩展参数"></a>1.1.1 S7-200smart扩展参数</h3><p><img src="https://i.postimg.cc/v85yShYx/a01.png" alt="a01.png"></p>
+<center>图1-1：S7-200smart扩展模块参数</center>
+
+<p><img src="https://i.postimg.cc/Xq6bYG8v/a02.png" alt="a02.png"></p>
+<center>图1-2：S7-200smat扩展信号板的参数</center>
+
+<p><img src="https://i.postimg.cc/5N1Jczy7/a03.png" alt="a03.png"></p>
+<center>图1-3：S7-200smat集成以太网口和RS485串口</center>
+
+<p><img src="https://i.postimg.cc/fTKNMb0w/a04.png" alt="a04.png"></p>
+<center>图1-4：S7-200smat三轴脉冲输出端</center>
+
+<pre><code class="language-html">CPU本体三轴脉冲输出端：
+Q0.0
+Q0.1
+Q0.3
+</code></pre>
+<h3 id="1-1-2-S7-200smart的硬件组成"><a href="#1-1-2-S7-200smart的硬件组成" class="headerlink" title="1.1.2 S7-200smart的硬件组成"></a>1.1.2 S7-200smart的硬件组成</h3><p><img src="https://i.postimg.cc/CxxV5Vjb/a05.png" alt="a05.png"></p>
+<center>图1-5：S7-200smat硬件组成</center>
+
+<h3 id="1-1-3-S7-200smart-PLC的订货号"><a href="#1-1-3-S7-200smart-PLC的订货号" class="headerlink" title="1.1.3 S7-200smart PLC的订货号"></a>1.1.3 S7-200smart PLC的订货号</h3><p><img src="https://i.postimg.cc/9f45PtgM/a06.png" alt="a06.png"></p>
+<center>图1-6：S7-200smat的订货号</center>
+
+<h3 id="1-1-4-S7-200smart-CPU选型"><a href="#1-1-4-S7-200smart-CPU选型" class="headerlink" title="1.1.4 S7-200smart CPU选型"></a>1.1.4 S7-200smart CPU选型</h3><p><img src="https://i.postimg.cc/MGhk9MgY/a07CPU.png" alt="a07CPU.png"></p>
+<center>图1-7：S7-200smatCPU的选型</center>
+
+<h3 id="1-1-5-S7-200smart-扩展参数"><a href="#1-1-5-S7-200smart-扩展参数" class="headerlink" title="1.1.5 S7-200smart 扩展参数"></a>1.1.5 S7-200smart 扩展参数</h3><p><img src="https://i.postimg.cc/RFfkyCBx/a08.png" alt="a08.png"></p>
+<p><img src="https://i.postimg.cc/wx5KkB2h/a09.png" alt="a09.png"></p>
+<p><img src="https://i.postimg.cc/MHmhZsHs/a10.png" alt="a10.png"></p>
+<center>图1-8：S7-200smat扩展参数</center>
+
+<h1 id="二、S7-200smart接线方式"><a href="#二、S7-200smart接线方式" class="headerlink" title="二、S7-200smart接线方式"></a>二、S7-200smart接线方式</h1><h2 id="2-1-S7-200smart接线"><a href="#2-1-S7-200smart接线" class="headerlink" title="2.1 S7-200smart接线"></a>2.1 S7-200smart接线</h2><h3 id="2-1-1-S7-200smart硬件接线"><a href="#2-1-1-S7-200smart硬件接线" class="headerlink" title="2.1.1 S7-200smart硬件接线"></a>2.1.1 S7-200smart硬件接线</h3><p><img src="https://i.postimg.cc/sgNb2GfR/a11.png" alt="a11.png"></p>
+<center>图2-1：S7-200smart输入端子接线方式</center>
+
+<p><img src="https://i.postimg.cc/cLHVZBSm/a12.png" alt="a12.png"></p>
+<center>图2-2：S7-200smart两线制传感器共阳极接线方式</center>
+
+<p><img src="https://i.postimg.cc/PxGcWG83/a13.png" alt="a13.png"></p>
+<center>图2-3：S7-200smart两线制传感器共阴极接线方式</center>
+
+<h3 id="2-1-2-传感器与PLC硬件接线"><a href="#2-1-2-传感器与PLC硬件接线" class="headerlink" title="2.1.2 传感器与PLC硬件接线"></a>2.1.2 传感器与PLC硬件接线</h3><p><img src="https://i.postimg.cc/yxsbGFj0/a14-NPN-PNP.png" alt="a14-NPN-PNP.png"></p>
+<center>图2-4：NPN型与PNP型传感器接线方式</center>
+
+<p><strong>有的四线制传感器，只是将输出信号分为了常开和常闭两种信号。</strong></p>
+<p><img src="https://i.postimg.cc/2yGKNV9M/a15NPN.png" alt="a15NPN.png"></p>
+<center>图2-5：NPN型与PNP型传感器接线方式</center>
+
+<p><img src="https://i.postimg.cc/5N9rqS6V/a16PNP.png" alt="a16PNP.png"></p>
+<center>图2-6：PNP型开关接线方式</center>
+
+<h1 id="三、输出信号的接线类型"><a href="#三、输出信号的接线类型" class="headerlink" title="三、输出信号的接线类型"></a>三、输出信号的接线类型</h1><h2 id="3-1-继电器与晶体管输出接线"><a href="#3-1-继电器与晶体管输出接线" class="headerlink" title="3.1 继电器与晶体管输出接线"></a>3.1 继电器与晶体管输出接线</h2><h3 id="3-1-1-继电器与晶体管接线"><a href="#3-1-1-继电器与晶体管接线" class="headerlink" title="3.1.1 继电器与晶体管接线"></a>3.1.1 继电器与晶体管接线</h3><p><img src="https://i.postimg.cc/VNtZL7Hj/a17.png" alt="a17.png"></p>
+<center>图3-1：S7-200smart继电器与晶体管输出</center>
+
+<h3 id="3-1-2-晶体管输出端子接线方式"><a href="#3-1-2-晶体管输出端子接线方式" class="headerlink" title="3.1.2 晶体管输出端子接线方式"></a>3.1.2 晶体管输出端子接线方式</h3><p><img src="https://i.postimg.cc/Z5CDXY8s/a18.png" alt="a18.png"></p>
+<center>图3-2：S7-200smart晶体管输出端子接线方式</center>
+
+<h3 id="3-1-3-继电器输出端子接线方式"><a href="#3-1-3-继电器输出端子接线方式" class="headerlink" title="3.1.3 继电器输出端子接线方式"></a>3.1.3 继电器输出端子接线方式</h3><p><img src="https://i.postimg.cc/T3FHx8Qd/a19.png" alt="a19.png"></p>
+<center>图3-2：S7-200smart晶体管输出端子接线方式</center>
+
+<h1 id="四、S7-200smart软件相关"><a href="#四、S7-200smart软件相关" class="headerlink" title="四、S7-200smart软件相关"></a>四、S7-200smart软件相关</h1><h2 id="4-1-PLC通信相关"><a href="#4-1-PLC通信相关" class="headerlink" title="4.1 PLC通信相关"></a>4.1 PLC通信相关</h2><h3 id="4-1-1-软件无法与PLC通信处理"><a href="#4-1-1-软件无法与PLC通信处理" class="headerlink" title="4.1.1 软件无法与PLC通信处理"></a>4.1.1 软件无法与PLC通信处理</h3><p><img src="https://i.postimg.cc/fLjHYVsy/a20.png" alt="a20.png"></p>
+<center>图4-1：S7-200smart软件与PLC无法进行通信处理</center>
+
+<h2 id="4-2-PLC编程相关"><a href="#4-2-PLC编程相关" class="headerlink" title="4.2 PLC编程相关"></a>4.2 PLC编程相关</h2><h3 id="4-2-1-S7-200smart编程常用快捷键"><a href="#4-2-1-S7-200smart编程常用快捷键" class="headerlink" title="4.2.1 S7-200smart编程常用快捷键"></a>4.2.1 S7-200smart编程常用快捷键</h3><p><strong>F1 : 帮助文件的调用</strong></p>
+<p><strong>F3 : 插入一行程序编辑栏</strong></p>
+<p><strong>F4: 触点指令快捷键</strong></p>
+<p><strong>F6 : 线圈指令快捷键</strong></p>
+<p><strong>F9 : 功能指令快捷键</strong></p>
+<p><strong>Ctrl + 方向键 : 改变连接线的位置</strong></p>
+<h3 id="4-2-2-项目程序的加密及解除"><a href="#4-2-2-项目程序的加密及解除" class="headerlink" title="4.2.2 项目程序的加密及解除"></a>4.2.2 项目程序的加密及解除</h3><p><img src="https://i.postimg.cc/wMw0bn7d/a22.png" alt="a22.png"></p>
+<center>图4-2：项目程序的加密及解除处理</center>
+
+<h3 id="4-2-3-S7-200smart程序转S7-200程序"><a href="#4-2-3-S7-200smart程序转S7-200程序" class="headerlink" title="4.2.3 S7-200smart程序转S7-200程序"></a>4.2.3 S7-200smart程序转S7-200程序</h3><p><strong>smart后缀文件，需要先下载一个200smart软件。</strong></p>
+<p><strong>打开软件后将程序与IO表依次复制到S7-200软件里即可。</strong></p>
+<blockquote>
+<p><strong>关关雎鸠，在河之洲。窈窕淑女，君子好逑。<br>参差荇菜，左右流之。窈窕淑女，寤寐求之。<br>求之不得，寤寐思服。悠哉悠哉，辗转反侧。<br>参差荇菜，左右采之。窈窕淑女，琴瑟友之。<br>参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。</strong></p>
+</blockquote>
+
+      
+       <hr><span style="font-style: bold;color: gray;"> 本站文章基于「知识共享署名4.0国际许可协议」共享，转载需注明源自「东方既白Eastdawns」并保留原文链接。智慧薪火相传，唯以金石镌刻出处，方使知识清流不竭，共筑东方既白之破晓哲思。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2025 东方既白 Eastdawns
+</p>
+
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 572px;
+    }
+    .nav.fullscreen {
+        margin-left: -572px;
+    }
+    .nav-left {
+        width: 150px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.33;
+        background: url("/img/article_bg_img.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
