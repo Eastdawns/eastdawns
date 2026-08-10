@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eastdawns.com/about/index.html</loc>
+    
+    <lastmod>2026-08-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://eastdawns.com/2026/S7-200%E7%B3%BB%E5%88%97_01%E7%9F%A5%E8%AF%86%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2026-08-10</lastmod>
@@ -146,15 +155,6 @@
   </url>
   
   <url>
-    <loc>https://eastdawns.com/about/index.html</loc>
-    
-    <lastmod>2025-09-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://eastdawns.com/friends/index.html</loc>
     
     <lastmod>2025-03-05</lastmod>
@@ -173,13 +173,6 @@
 
   
   <url>
-    <loc>https://eastdawns.com/tags/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://eastdawns.com/tags/HCIA/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -187,7 +180,21 @@
   </url>
   
   <url>
-    <loc>https://eastdawns.com/tags/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</loc>
+    <loc>https://eastdawns.com/tags/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://eastdawns.com/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://eastdawns.com/tags/Matlab/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -208,14 +215,7 @@
   </url>
   
   <url>
-    <loc>https://eastdawns.com/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://eastdawns.com/tags/Matlab/</loc>
+    <loc>https://eastdawns.com/tags/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -238,14 +238,14 @@
 
   
   <url>
-    <loc>https://eastdawns.com/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://eastdawns.com/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://eastdawns.com/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/</loc>
+    <loc>https://eastdawns.com/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
