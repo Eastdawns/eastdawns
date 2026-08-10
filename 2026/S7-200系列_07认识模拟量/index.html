@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>S7-200系列_07认识模拟量 | 东方既白 Eastdawns</title>
+  <meta name="baidu-site-verification" content="codeva-Xt5AHDJkfA" />
+  <meta name="google-adsense-account" content="ca-pub-6050600433044906">
+  <meta name="keywords" content="东方既白博客,east,dawns,danw,工控技术,工控学习,自动化,PLC,人工智能,AI,培训教育,网站建设">
+  <meta name="description" content="东方既白(eastdawns.com)是一个专注于互联网技术学习与资源共享的综合站点。内容涵盖前沿技术解析、实用开发工具、精选教程及行业资讯，所有资源均源自互联网并持续更新，助力开发者成长与技术探索。">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="东方既白(eastdawns.com)是一个专注于互联网技术学习与资源共享的综合站点。内容涵盖前沿技术解析、实用开发工具、精选教程及行业资讯，所有资源均源自互联网并持续更新，助力开发者成长与技术探索。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="https://eastdawns.com/friends/index.html">
+<meta property="og:site_name" content="东方既白 Eastdawns">
+<meta property="og:description" content="东方既白(eastdawns.com)是一个专注于互联网技术学习与资源共享的综合站点。内容涵盖前沿技术解析、实用开发工具、精选教程及行业资讯，所有资源均源自互联网并持续更新，助力开发者成长与技术探索。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-05T12:19:01.000Z">
+<meta property="article:modified_time" content="2025-03-05T12:19:02.000Z">
+<meta property="article:author" content="Eastdawns">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/Eastdawns.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="东方既白 Eastdawns" type="application/atom+xml">
+</head>
+
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/Eastdawns.jpg"/>
+</a>
+<div class="author">
+    <span>Eastdawns</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(16)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="电脑系统">
+            
+            电脑系统
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="工控学习">
+            
+            工控学习
+            <small>(11)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="网络工程">
+            
+            网络工程
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="英语学习">
+            
+            英语学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="综合资料">
+            
+            综合资料
+            <small>(2)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about/index.html">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="16">
+<input type="hidden" id="yelog_site_word_count" value="6.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://eastdawns.com">东方既白 Eastdawns</a></li>
+            
+            <li><a target="_blank" href="https://www.gov.cn">中国政府网</a></li>
+            
+            <li><a target="_blank" href="https://www.forbes.com">Forbes</a></li>
+            
+            <li><a target="_blank" href="https://www.linkedin.com">LinkedIn</a></li>
+            
+            <li><a target="_blank" href="https://www.quora.com">Quora</a></li>
+            
+            <li><a target="_blank" href="https://www.csdn.net">CSDN</a></li>
+            
+            <li><a target="_blank" href="https://www.zhihu.com">知乎</a></li>
+            
+            <li><a target="_blank" href="https://www.douban.com">豆瓣</a></li>
+            
+            <li><a target="_blank" href="https://zhuanlan.bilibili.com">Bilibili专栏</a></li>
+            
+            <li><a target="_blank" href="https://medium.com">Medium</a></li>
+            
+            <li><a target="_blank" href="https://wordpress.com">WordPress.com</a></li>
+            
+            <li><a target="_blank" href="https://github.com">GitHub</a></li>
+            
+            <li><a target="_blank" href="https://link.chinaz.com/">站长之家友情链接平台</a></li>
+            
+            <li><a target="_blank" href="http://www.go9go.cn/">Go9Go友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://bbs.aizhan.com/">爱站网友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://link.admin5.com/">站长工具友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://www.tuizhan.com/">推站</a></li>
+            
+            <li><a target="_blank" href="http://www.yqlj.net/">友情链接网</a></li>
+            
+            <li><a target="_blank" href="https://www.lianzhan.com/">链站</a></li>
+            
+            <li><a target="_blank" href="https://www.lianling.cn/">链灵友情链接</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>安装教程</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>电脑设置</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>电脑性能</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>使用说明</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>西门子</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>英语单词</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HCIA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Matlab</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>S7-200系列</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 英语学习 "
+           href="/2026/Eastdawns%E6%96%B0%E4%B8%9C%E6%96%B9%E8%80%83%E7%A0%94%E8%AF%8D%E6%B1%87(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0)/"
+           data-tag="英语单词"
+           data-author="" >
+            <span class="post-title" title="新东方考研词汇乱序版(持续更新)">新东方考研词汇乱序版(持续更新)</span>
+            <span class="post-date" title="2026-01-26 00:00:00">2026/01/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_01%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%A8%A1%E5%9E%8B/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA_01网络工程概述及模型">HCIA_01网络工程概述及模型</span>
+            <span class="post-date" title="2026-02-01 21:32:00">2026/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 综合资料 "
+           href="/2026/MatlabR2023a%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B/"
+           data-tag="安装教程,Matlab"
+           data-author="" >
+            <span class="post-title" title="MatlabR2023a软件教程">MatlabR2023a软件教程</span>
+            <span class="post-date" title="2026-01-23 20:36:00">2026/01/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 电脑系统 "
+           href="/2026/WIN11%E4%B8%93%E4%B8%9A%E7%89%88%E7%94%B5%E8%84%91%E9%87%8D%E8%A3%85%E9%85%8D%E7%BD%AE/"
+           data-tag="电脑性能,电脑设置"
+           data-author="" >
+            <span class="post-title" title="WIN11专业版电脑重装配置">WIN11专业版电脑重装配置</span>
+            <span class="post-date" title="2026-01-21 20:33:00">2026/01/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_11%E9%80%9A%E4%BF%A1GETPUT/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_11通信GETPUT">S7-200系列_11通信GETPUT</span>
+            <span class="post-date" title="2026-01-20 21:16:00">2026/01/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_10%E9%AB%98%E9%80%9F%E8%84%89%E5%86%B2/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_10高速脉冲">S7-200系列_10高速脉冲</span>
+            <span class="post-date" title="2026-01-18 22:22:00">2026/01/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_09%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_09高速计数器">S7-200系列_09高速计数器</span>
+            <span class="post-date" title="2026-01-16 20:23:00">2026/01/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_08PID%E8%B0%83%E8%8A%82/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_08PID调节">S7-200系列_08PID调节</span>
+            <span class="post-date" title="2026-01-15 20:33:00">2026/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_07%E8%AE%A4%E8%AF%86%E6%A8%A1%E6%8B%9F%E9%87%8F/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_07认识模拟量">S7-200系列_07认识模拟量</span>
+            <span class="post-date" title="2026-01-12 20:23:00">2026/01/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_06%E7%AE%80%E5%8D%95%E7%A8%8B%E5%BA%8F%E6%A1%88%E4%BE%8B/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_06简单程序案例">S7-200系列_06简单程序案例</span>
+            <span class="post-date" title="2026-01-10 20:39:00">2026/01/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_05%E4%B8%AD%E6%96%AD%E5%AD%90%E7%A8%8B%E5%BA%8F/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_05中断子程序">S7-200系列_05中断子程序</span>
+            <span class="post-date" title="2026-01-09 23:10:00">2026/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_04%E8%BF%9B%E9%98%B6%E6%8C%87%E4%BB%A4/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_04进阶指令">S7-200系列_04进阶指令</span>
+            <span class="post-date" title="2026-01-06 22:19:00">2026/01/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_03%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_03数据结构">S7-200系列_03数据结构</span>
+            <span class="post-date" title="2026-01-05 22:02:00">2026/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_02%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_02基础指令">S7-200系列_02基础指令</span>
+            <span class="post-date" title="2026-01-03 21:09:00">2026/01/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_01%E7%9F%A5%E8%AF%86%E5%85%A5%E9%97%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_01知识入门">S7-200系列_01知识入门</span>
+            <span class="post-date" title="2026-01-02 20:26:00">2026/01/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 综合资料 "
+           href="/2026/Eastdawns%E7%BD%91%E7%AB%99%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E/"
+           data-tag="使用说明"
+           data-author="" >
+            <span class="post-title" title="Eastdawns网站功能说明">Eastdawns网站功能说明</span>
+            <span class="post-date" title="2026-01-01 00:00:00">2026/01/01</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-S7-200系列_07认识模拟量" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">S7-200系列_07认识模拟量</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="工控学习">工控学习</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">西门子</a>
+            
+            <a class="color4">S7-200系列</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2026-08-10 16:40:36'>2026-01-12 20:23</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:568</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81S7-200smart%E6%A8%A1%E6%8B%9F%E9%87%8F%E6%A6%82%E5%BF%B5"><span class="toc-text">一、S7-200smart模拟量概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E6%A8%A1%E6%8B%9F%E9%87%8F%E7%9F%A5%E8%AF%86"><span class="toc-text">1.1 模拟量知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E6%A8%A1%E6%8B%9F%E9%87%8F%E7%AE%80%E8%BF%B0"><span class="toc-text">1.1.1 模拟量简述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%B8%B8%E7%94%A8%E4%BC%A0%E6%84%9F%E5%99%A8"><span class="toc-text">1.1.2 模拟量常用传感器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-%E6%B8%A9%E5%BA%A6%E5%8F%98%E9%80%81%E5%99%A8"><span class="toc-text">1.1.3 温度变送器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BD%AC%E6%8D%A2%E6%A8%A1%E5%9D%97"><span class="toc-text">1.2 模拟量转换模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E6%A8%A1%E6%8B%9F%E9%87%8F%E6%A8%A1%E5%9D%97%EF%BC%88A-D%E6%A8%A1%E5%9D%97%E3%80%81D-A%E6%A8%A1%E5%9D%97%EF%BC%89"><span class="toc-text">1.2.1 模拟量模块（A&#x2F;D模块、D&#x2F;A模块）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B"><span class="toc-text">1.2.2 模拟量处理过程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%A8%A1%E6%8B%9F%E9%87%8F%E6%A8%A1%E5%9D%97"><span class="toc-text">二、模拟量模块</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97"><span class="toc-text">2.1 模拟量常用模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97-EM-AE04"><span class="toc-text">2.1.1 输入模块 EM AE04</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9D%97-EM-AQ02"><span class="toc-text">2.1.2 输出模块 EM AQ02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-%E8%BE%93%E5%85%A5-%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9D%97-EM-AM03"><span class="toc-text">2.1.3 输入&#x2F;输出模块 EM AM03</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-4-%E7%83%AD%E7%94%B5%E9%98%BB%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97-EM-AR02"><span class="toc-text">2.1.4 热电阻输入模块 EM AR02</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-5-%E7%83%AD%E7%94%B5%E5%81%B6%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97-EM-AT04-%EF%BC%88%E9%AB%98%E6%B8%A9%E7%8E%AF%E5%A2%83%EF%BC%89"><span class="toc-text">2.1.5 热电偶输入模块 EM AT04 （高温环境）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D"><span class="toc-text">2.2 模拟量地址分配</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D"><span class="toc-text">2.2.1 模拟量地址分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-%E6%B8%A9%E5%BA%A6%E5%8F%98%E9%80%81%E5%99%A8%E4%B8%8E%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%85%A5%E6%8E%A5%E7%BA%BF%E5%9B%BE"><span class="toc-text">2.2.2 温度变送器与模拟量输入接线图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-%E5%8E%8B%E5%8A%9B%E4%BC%A0%E6%84%9F%E5%99%A8%E4%B8%8E%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%85%A5%E6%8E%A5%E7%BA%BF%E5%9B%BE"><span class="toc-text">2.2.3 压力传感器与模拟量输入接线图</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%A8%A1%E6%8B%9F%E9%87%8F%E6%95%B0%E5%AD%97%E9%87%8F%E8%BD%AC%E6%8D%A2"><span class="toc-text">三、模拟量数字量转换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB"><span class="toc-text">3.1 对应关系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97"><span class="toc-text">3.1.1 模拟量输入模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9D%97"><span class="toc-text">3.1.2 模拟量输出模块</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%A8%A1%E6%8B%9F%E9%87%8F%E6%A1%88%E4%BE%8B"><span class="toc-text">四、模拟量案例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-%E6%B8%A9%E5%BA%A6%E8%AF%BB%E5%8F%96"><span class="toc-text">4.1 温度读取</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-1-PT100%E8%AF%BB%E5%8F%96%E5%BD%93%E5%89%8D%E6%B8%A9%E5%BA%A6"><span class="toc-text">4.1.1 PT100读取当前温度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-2-PTJ410%E8%AF%BB%E5%8F%96%E5%BD%93%E5%89%8D%E5%8E%8B%E5%8A%9B"><span class="toc-text">4.1.2 PTJ410读取当前压力</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>子曰：弟子入则孝，出则悌，谨而信，泛爱众，而亲仁，行有余力，则以学文。</strong></p>
+</blockquote>
+<h1 id="一、S7-200smart模拟量概念"><a href="#一、S7-200smart模拟量概念" class="headerlink" title="一、S7-200smart模拟量概念"></a>一、S7-200smart模拟量概念</h1><h2 id="1-1-模拟量知识"><a href="#1-1-模拟量知识" class="headerlink" title="1.1 模拟量知识"></a>1.1 模拟量知识</h2><h3 id="1-1-1-模拟量简述"><a href="#1-1-1-模拟量简述" class="headerlink" title="1.1.1 模拟量简述"></a>1.1.1 模拟量简述</h3><p><img src="https://i.postimg.cc/C5q69Q5K/g01%E6%A8%A1%E6%8B%9F%E9%87%8F%E6%A6%82%E8%BF%B0.png" alt="g01模拟量概述.png"></p>
+<center>图1-1：模拟量简述</center>
+
+<h3 id="1-1-2-模拟量常用传感器"><a href="#1-1-2-模拟量常用传感器" class="headerlink" title="1.1.2 模拟量常用传感器"></a>1.1.2 模拟量常用传感器</h3><p><img src="https://i.postimg.cc/qRY5bTkY/g02%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%B8%B8%E7%94%A8%E4%BC%A0%E6%84%9F%E5%99%A8.png" alt="g02模拟量常用传感器.png"></p>
+<center>图1-2：模拟量常用传感器</center>
+
+<h3 id="1-1-3-温度变送器"><a href="#1-1-3-温度变送器" class="headerlink" title="1.1.3 温度变送器"></a>1.1.3 温度变送器</h3><p><img src="https://i.postimg.cc/ryBH5MZR/g03%E4%BC%A0%E6%84%9F%E5%99%A8%E5%8F%98%E9%80%81%E5%99%A8.png" alt="g03传感器变送器.png"></p>
+<center>图1-3：模拟量常用温度变送器</center>
+
+<h2 id="1-2-模拟量转换模块"><a href="#1-2-模拟量转换模块" class="headerlink" title="1.2 模拟量转换模块"></a>1.2 模拟量转换模块</h2><h3 id="1-2-1-模拟量模块（A-D模块、D-A模块）"><a href="#1-2-1-模拟量模块（A-D模块、D-A模块）" class="headerlink" title="1.2.1 模拟量模块（A&#x2F;D模块、D&#x2F;A模块）"></a>1.2.1 模拟量模块（A&#x2F;D模块、D&#x2F;A模块）</h3><p><img src="https://i.postimg.cc/DfJDW86K/g04%E6%A8%A1%E6%8B%9F%E9%87%8F%E6%A8%A1%E5%9D%97.png" alt="g04模拟量模块.png"></p>
+<center>图1-4：模拟量转换模块</center>
+
+<h3 id="1-2-2-模拟量处理过程"><a href="#1-2-2-模拟量处理过程" class="headerlink" title="1.2.2 模拟量处理过程"></a>1.2.2 模拟量处理过程</h3><p><img src="https://i.postimg.cc/027BfFhW/g05%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B.png" alt="g05模拟量处理过程.png"></p>
+<center>图1-5：模拟量处理过程</center>
+
+<h1 id="二、模拟量模块"><a href="#二、模拟量模块" class="headerlink" title="二、模拟量模块"></a>二、模拟量模块</h1><h2 id="2-1-模拟量常用模块"><a href="#2-1-模拟量常用模块" class="headerlink" title="2.1 模拟量常用模块"></a>2.1 模拟量常用模块</h2><h3 id="2-1-1-输入模块-EM-AE04"><a href="#2-1-1-输入模块-EM-AE04" class="headerlink" title="2.1.1 输入模块 EM AE04"></a>2.1.1 输入模块 EM AE04</h3><p><img src="https://i.postimg.cc/mgR66Vsb/g06%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97EMAE04.png" alt="g06输入模块EMAE04.png"></p>
+<p><img src="https://i.postimg.cc/0yfHgmk7/g07%E6%A8%A1%E5%9D%97%E7%BB%84%E6%80%81.png" alt="g07模块组态.png"></p>
+<center>图2-1：模拟量输入模块EM AE04参数</center>
+
+<h3 id="2-1-2-输出模块-EM-AQ02"><a href="#2-1-2-输出模块-EM-AQ02" class="headerlink" title="2.1.2 输出模块 EM AQ02"></a>2.1.2 输出模块 EM AQ02</h3><p><img src="https://i.postimg.cc/jjS3R52m/g08%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9D%97EMAQ02.png" alt="g08输出模块EMAQ02.png"></p>
+<p><img src="https://i.postimg.cc/0NXWjsJQ/g09%E7%BB%84%E6%80%81%E6%A8%A1%E5%9D%97.png" alt="g09组态模块.png"></p>
+<center>图2-2：模拟量输出模块EM AQ02参数</center>
+
+<h3 id="2-1-3-输入-输出模块-EM-AM03"><a href="#2-1-3-输入-输出模块-EM-AM03" class="headerlink" title="2.1.3 输入&#x2F;输出模块 EM AM03"></a>2.1.3 输入&#x2F;输出模块 EM AM03</h3><p><img src="https://i.postimg.cc/4dK8hSz1/g10%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9D%97EMAM03.png" alt="g10输入输出模块EMAM03.png"></p>
+<p><img src="https://i.postimg.cc/DZtxQP63/g11%E6%8E%A5%E7%BA%BF%E5%9B%BE.png" alt="g11接线图.png"></p>
+<center>图2-3：模拟量输入/输出模块EM AM03参数</center>
+
+<h3 id="2-1-4-热电阻输入模块-EM-AR02"><a href="#2-1-4-热电阻输入模块-EM-AR02" class="headerlink" title="2.1.4 热电阻输入模块 EM AR02"></a>2.1.4 热电阻输入模块 EM AR02</h3><p><img src="https://i.postimg.cc/x8Mt6NpJ/g12%E7%83%AD%E7%94%B5%E9%98%BB%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97.png" alt="g12热电阻输入模块.png"></p>
+<p><img src="https://i.postimg.cc/T2D7dB2d/g13%E7%83%AD%E7%94%B5%E9%98%BB%E6%8E%A5%E7%BA%BF%E5%9B%BE.png" alt="g13热电阻接线图.png"></p>
+<p><img src="https://i.postimg.cc/sDCnvK1p/g14%E7%83%AD%E7%94%B5%E9%98%BB%E6%A8%A1%E5%9D%97.png" alt="g14热电阻模块.png"></p>
+<center>图2-4：热电阻输入模块EM AR02参数</center>
+
+<h3 id="2-1-5-热电偶输入模块-EM-AT04-（高温环境）"><a href="#2-1-5-热电偶输入模块-EM-AT04-（高温环境）" class="headerlink" title="2.1.5 热电偶输入模块 EM AT04 （高温环境）"></a>2.1.5 热电偶输入模块 EM AT04 （高温环境）</h3><p><img src="https://i.postimg.cc/W12X73Gz/g15EMAT04%E6%A8%A1%E5%9D%97.png" alt="g15EMAT04模块.png"></p>
+<p><img src="https://i.postimg.cc/fT78XX01/g16%E7%BB%84%E6%80%81EMAT04.png" alt="g16组态EMAT04.png"></p>
+<center>图2-5：热电阻输入模块EM AR02参数</center>
+
+<h2 id="2-2-模拟量地址分配"><a href="#2-2-模拟量地址分配" class="headerlink" title="2.2 模拟量地址分配"></a>2.2 模拟量地址分配</h2><h3 id="2-2-1-模拟量地址分配"><a href="#2-2-1-模拟量地址分配" class="headerlink" title="2.2.1 模拟量地址分配"></a>2.2.1 模拟量地址分配</h3><p><img src="https://i.postimg.cc/43yPrSFT/g17%E6%A8%A1%E6%8B%9F%E9%87%8F%E5%9C%B0%E5%9D%80%E5%88%86%E9%85%8D.png" alt="g17模拟量地址分配.png"></p>
+<center>图2-6：模拟量地址分配</center>
+
+<h3 id="2-2-2-温度变送器与模拟量输入接线图"><a href="#2-2-2-温度变送器与模拟量输入接线图" class="headerlink" title="2.2.2 温度变送器与模拟量输入接线图"></a>2.2.2 温度变送器与模拟量输入接线图</h3><p><img src="https://i.postimg.cc/bw3LVhgT/g18%E6%B8%A9%E5%BA%A6%E5%8F%98%E9%80%81%E4%B8%8E%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%85%A5%E6%8E%A5%E7%BA%BF.png" alt="g18温度变送与模拟量输入接线.png"></p>
+<center>图2-7：温度变送器与模拟量输入接线图</center>
+
+<h3 id="2-2-3-压力传感器与模拟量输入接线图"><a href="#2-2-3-压力传感器与模拟量输入接线图" class="headerlink" title="2.2.3 压力传感器与模拟量输入接线图"></a>2.2.3 压力传感器与模拟量输入接线图</h3><p><img src="https://i.postimg.cc/RFnR0nBs/g19%E5%8E%8B%E5%8A%9B%E5%8F%98%E9%80%81%E5%99%A8%E4%B8%8E%E6%A8%A1%E6%8B%9F%E9%87%8F.png" alt="g19压力变送器与模拟量.png"></p>
+<p><img src="https://i.postimg.cc/wBr2HQSR/g20%E4%B8%89%E7%BA%BF%E5%88%B6%E5%8E%8B%E5%8A%9B%E5%8F%98%E9%80%81%E5%99%A8.png" alt="g20三线制压力变送器.png"></p>
+<center>图2-8：压力传感器与模拟量输入接线图</center>
+
+<h1 id="三、模拟量数字量转换"><a href="#三、模拟量数字量转换" class="headerlink" title="三、模拟量数字量转换"></a>三、模拟量数字量转换</h1><h2 id="3-1-对应关系"><a href="#3-1-对应关系" class="headerlink" title="3.1 对应关系"></a>3.1 对应关系</h2><h3 id="3-1-1-模拟量输入模块"><a href="#3-1-1-模拟量输入模块" class="headerlink" title="3.1.1 模拟量输入模块"></a>3.1.1 模拟量输入模块</h3><p><img src="https://i.postimg.cc/MH2YfKZW/g21%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%85%A5%E6%A8%A1%E5%9D%97.png" alt="g21模拟量输入模块.png"></p>
+<center>图3-1：模拟量输入模块与数字量</center>
+
+<h3 id="3-1-2-模拟量输出模块"><a href="#3-1-2-模拟量输出模块" class="headerlink" title="3.1.2 模拟量输出模块"></a>3.1.2 模拟量输出模块</h3><p><img src="https://i.postimg.cc/Hnw9wDjb/g22%E6%A8%A1%E6%8B%9F%E9%87%8F%E8%BE%93%E5%87%BA%E6%A8%A1%E5%9D%97.png" alt="g22模拟量输出模块.png"></p>
+<center>图3-2：模拟量输出模块与数字量</center>
+
+<h1 id="四、模拟量案例"><a href="#四、模拟量案例" class="headerlink" title="四、模拟量案例"></a>四、模拟量案例</h1><h2 id="4-1-温度读取"><a href="#4-1-温度读取" class="headerlink" title="4.1 温度读取"></a>4.1 温度读取</h2><h3 id="4-1-1-PT100读取当前温度"><a href="#4-1-1-PT100读取当前温度" class="headerlink" title="4.1.1 PT100读取当前温度"></a>4.1.1 PT100读取当前温度</h3><p><a target="_blank" rel="noopener" href="https://postimg.cc/dDWd6qFZ"><img src="https://i.postimg.cc/15SH9tYB/g23%E6%A8%A1%E6%8B%9F%E9%87%8F%E9%87%87%E9%9B%86%E8%BD%AC%E6%8D%A2%E6%A1%88%E4%BE%8B.png" alt="g23模拟量采集转换案例.png"></a><img src="https://i.postimg.cc/SQCdF8Vj/g23%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C.png" alt="g23程序运行.png"></p>
+<center>图4-1：温度读取</center>
+
+<h3 id="4-1-2-PTJ410读取当前压力"><a href="#4-1-2-PTJ410读取当前压力" class="headerlink" title="4.1.2 PTJ410读取当前压力"></a>4.1.2 PTJ410读取当前压力</h3><p><img src="https://i.postimg.cc/8PbbsS2S/g24%E9%87%87%E5%8F%96%E5%BD%93%E5%89%8D%E5%8E%8B%E5%8A%9B.png" alt="g24采取当前压力.png"></p>
+<p><img src="https://i.postimg.cc/CxLsq20f/g25%E6%A8%A1%E6%8B%9F%E9%87%8F%E4%B8%8E%E6%95%B0%E5%AD%97%E9%87%8F%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB.png" alt="g25模拟量与数字量对应关系.png"></p>
+<p><img src="https://i.postimg.cc/527qqm9K/g26EMAM03%E7%BB%84%E6%80%81.png" alt="g26EMAM03组态.png"></p>
+<p><img src="https://i.postimg.cc/9fDPxqrm/g27%E5%8E%8B%E5%8A%9B%E8%AF%BB%E5%8F%96%E7%A8%8B%E5%BA%8F.png" alt="g27压力读取程序.png"></p>
+<center>图4-2：压力读取</center>
+
+<blockquote>
+<p><strong>孔子说：“弟子们在父母跟前就要遵守孝道，在外面就要敬爱兄长，做到谨慎守信，有大爱，亲近仁者，这样躬行实践之后还有精力，就可以学习文化知识。”</strong></p>
+</blockquote>
+
+      
+       <hr><span style="font-style: bold;color: gray;"> 本站文章基于「知识共享署名4.0国际许可协议」共享，转载需注明源自「东方既白 Eastdawns」并保留原文链接。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2026 东方既白 Eastdawns
+</p>
+
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 572px;
+    }
+    .nav.fullscreen {
+        margin-left: -572px;
+    }
+    .nav-left {
+        width: 150px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.33;
+        background: url("/img/article_bg_img.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
