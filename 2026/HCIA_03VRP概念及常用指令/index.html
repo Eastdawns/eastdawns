@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HCIA_03VRP概念及常用指令 | 东方既白 Eastdawns</title>
+  <meta name="baidu-site-verification" content="codeva-Xt5AHDJkfA" />
+  <meta name="google-adsense-account" content="ca-pub-6050600433044906">
+  <meta name="keywords" content="东方既白博客,eastdawns,dawns,工控技术,工控学习,自动化,PLC,人工智能,AI,培训教育,网站建设">
+  <meta name="description" content="东方既白(eastdawns.com)是一个专注于互联网技术学习与资源共享的综合站点。内容涵盖前沿技术解析、实用开发工具、精选教程及行业资讯，所有资源均源自互联网并持续更新，助力开发者成长与技术探索。">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="东方既白(eastdawns.com)是一个专注于互联网技术学习与资源共享的综合站点。内容涵盖前沿技术解析、实用开发工具、精选教程及行业资讯，所有资源均源自互联网并持续更新，助力开发者成长与技术探索。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="https://eastdawns.com/friends/index.html">
+<meta property="og:site_name" content="东方既白 Eastdawns">
+<meta property="og:description" content="东方既白(eastdawns.com)是一个专注于互联网技术学习与资源共享的综合站点。内容涵盖前沿技术解析、实用开发工具、精选教程及行业资讯，所有资源均源自互联网并持续更新，助力开发者成长与技术探索。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-05T12:19:01.000Z">
+<meta property="article:modified_time" content="2025-03-05T12:19:02.000Z">
+<meta property="article:author" content="Eastdawns">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/Eastdawns.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="东方既白 Eastdawns" type="application/atom+xml">
+</head>
+
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/Eastdawns.jpg"/>
+</a>
+<div class="author">
+    <span>Eastdawns</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(21)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="分类名称">
+            
+            分类名称
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="工控学习">
+            
+            工控学习
+            <small>(14)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="网络工程">
+            
+            网络工程
+            <small>(3)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="英语学习">
+            
+            英语学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="综合资料">
+            
+            综合资料
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about/index.html">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="21">
+<input type="hidden" id="yelog_site_word_count" value="7.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://eastdawns.com">东方既白 Eastdawns</a></li>
+            
+            <li><a target="_blank" href="https://www.gov.cn">中国政府网</a></li>
+            
+            <li><a target="_blank" href="https://www.forbes.com">Forbes</a></li>
+            
+            <li><a target="_blank" href="https://www.linkedin.com">LinkedIn</a></li>
+            
+            <li><a target="_blank" href="https://www.quora.com">Quora</a></li>
+            
+            <li><a target="_blank" href="https://www.csdn.net">CSDN</a></li>
+            
+            <li><a target="_blank" href="https://www.zhihu.com">知乎</a></li>
+            
+            <li><a target="_blank" href="https://www.douban.com">豆瓣</a></li>
+            
+            <li><a target="_blank" href="https://zhuanlan.bilibili.com">Bilibili专栏</a></li>
+            
+            <li><a target="_blank" href="https://medium.com">Medium</a></li>
+            
+            <li><a target="_blank" href="https://wordpress.com">WordPress.com</a></li>
+            
+            <li><a target="_blank" href="https://github.com">GitHub</a></li>
+            
+            <li><a target="_blank" href="https://link.chinaz.com/">站长之家友情链接平台</a></li>
+            
+            <li><a target="_blank" href="http://www.go9go.cn/">Go9Go友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://bbs.aizhan.com/">爱站网友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://link.admin5.com/">站长工具友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://www.tuizhan.com/">推站</a></li>
+            
+            <li><a target="_blank" href="http://www.yqlj.net/">友情链接网</a></li>
+            
+            <li><a target="_blank" href="https://www.lianzhan.com/">链站</a></li>
+            
+            <li><a target="_blank" href="https://www.lianling.cn/">链灵友情链接</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>标题1</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>标题2</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>使用说明</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>网络工具</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>西门子</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>英语单词</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HCIA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>S7-200系列</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 "
+           href="/2026/Eastdawns%E4%B8%9C%E6%96%B9%E6%97%A2%E7%99%BD%E7%9F%A5%E8%A1%8C%E5%BD%95/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Eastdawns东方既白知行录">Eastdawns东方既白知行录</span>
+            <span class="post-date" title="2026-01-01 00:00:00">2026/01/01</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 英语学习 "
+           href="/2026/Eastdawns%E6%96%B0%E4%B8%9C%E6%96%B9%E8%80%83%E7%A0%94%E8%AF%8D%E6%B1%87(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0)/"
+           data-tag="英语单词"
+           data-author="" >
+            <span class="post-title" title="新东方考研词汇乱序版(持续更新)">新东方考研词汇乱序版(持续更新)</span>
+            <span class="post-date" title="2026-01-01 00:00:00">2026/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_03VRP%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA_03VRP概念及常用指令">HCIA_03VRP概念及常用指令</span>
+            <span class="post-date" title="2026-02-06 22:28:00">2026/02/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_02%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E5%8F%8AENSP%E4%BD%BF%E7%94%A8/"
+           data-tag="HCIA,网络工具"
+           data-author="" >
+            <span class="post-title" title="HCIA_02网络工具及ENSP使用">HCIA_02网络工具及ENSP使用</span>
+            <span class="post-date" title="2026-02-04 22:56:00">2026/02/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_01%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%A8%A1%E5%9E%8B/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA_01网络工程概述及模型">HCIA_01网络工程概述及模型</span>
+            <span class="post-date" title="2026-02-01 21:09:00">2026/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_14USS%E5%8D%8F%E8%AE%AEMM420%E9%80%9A%E4%BF%A1%20/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_14USS协议MM420通信">S7-200系列_14USS协议MM420通信</span>
+            <span class="post-date" title="2026-01-26 21:15:00">2026/01/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_13%E5%A8%81%E7%BA%B6AR60%E5%8F%98%E9%A2%91%E5%99%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_13威纶AR60变频器">S7-200系列_13威纶AR60变频器</span>
+            <span class="post-date" title="2026-01-24 21:26:00">2026/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_12Modbus%E9%80%9A%E4%BF%A1/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_12Modbus通信">S7-200系列_12Modbus通信</span>
+            <span class="post-date" title="2026-01-22 23:00:00">2026/01/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_11%E9%80%9A%E4%BF%A1GETPUT/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_11通信GETPUT">S7-200系列_11通信GETPUT</span>
+            <span class="post-date" title="2026-01-20 21:16:00">2026/01/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_10%E9%AB%98%E9%80%9F%E8%84%89%E5%86%B2/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_10高速脉冲">S7-200系列_10高速脉冲</span>
+            <span class="post-date" title="2026-01-18 22:22:00">2026/01/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_09%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_09高速计数器">S7-200系列_09高速计数器</span>
+            <span class="post-date" title="2026-01-16 20:23:00">2026/01/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_08PID%E8%B0%83%E8%8A%82/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_08PID调节">S7-200系列_08PID调节</span>
+            <span class="post-date" title="2026-01-15 20:33:00">2026/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_07%E8%AE%A4%E8%AF%86%E6%A8%A1%E6%8B%9F%E9%87%8F/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_07认识模拟量">S7-200系列_07认识模拟量</span>
+            <span class="post-date" title="2026-01-12 20:23:00">2026/01/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_06%E7%AE%80%E5%8D%95%E7%A8%8B%E5%BA%8F%E6%A1%88%E4%BE%8B/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_06简单程序案例">S7-200系列_06简单程序案例</span>
+            <span class="post-date" title="2026-01-10 20:39:00">2026/01/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_05%E4%B8%AD%E6%96%AD%E5%AD%90%E7%A8%8B%E5%BA%8F/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_05中断子程序">S7-200系列_05中断子程序</span>
+            <span class="post-date" title="2026-01-09 23:10:00">2026/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_04%E8%BF%9B%E9%98%B6%E6%8C%87%E4%BB%A4/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_04进阶指令">S7-200系列_04进阶指令</span>
+            <span class="post-date" title="2026-01-06 22:19:00">2026/01/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_03%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_03数据结构">S7-200系列_03数据结构</span>
+            <span class="post-date" title="2026-01-05 22:02:00">2026/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_02%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_02基础指令">S7-200系列_02基础指令</span>
+            <span class="post-date" title="2026-01-03 21:09:00">2026/01/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_01%E7%9F%A5%E8%AF%86%E5%85%A5%E9%97%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_01知识入门">S7-200系列_01知识入门</span>
+            <span class="post-date" title="2026-01-02 20:26:00">2026/01/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 综合资料 "
+           href="/2026/Eastdawns%E7%BD%91%E7%AB%99%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E/"
+           data-tag="使用说明"
+           data-author="" >
+            <span class="post-title" title="Eastdawns网站功能说明">Eastdawns网站功能说明</span>
+            <span class="post-date" title="2026-01-01 00:00:00">2026/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 分类名称 "
+           href="/2026/%E4%B8%9C%E6%96%B9%E6%97%A2%E7%99%BDEastdawns.com%E7%BD%91%E7%AB%99%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99%E7%BB%9F%E4%B8%80%E6%A8%A1%E7%89%88/"
+           data-tag="标题1,标题2"
+           data-author="" >
+            <span class="post-title" title="东方既白网站文档编写模版">东方既白网站文档编写模版</span>
+            <span class="post-date" title="2026-01-01 00:00:00">2026/01/01</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-HCIA_03VRP概念及常用指令" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">HCIA_03VRP概念及常用指令</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="网络工程">网络工程</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">HCIA</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2026-09-11 18:22:35'>2026-02-06 22:28</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:486</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81VRP%E8%B7%AF%E7%94%B1%E5%B9%B3%E5%8F%B0"><span class="toc-text">一、VRP路由平台</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0"><span class="toc-text">1.1 基本概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-VRP%E6%A6%82%E8%BF%B0"><span class="toc-text">1.1.1 VRP概述</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%95%8C%E9%9D%A2%E5%8F%8A%E7%99%BB%E5%BD%95"><span class="toc-text">1.2 界面及登录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-VRP%E7%95%8C%E9%9D%A2%E5%8F%8A%E7%99%BB%E5%BD%95"><span class="toc-text">1.2.1 VRP界面及登录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%8C%87%E4%BB%A4"><span class="toc-text">1.3 命令行指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%8C%87%E4%BB%A4%E5%8F%8A%E9%85%8D%E7%BD%AE"><span class="toc-text">1.3.1 命令行指令及配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-%E6%8C%87%E4%BB%A4%E9%85%8D%E7%BD%AE%E6%A1%88%E4%BE%8B"><span class="toc-text">1.3.2 指令配置案例</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>子曰：君子食无求饱，居无求安，敏于事而慎于言，就有道而正焉，可谓好学也</strong></p>
+<p><strong>已矣。</strong></p>
+</blockquote>
+<h1 id="一、VRP路由平台"><a href="#一、VRP路由平台" class="headerlink" title="一、VRP路由平台"></a>一、VRP路由平台</h1><h2 id="1-1-基本概述"><a href="#1-1-基本概述" class="headerlink" title="1.1 基本概述"></a>1.1 基本概述</h2><h3 id="1-1-1-VRP概述"><a href="#1-1-1-VRP概述" class="headerlink" title="1.1.1 VRP概述"></a>1.1.1 VRP概述</h3><p><img src="https://i.postimg.cc/rynDcCK3/c1_VRP%E9%80%9A%E7%94%A8%E8%B7%AF%E7%94%B1%E5%B9%B3%E5%8F%B0.png" alt="c1_VRP通用路由平台.png"></p>
+<center>图1-1：VRP通用路由平台</center>
+
+<p><img src="https://i.postimg.cc/y6QDBXkw/c2_%E4%BB%80%E4%B9%88%E6%98%AFVRP.png" alt="c2_什么是VRP.png"></p>
+<center>图1-2：什么是VRP</center>
+
+<p><img src="https://i.postimg.cc/FFWYmgY5/c3_VRP%E7%9A%84%E5%8F%91%E5%B1%95.png" alt="c3_VRP的发展.png"></p>
+<center>图1-3：VRP的发展</center>
+
+<p><img src="https://i.postimg.cc/yYDkNgZw/c4_%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png" alt="c4_文件系统.png"></p>
+<center>图1-4：文件系统</center>
+
+<p><img src="https://i.postimg.cc/4NYm37cY/c5_%E5%AD%98%E5%82%A8%E8%AE%BE%E5%A4%87.png" alt="c5_存储设备.png"></p>
+<center>图1-5：存储设备</center>
+
+<p><img src="https://i.postimg.cc/X7rpvG5Z/c6_%E8%AE%BE%E5%A4%87%E5%88%9D%E5%A7%8B%E5%8C%96.png" alt="c6_设备初始化.png"></p>
+<center>图1-6：设备初始化</center>
+
+<p><img src="https://i.postimg.cc/qMWg6JcB/c7_%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86.png" alt="c7_设备管理.png"></p>
+<center>图1-7：设备管理</center>
+
+<h2 id="1-2-界面及登录"><a href="#1-2-界面及登录" class="headerlink" title="1.2 界面及登录"></a>1.2 界面及登录</h2><h3 id="1-2-1-VRP界面及登录"><a href="#1-2-1-VRP界面及登录" class="headerlink" title="1.2.1 VRP界面及登录"></a>1.2.1 VRP界面及登录</h3><p><img src="https://i.postimg.cc/ncNM9FKC/c8_VRP%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2.png" alt="c8_VRP用户界面.png"></p>
+<center>图1-8：VRP用户界面</center>
+
+<p><img src="https://i.postimg.cc/qMWg6Jcj/c9_VRP%E7%94%A8%E6%88%B7%E7%BA%A7%E5%88%AB.png" alt="c9_VRP用户级别.png"></p>
+<center>图1-9：VRP用户级别</center>
+
+<p><img src="https://i.postimg.cc/BQRtPS5c/c10_WEB%E7%BD%91%E7%AE%A1%E6%96%B9%E5%BC%8F%E7%99%BB%E5%BD%95.png" alt="c10_WEB网管方式登录.png"></p>
+<center>图1-10：WEB网管方式登录</center>
+
+<p><img src="https://i.postimg.cc/3xpNgs9t/c11_%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9C%AC%E5%9C%B0%E7%99%BB%E5%BD%951.png" alt="c11_命令行本地登录1.png"></p>
+<center>图1-11：命令行本地登录1</center>
+
+<p><img src="https://i.postimg.cc/fRXyxGB4/c12_%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%951.png" alt="c12_远程登录1.png"></p>
+<center>图1-12：命令行远程登录</center>
+
+<p><img src="https://i.postimg.cc/zfrBpxcv/c13_%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9C%AC%E5%9C%B0%E7%99%BB%E5%BD%952.png" alt="c13_命令行本地登录2.png"></p>
+<center>图1-13：命令行本地登录2</center>
+
+<h2 id="1-3-命令行指令"><a href="#1-3-命令行指令" class="headerlink" title="1.3 命令行指令"></a>1.3 命令行指令</h2><h3 id="1-3-1-命令行指令及配置"><a href="#1-3-1-命令行指令及配置" class="headerlink" title="1.3.1 命令行指令及配置"></a>1.3.1 命令行指令及配置</h3><p><img src="https://i.postimg.cc/W4v3S5Hg/c14_%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%95%8C%E9%9D%A2.png" alt="c14_命令行界面.png"></p>
+<center>图1-14：命令行界面</center>
+
+<p><img src="https://i.postimg.cc/YSzSPQ5Q/c15_%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E7%BB%93%E6%9E%84.png" alt="c15_基本命令结构.png"></p>
+<center>图1-15：基本命令结构</center>
+
+<p><img src="https://i.postimg.cc/QtNMZHsd/c16_%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%86%E5%9B%BE1.png" alt="c16_命令行视图1.png"></p>
+<center>图1-16：命令行视图1</center>
+
+<p><img src="https://i.postimg.cc/gJc0bndJ/c17_%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%86%E5%9B%BE2.png" alt="c17_命令行视图2.png"></p>
+<center>图1-17：命令行视图2</center>
+
+<p><img src="https://i.postimg.cc/26HSkr8V/c18_%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4%E8%A1%8C1.png" alt="c18_编辑命令行1.png"></p>
+<center>图1-18：编辑命令行1</center>
+
+<p><img src="https://i.postimg.cc/7hfYbdfz/c19_%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4%E8%A1%8C2.png" alt="c19_编辑命令行2.png"></p>
+<center>图1-19：编辑命令行2</center>
+
+<p><img src="https://i.postimg.cc/90rFzKr8/c20_%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9C%A8%E7%BA%BF%E5%B8%AE%E5%8A%A9.png" alt="c20_命令行在线帮助.png"></p>
+<center>图1-20：命令行在线帮助</center>
+
+<p><img src="https://i.postimg.cc/prpXy4pw/c21_%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%A3%E8%AF%BB%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF%E5%9C%A8%E7%BA%BF%E5%B8%AE%E5%8A%A9.png" alt="c21_命令行解读错误信息在线帮助.png"></p>
+<center>图1-21：命令行解读错误信息在线帮助</center>
+
+<p><img src="https://i.postimg.cc/zv6Dh7gs/c22_uddo_%E5%91%BD%E4%BB%A4%E8%A1%8C.png" alt="c22_uddo_命令行.png"></p>
+<center>图1-22：uddo命令行</center>
+
+<p><img src="https://i.postimg.cc/sxqfWmW3/c23_%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%BF%AB%E6%8D%B7%E9%94%AE.png" alt="c23_命令行快捷键.png"></p>
+<center>图1-23：命令行快捷键</center>
+
+<p><img src="https://i.postimg.cc/rs3y4j4p/c24_%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A41.png" alt="c24_命令行常见操作指令1.png"></p>
+<center>图1-24：命令行常见操作指令1</center>
+
+<p><img src="https://i.postimg.cc/Fz8FSpSY/c25_%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A42.png" alt="c25_命令行常见操作指令2.png"></p>
+<center>图1-25：命令行常见操作指令2</center>
+
+<p><img src="https://i.postimg.cc/vTk8nhnx/c26_%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A43.png" alt="c26_命令行常见操作指令3.png"></p>
+<center>图1-26：命令行常见操作指令3</center>
+
+<p><img src="https://i.postimg.cc/G35m6L5X/c27_%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A41.png" alt="c27_基本配置命令1.png"></p>
+<center>图1-27：基本配置命令1</center>
+
+<p><img src="https://i.postimg.cc/DfMwRvNF/c28_%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A42.png" alt="c28_基本配置命令2.png"></p>
+<center>图1-28：基本配置命令2</center>
+
+<p><img src="https://i.postimg.cc/7PWZjHRw/c29_%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A43.png" alt="c29_基本配置命令3.png"></p>
+<center>图1-29：基本配置命令3</center>
+
+<p><img src="https://i.postimg.cc/7YJZ4vvD/c30_%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A44.png" alt="c30_基本配置命令4.png"></p>
+<center>图1-30：基本配置命令4</center>
+
+<h3 id="1-3-2-指令配置案例"><a href="#1-3-2-指令配置案例" class="headerlink" title="1.3.2 指令配置案例"></a>1.3.2 指令配置案例</h3><p><img src="https://i.postimg.cc/52cNNP1B/c31_%E6%A1%88%E4%BE%8B1.png" alt="c31_案例1.png"></p>
+<center>图1-31：案例1</center>
+
+<p><img src="https://i.postimg.cc/bwXNN68C/c32_%E6%A1%88%E4%BE%8B2.png" alt="c32_案例2.png"></p>
+<center>图1-32：案例2-1</center>
+
+<p><img src="https://i.postimg.cc/BnWQQhsd/c33_%E6%A1%88%E4%BE%8B2.png" alt="c33_案例2.png"></p>
+<center>图1-33：案例2-2</center>
+
+<p><img src="https://i.postimg.cc/Gmk3Bkmw/c34_%E6%A1%88%E4%BE%8B3.png" alt="c34_案例3.png"></p>
+<center>图1-34：案例3-1</center>
+
+<p><img src="https://i.postimg.cc/MpyZcypp/c35_%E6%A1%88%E4%BE%8B3_1.png" alt="c35_案例3_1.png"></p>
+<center>图1-35：案例3-2</center>
+
+<p><img src="https://i.postimg.cc/pdRWKpmW/c36_%E6%A1%88%E4%BE%8B3_2.png" alt="c36_案例3_2.png"></p>
+<center>图1-36：案例3-3</center>
+
+<p><img src="https://i.postimg.cc/tgpqFYsZ/c37_%E6%A1%88%E4%BE%8B3_3.png" alt="c37_案例3_3.png"></p>
+<center>图1-37：查看配置结果</center>
+
+<p><img src="https://i.postimg.cc/PqytyTDW/c38_%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF.png" alt="c38_更多信息.png"></p>
+<center>图1-38：更多信息</center>
+
+<p><img src="https://i.postimg.cc/Dz626nGs/c39_VRP%E6%80%BB%E7%BB%93.png" alt="c39_VRP总结.png"></p>
+<center>图1-39：本章总结</center>
+
+<blockquote>
+<p><strong>孔子说：“君子饮食不求饱足，居住不求安逸，勤于政事而谨慎地说话，靠近有道的人去匡正自己，可以说是好学了。”</strong></p>
+</blockquote>
+
+      
+       <hr><span style="font-style: bold;color: gray;"> 本站文章基于「知识共享署名4.0国际许可协议」共享，转载需注明源自「东方既白 Eastdawns」并保留原文链接。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2026 东方既白 Eastdawns
+</p>
+
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 572px;
+    }
+    .nav.fullscreen {
+        margin-left: -572px;
+    }
+    .nav-left {
+        width: 150px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.33;
+        background: url("/img/article_bg_img.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
