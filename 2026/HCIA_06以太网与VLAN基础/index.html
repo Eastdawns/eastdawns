@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HCIA_06以太网与VLAN基础 | 东方既白 Eastdawns</title>
+  <meta name="baidu-site-verification" content="codeva-Xt5AHDJkfA" />
+  <meta name="google-adsense-account" content="ca-pub-6050600433044906">
+  <meta name="keywords" content="东方既白博客,eastdawns,dawns,工控技术,工控学习,自动化,PLC,人工智能,AI,培训教育,网站建设">
+  <meta name="description" content="东方既白(eastdawns.com)是一个专注于互联网技术学习与资源共享的综合站点。内容涵盖前沿技术解析、实用开发工具、精选教程及行业资讯，所有资源均源自互联网并持续更新，助力开发者成长与技术探索。">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="🌅 缘起·熹微初醒东方既白，其名溯源于《诗经·齐风·鸡鸣》“东方明矣，朝既昌矣”之千古意象，远非寻常名谓，实为一种哲学宣言。它喻示的不仅是天地交割时分的光影之变，更是人类认知进程中由晦暗走向澄明的永恒瞬间——此即“智慧启明、知识破晓”的深层哲思。本站承东方木德生发之气，木主仁，亦主文曲，故其运作不取峻厉之争辩，而循“生生”之道，如林木般无言地生长、延展、滋养。所谓汇聚古今智慧，非为简单的知识堆砌">
+<meta property="og:type" content="website">
+<meta property="og:title" content="东方既白 Eastdawns">
+<meta property="og:url" content="https://eastdawns.com/about/index.html">
+<meta property="og:site_name" content="东方既白 Eastdawns">
+<meta property="og:description" content="🌅 缘起·熹微初醒东方既白，其名溯源于《诗经·齐风·鸡鸣》“东方明矣，朝既昌矣”之千古意象，远非寻常名谓，实为一种哲学宣言。它喻示的不仅是天地交割时分的光影之变，更是人类认知进程中由晦暗走向澄明的永恒瞬间——此即“智慧启明、知识破晓”的深层哲思。本站承东方木德生发之气，木主仁，亦主文曲，故其运作不取峻厉之争辩，而循“生生”之道，如林木般无言地生长、延展、滋养。所谓汇聚古今智慧，非为简单的知识堆砌">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-10T16:41:28.218Z">
+<meta property="article:author" content="Eastdawns">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/Eastdawns.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="东方既白 Eastdawns" type="application/atom+xml">
+</head>
+
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/Eastdawns.jpg"/>
+</a>
+<div class="author">
+    <span>Eastdawns</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(25)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+                
+    <li>
+        <div data-rel="分类名称">
+            
+            分类名称
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="工控学习">
+            
+            工控学习
+            <small>(14)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="网络工程">
+            
+            网络工程
+            <small>(7)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="英语学习">
+            
+            英语学习
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="综合资料">
+            
+            综合资料
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+    </div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about/index.html">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="25">
+<input type="hidden" id="yelog_site_word_count" value="9.9k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://eastdawns.com">东方既白 Eastdawns</a></li>
+            
+            <li><a target="_blank" href="https://www.gov.cn">中国政府网</a></li>
+            
+            <li><a target="_blank" href="https://www.forbes.com">Forbes</a></li>
+            
+            <li><a target="_blank" href="https://www.linkedin.com">LinkedIn</a></li>
+            
+            <li><a target="_blank" href="https://www.quora.com">Quora</a></li>
+            
+            <li><a target="_blank" href="https://www.csdn.net">CSDN</a></li>
+            
+            <li><a target="_blank" href="https://www.zhihu.com">知乎</a></li>
+            
+            <li><a target="_blank" href="https://www.douban.com">豆瓣</a></li>
+            
+            <li><a target="_blank" href="https://zhuanlan.bilibili.com">Bilibili专栏</a></li>
+            
+            <li><a target="_blank" href="https://medium.com">Medium</a></li>
+            
+            <li><a target="_blank" href="https://wordpress.com">WordPress.com</a></li>
+            
+            <li><a target="_blank" href="https://github.com">GitHub</a></li>
+            
+            <li><a target="_blank" href="https://link.chinaz.com/">站长之家友情链接平台</a></li>
+            
+            <li><a target="_blank" href="http://www.go9go.cn/">Go9Go友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://bbs.aizhan.com/">爱站网友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://link.admin5.com/">站长工具友情链接平台</a></li>
+            
+            <li><a target="_blank" href="https://www.tuizhan.com/">推站</a></li>
+            
+            <li><a target="_blank" href="http://www.yqlj.net/">友情链接网</a></li>
+            
+            <li><a target="_blank" href="https://www.lianzhan.com/">链站</a></li>
+            
+            <li><a target="_blank" href="https://www.lianling.cn/">链灵友情链接</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>标题1</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>标题2</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>操作调试</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>使用说明</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>网络工具</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>西门子</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>英语单词</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HCIA</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>S7-200系列</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        
+        <a id="top" class="全部文章 "
+           href="/2026/Eastdawns%E4%B8%9C%E6%96%B9%E6%97%A2%E7%99%BD%E7%9F%A5%E8%A1%8C%E5%BD%95/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Eastdawns东方既白知行录">Eastdawns东方既白知行录</span>
+            <span class="post-date" title="2026-01-01 00:00:00">2026/01/01</span>
+        </a>
+        
+        
+        <a id="top" class="全部文章 英语学习 "
+           href="/2026/Eastdawns%E6%96%B0%E4%B8%9C%E6%96%B9%E8%80%83%E7%A0%94%E8%AF%8D%E6%B1%87(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0)/"
+           data-tag="英语单词"
+           data-author="" >
+            <span class="post-title" title="新东方考研词汇乱序版(持续更新)">新东方考研词汇乱序版(持续更新)</span>
+            <span class="post-date" title="2026-01-01 00:00:00">2026/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_06%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%B8%8EVLAN%E5%9F%BA%E7%A1%80/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA_06以太网与VLAN基础">HCIA_06以太网与VLAN基础</span>
+            <span class="post-date" title="2026-02-16 23:59:00">2026/02/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_05OSPF%E5%9F%BA%E7%A1%80%E5%8F%8A%E5%BA%94%E7%94%A8/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA_05OSPF基础及应用">HCIA_05OSPF基础及应用</span>
+            <span class="post-date" title="2026-02-12 22:09:00">2026/02/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_04%E7%BD%91%E7%BB%9C%E5%B1%82%E5%8D%8F%E8%AE%AEIP%E5%9C%B0%E5%9D%80%E5%8F%8A%E8%B7%AF%E7%94%B1/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA_04网络层协议IP地址及路由">HCIA_04网络层协议IP地址及路由</span>
+            <span class="post-date" title="2026-02-09 23:42:00">2026/02/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_03VRP%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA_03VRP概念及常用指令">HCIA_03VRP概念及常用指令</span>
+            <span class="post-date" title="2026-02-06 22:28:00">2026/02/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_02%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E5%8F%8AENSP%E4%BD%BF%E7%94%A8/"
+           data-tag="网络工具,HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA_02网络工具及ENSP使用">HCIA_02网络工具及ENSP使用</span>
+            <span class="post-date" title="2026-02-04 22:56:00">2026/02/04</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/HCIA_01%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E6%A6%82%E8%BF%B0%E5%8F%8A%E6%A8%A1%E5%9E%8B/"
+           data-tag="HCIA"
+           data-author="" >
+            <span class="post-title" title="HCIA_01网络工程概述及模型">HCIA_01网络工程概述及模型</span>
+            <span class="post-date" title="2026-02-01 21:09:00">2026/02/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 网络工程 "
+           href="/2026/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E6%95%B0%E9%80%9AENSP%E6%93%8D%E4%BD%9C%E8%B0%83%E8%AF%95%E6%B1%87%E6%80%BB/"
+           data-tag="操作调试"
+           data-author="" >
+            <span class="post-title" title="网络工程数通ENSP操作调试汇总">网络工程数通ENSP操作调试汇总</span>
+            <span class="post-date" title="2026-01-30 23:45:00">2026/01/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_14USS%E5%8D%8F%E8%AE%AEMM420%E9%80%9A%E4%BF%A1%20/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_14USS协议MM420通信">S7-200系列_14USS协议MM420通信</span>
+            <span class="post-date" title="2026-01-26 21:15:00">2026/01/26</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_13%E5%A8%81%E7%BA%B6AR60%E5%8F%98%E9%A2%91%E5%99%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_13威纶AR60变频器">S7-200系列_13威纶AR60变频器</span>
+            <span class="post-date" title="2026-01-24 21:26:00">2026/01/24</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_12Modbus%E9%80%9A%E4%BF%A1/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_12Modbus通信">S7-200系列_12Modbus通信</span>
+            <span class="post-date" title="2026-01-22 23:00:00">2026/01/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_11%E9%80%9A%E4%BF%A1GETPUT/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_11通信GETPUT">S7-200系列_11通信GETPUT</span>
+            <span class="post-date" title="2026-01-20 21:16:00">2026/01/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_10%E9%AB%98%E9%80%9F%E8%84%89%E5%86%B2/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_10高速脉冲">S7-200系列_10高速脉冲</span>
+            <span class="post-date" title="2026-01-18 22:22:00">2026/01/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_09%E9%AB%98%E9%80%9F%E8%AE%A1%E6%95%B0%E5%99%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_09高速计数器">S7-200系列_09高速计数器</span>
+            <span class="post-date" title="2026-01-16 20:23:00">2026/01/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_08PID%E8%B0%83%E8%8A%82/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_08PID调节">S7-200系列_08PID调节</span>
+            <span class="post-date" title="2026-01-15 20:33:00">2026/01/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_07%E8%AE%A4%E8%AF%86%E6%A8%A1%E6%8B%9F%E9%87%8F/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_07认识模拟量">S7-200系列_07认识模拟量</span>
+            <span class="post-date" title="2026-01-12 20:23:00">2026/01/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_06%E7%AE%80%E5%8D%95%E7%A8%8B%E5%BA%8F%E6%A1%88%E4%BE%8B/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_06简单程序案例">S7-200系列_06简单程序案例</span>
+            <span class="post-date" title="2026-01-10 20:39:00">2026/01/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_05%E4%B8%AD%E6%96%AD%E5%AD%90%E7%A8%8B%E5%BA%8F/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_05中断子程序">S7-200系列_05中断子程序</span>
+            <span class="post-date" title="2026-01-09 23:10:00">2026/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_04%E8%BF%9B%E9%98%B6%E6%8C%87%E4%BB%A4/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_04进阶指令">S7-200系列_04进阶指令</span>
+            <span class="post-date" title="2026-01-06 22:19:00">2026/01/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_03%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_03数据结构">S7-200系列_03数据结构</span>
+            <span class="post-date" title="2026-01-05 22:02:00">2026/01/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_02%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_02基础指令">S7-200系列_02基础指令</span>
+            <span class="post-date" title="2026-01-03 21:09:00">2026/01/03</span>
+        </a>
+        
+        
+        <a  class="全部文章 工控学习 "
+           href="/2026/S7-200%E7%B3%BB%E5%88%97_01%E7%9F%A5%E8%AF%86%E5%85%A5%E9%97%A8/"
+           data-tag="西门子,S7-200系列"
+           data-author="" >
+            <span class="post-title" title="S7-200系列_01知识入门">S7-200系列_01知识入门</span>
+            <span class="post-date" title="2026-01-02 20:26:00">2026/01/02</span>
+        </a>
+        
+        
+        <a  class="全部文章 综合资料 "
+           href="/2026/Eastdawns%E7%BD%91%E7%AB%99%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E/"
+           data-tag="使用说明"
+           data-author="" >
+            <span class="post-title" title="Eastdawns网站功能说明">Eastdawns网站功能说明</span>
+            <span class="post-date" title="2026-01-01 00:00:00">2026/01/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 分类名称 "
+           href="/2026/%E4%B8%9C%E6%96%B9%E6%97%A2%E7%99%BDEastdawns.com%E7%BD%91%E7%AB%99%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99%E7%BB%9F%E4%B8%80%E6%A8%A1%E7%89%88/"
+           data-tag="标题1,标题2"
+           data-author="" >
+            <span class="post-title" title="东方既白网站文档编写模版">东方既白网站文档编写模版</span>
+            <span class="post-date" title="2026-01-01 00:00:00">2026/01/01</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-HCIA_06以太网与VLAN基础" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">HCIA_06以太网与VLAN基础</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="网络工程">网络工程</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">HCIA</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2026-09-13 00:02:19'>2026-02-16 23:59</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:696</span>
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%A5%E5%A4%AA%E7%BD%91"><span class="toc-text">一、以太网</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E4%BB%A5%E5%A4%AA%E7%BD%91%E5%9F%BA%E7%A1%80"><span class="toc-text">1.1 以太网基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-%E5%8D%8F%E8%AE%AE%E5%8F%8A%E5%86%B2%E7%AA%81-%E5%B9%BF%E6%92%AD%E5%9F%9F"><span class="toc-text">1.1.1 协议及冲突&#x2F;广播域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-MAC%E5%9C%B0%E5%9D%80"><span class="toc-text">1.1.2 MAC地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-%E5%8D%95%E6%92%AD-%E5%B9%BF%E6%92%AD-%E7%BB%84%E6%92%AD%E4%BB%A5%E5%A4%AA%E5%B8%A7"><span class="toc-text">1.1.3 单播&#x2F;广播&#x2F;组播以太帧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-4-%E5%9B%AD%E5%8C%BA%E7%BD%91%E5%85%B8%E5%9E%8B%E6%9E%B6%E6%9E%84"><span class="toc-text">1.1.4 园区网典型架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-5-%E4%BA%A4%E6%8D%A2%E6%9C%BAMAC%E5%9C%B0%E5%9D%80%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.1.5 交换机MAC地址学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-6-%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B"><span class="toc-text">1.1.6 数据通信过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-1-%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="toc-text">1.2.1 虚拟局域网</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>子曰：赐也，始可与言诗已矣，告诸往而知来者也。</strong></p>
+</blockquote>
+<h1 id="一、以太网"><a href="#一、以太网" class="headerlink" title="一、以太网"></a>一、以太网</h1><h2 id="1-1-以太网基础"><a href="#1-1-以太网基础" class="headerlink" title="1.1 以太网基础"></a>1.1 以太网基础</h2><h3 id="1-1-1-协议及冲突-广播域"><a href="#1-1-1-协议及冲突-广播域" class="headerlink" title="1.1.1 协议及冲突&#x2F;广播域"></a>1.1.1 协议及冲突&#x2F;广播域</h3><p><img src="https://i.postimg.cc/MTCMjqsj/f1_%E5%89%8D%E8%A8%80.png" alt="f1_前言.png"></p>
+<center>图1-1前言</center>
+
+<p><img src="https://i.postimg.cc/SsB2zkZ9/f2_%E4%BB%A5%E5%A4%AA%E7%BD%91%E5%8D%8F%E8%AE%AE.png" alt="f2_以太网协议.png"></p>
+<center>图1-2：以太网协议</center>
+
+<p><img src="https://i.postimg.cc/j5pwJt8N/f3_%E5%86%B2%E7%AA%81%E5%9F%9F.png" alt="f3_冲突域.png"></p>
+<center>图1-3：冲突域</center>
+
+<p><img src="https://i.postimg.cc/XJRGy42d/f4_%E5%B9%BF%E6%92%AD%E5%9F%9F.png" alt="f4_广播域.png"></p>
+<center>图1-4：广播域</center>
+
+<p><img src="https://i.postimg.cc/5y8HBTGY/f5_%E4%BB%A5%E5%A4%AA%E7%BD%91%E5%8D%A1.png" alt="f5_以太网卡.png"></p>
+<center>图1-5：以太网卡</center>
+
+<p><img src="https://i.postimg.cc/Bb28TkyK/f6_%E4%BB%A5%E5%A4%AA%E7%BD%91%E5%B8%A7%E6%A0%BC%E5%BC%8F.png" alt="f6_以太网帧格式.png"></p>
+<center>图1-6：以太帧格式</center>
+
+<h3 id="1-1-2-MAC地址"><a href="#1-1-2-MAC地址" class="headerlink" title="1.1.2 MAC地址"></a>1.1.2 MAC地址</h3><p><img src="https://i.postimg.cc/gj3wVQ5L/f7_MAC%E5%9C%B0%E5%9D%80.png" alt="f7_MAC地址.png"></p>
+<center>图1-7：MAC</center>
+
+
+<p><img src="https://i.postimg.cc/j2yWHm9N/f8_IP%E5%8A%A8%E4%BD%9C%E4%B8%8EMAC%E5%9C%B0%E5%9D%80.png" alt="f8_IP动作与MAC地址.png"></p>
+<center>图1-8：IP地址与MAC地址</center>
+
+<p><img src="https://i.postimg.cc/3N2yXV6j/f9_MAC%E5%9C%B0%E5%9D%80%E8%A1%A8%E7%A4%BA.png" alt="f9_MAC地址表示.png"></p>
+<center>图1-9：MAC地址表示</center>
+
+<p><img src="https://i.postimg.cc/gj3wVQ5v/f10_MAC%E5%9C%B0%E5%9D%80%E6%9E%84%E6%88%90%E5%8F%8A%E5%88%86%E7%B1%BB.png" alt="f10_MAC地址构成及分类.png"></p>
+<center>图1-10：MAC地址构成及分类</center>
+
+<h3 id="1-1-3-单播-广播-组播以太帧"><a href="#1-1-3-单播-广播-组播以太帧" class="headerlink" title="1.1.3 单播&#x2F;广播&#x2F;组播以太帧"></a>1.1.3 单播&#x2F;广播&#x2F;组播以太帧</h3><p><img src="https://i.postimg.cc/prK9f47J/f11_%E5%8D%95%E6%92%AD%E4%BB%A5%E5%A4%AA%E5%B8%A7.png" alt="f11_单播以太帧.png"></p>
+<center>图1-11：单播以太帧</center>
+
+<p><img src="https://i.postimg.cc/Bb28Tkyg/f12_%E5%B9%BF%E6%92%AD%E4%BB%A5%E5%A4%AA%E5%B8%A7.png" alt="f12_广播以太帧.png"></p>
+<center>图1-12：广播以太帧</center>
+
+<p><img src="https://i.postimg.cc/0j76YF3W/f13_%E7%BB%84%E6%92%AD%E4%BB%A5%E5%A4%AA%E5%B8%A7.png" alt="f13_组播以太帧.png"></p>
+<center>图1-13：组播以太帧</center>
+
+<h3 id="1-1-4-园区网典型架构"><a href="#1-1-4-园区网典型架构" class="headerlink" title="1.1.4 园区网典型架构"></a>1.1.4 园区网典型架构</h3><p><img src="https://i.postimg.cc/L5jqtw70/f14_%E5%9B%AD%E5%8C%BA%E7%BD%91%E7%BB%8F%E5%85%B8%E6%9E%B6%E6%9E%84.png" alt="f14_园区网经典架构.png"></p>
+<center>图1-14：园区网架构</center>
+
+<p><img src="https://i.postimg.cc/QCcBQwPY/f15_%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%BA%8C%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA.png" alt="f15_以太网二层交换机.png"></p>
+<center>图1-15：以太网二层交换机</center>
+
+<p><img src="https://i.postimg.cc/Rhw37y8D/f16_%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png" alt="f16_交换机工作原理.png"></p>
+<center>图1-16：交换机工作原理</center>
+
+<p><img src="https://i.postimg.cc/tJF13wff/f17_MAC%E5%9C%B0%E5%9D%80%E8%A1%A8.png" alt="f17_MAC地址表.png"></p>
+<pre><code>&lt;center&gt;图1-17：MAC地址表&lt;/center&gt;
+</code></pre>
+<p><img src="https://i.postimg.cc/NGXrv2Mw/f18_%E5%A4%84%E7%90%86%E8%A1%8C%E4%B8%BA.png" alt="f18_处理行为.png"></p>
+<center>图1-18：交换机的数据帧处理行为</center>
+
+<p><img src="https://i.postimg.cc/fWd0QSLM/f19_%E6%B3%9B%E6%B4%AA.png" alt="f19_泛洪.png"></p>
+<center>图1-19：泛洪</center>
+
+<p><img src="https://i.postimg.cc/tR6VGnTy/f19_%E8%BD%AC%E5%8F%91.png" alt="f19_转发.png"></p>
+<center>图1-20：转发</center>
+
+<p><img src="https://i.postimg.cc/8kvrgf5p/f20_%E4%B8%A2%E5%BC%83.png" alt="f20_丢弃.png"></p>
+<center>图1-21：丢弃</center>
+
+<h3 id="1-1-5-交换机MAC地址学习"><a href="#1-1-5-交换机MAC地址学习" class="headerlink" title="1.1.5 交换机MAC地址学习"></a>1.1.5 交换机MAC地址学习</h3><p><img src="https://i.postimg.cc/WpZJcq31/f21_%E4%BA%A4%E6%8D%A2%E6%9C%BAMAC%E5%9C%B0%E5%9D%80%E5%AD%A6%E4%B9%A01.png" alt="f21_交换机MAC地址学习1.png"></p>
+<center>图1-22：MAC地址学习1</center>
+
+<p><img src="https://i.postimg.cc/qBKCH6Rt/f22_%E4%BA%A4%E6%8D%A2%E6%9C%BAMAC%E5%9C%B0%E5%9D%80%E5%AD%A6%E4%B9%A02.png" alt="f22_交换机MAC地址学习2.png"></p>
+<center>图1-23：MAC地址学习2</center>
+
+<p><img src="https://i.postimg.cc/MZBjJfTv/f23_%E4%BA%A4%E6%8D%A2%E6%9C%BAMAC%E5%9C%B0%E5%9D%80%E5%AD%A6%E4%B9%A03.png" alt="f23_交换机MAC地址学习3.png"></p>
+<center>图1-24：MAC地址学习3</center>
+
+<p><img src="https://i.postimg.cc/SQ9zbYs8/f24_%E4%BA%A4%E6%8D%A2%E6%9C%BAMAC%E5%9C%B0%E5%9D%80%E5%AD%A6%E4%B9%A04.png" alt="f24_交换机MAC地址学习4.png"></p>
+<center>图1-25：MAC地址学习4</center>
+
+<p><img src="https://i.postimg.cc/J7XBCHnX/f25_%E4%BA%A4%E6%8D%A2%E6%9C%BAMAC%E5%9C%B0%E5%9D%80%E5%AD%A6%E4%B9%A05.png" alt="f25_交换机MAC地址学习5.png"></p>
+<center>图1-26：MAC地址学习5</center>
+
+<h3 id="1-1-6-数据通信过程"><a href="#1-1-6-数据通信过程" class="headerlink" title="1.1.6 数据通信过程"></a>1.1.6 数据通信过程</h3><p><img src="https://i.postimg.cc/FFSJXkRV/f26_%E5%90%8C%E7%BD%91%E6%AE%B5%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B.png" alt="f26_同网段通信过程.png"></p>
+<center>图1-27：数据通信过程</center>
+
+<p><img src="https://i.postimg.cc/RCtnxJFQ/f27_%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85%E8%BF%87%E7%A8%8B.png" alt="f27_数据封装过程.png"></p>
+<center>图1-28：数据封装过程</center>
+
+<p><img src="https://i.postimg.cc/L6Mg94Yg/f28_%E5%88%9D%E5%A7%8B%E7%8A%B6%E6%80%81.png" alt="f28_初始状态.png"></p>
+<center>图1-29：初始状态</center>
+
+<p><img src="https://i.postimg.cc/vHdxY8gV/f29_%E6%B3%9B%E6%B4%AA%E6%95%B0%E6%8D%AE%E5%B8%A7.png" alt="f29_泛洪数据帧.png"></p>
+<center>图1-30：泛洪数据帧</center>
+
+<p><img src="https://i.postimg.cc/Nfw2sG91/f30_%E5%AD%A6%E4%B9%A0MAC%E5%9C%B0%E5%9D%80.png" alt="f30_学习MAC地址.png"></p>
+<center>图1-31：学习MAC地址</center>
+
+<p><img src="https://i.postimg.cc/yYz316g9/f31_%E7%9B%AE%E6%A0%87%E4%B8%BB%E6%9C%BA%E5%9B%9E%E5%A4%8D.png" alt="f31_目标主机回复.png"></p>
+<center>图1-32：目标主机回复</center>
+
+<p><img src="https://i.postimg.cc/Gh1TL38j/f32_%E6%80%BB%E7%BB%93.png" alt="f32_总结.png"></p>
+<center>图1-33：总结</center>
+
+<h2 id="1-2-1-虚拟局域网"><a href="#1-2-1-虚拟局域网" class="headerlink" title="1.2.1 虚拟局域网"></a>1.2.1 虚拟局域网</h2><p><img src="https://i.postimg.cc/X70BjNGL/f33_VLAN%E5%89%8D%E8%A8%80.png" alt="f33_VLAN前言.png"></p>
+<center>图1-34：VLAN前言</center>
+
+<p><img src="https://i.postimg.cc/9FjwmXR1/f34_%E4%BC%A0%E7%BB%9F%E4%BB%A5%E5%A4%AA%E7%BD%91%E9%97%AE%E9%A2%98.png" alt="f34_传统以太网问题.png"></p>
+<center>图1-35：传统以太网的问题</center>
+
+<p><img src="https://i.postimg.cc/kXdRJM6f/f35_%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91.png" alt="f35_虚拟局域网.png"></p>
+<center>图1-36：虚拟局域网</center>
+
+<p><img src="https://i.postimg.cc/TYX5d2Lt/f36_%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0VLAN.png" alt="f36_如何实现VLAN.png"></p>
+<center>图1-37：如何实现VLAN</center>
+
+<p><img src="https://i.postimg.cc/pXt5WVh0/f37_VLAN%E6%A0%87%E7%AD%BE.png" alt="f37_VLAN标签.png"></p>
+<center>图1-38：VLAN标签</center>
+
+<p><img src="https://i.postimg.cc/pXt5WVh6/f38_VLAN%E7%9A%84%E5%AE%9E%E7%8E%B0.png" alt="f38_VLAN的实现.png"></p>
+<center>图1-39：VLAN的实现</center>
+
+<p><img src="https://i.postimg.cc/9FjwmXRs/f39_VLAN%E7%9A%84%E5%88%92%E5%88%86%E6%96%B9%E5%BC%8F.png" alt="f39_VLAN的划分方式.png"></p>
+<center>图1-40：VLAN的划分</center>
+
+<p><img src="https://i.postimg.cc/8PVfpkJq/f40_VLAN%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%88%92%E5%88%86%E6%96%B9%E5%BC%8F.png" alt="f40_VLAN的接口划分方式.png"></p>
+<center>图1-41：基于接口的VLAN的划分</center>
+
+<p><img src="https://i.postimg.cc/hPqQD4zk/f41_VLAN%E7%9A%84MAC%E5%9C%B0%E5%9D%80%E5%88%92%E5%88%86%E6%96%B9%E5%BC%8F.png" alt="f41_VLAN的MAC地址划分方式.png"></p>
+<center>图1-42：基于MAC地址的VLAN划分</center>
+
+<p><img src="https://i.postimg.cc/nct9FV98/f42_%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%BA%8C%E5%B1%82%E6%8E%A5%E5%8F%A3%E7%B1%BB%E5%9E%8B.png" alt="f42_以太网二层接口类型.png"></p>
+<center>图1-43：以太网二层接口类型</center>
+
+<p><img src="https://i.postimg.cc/rFLRVyRX/f43_Access%E6%8E%A5%E5%8F%A3.png" alt="f43_Access接口.png"></p>
+<center>图1-44：Access接口</center>
+
+<p><img src="https://i.postimg.cc/28fLkjLf/f44_Trunk%E6%8E%A5%E5%8F%A3.png" alt="f44_Trunk接口.png"></p>
+<center>图1-45：Trunk接口</center>
+
+<p><img src="https://i.postimg.cc/65L2ysn1/f45_Access%E6%8E%A5%E5%8F%A3%E4%B8%8ETrunk%E6%8E%A5%E5%8F%A3.png" alt="f45_Access接口与Trunk接口.png"></p>
+<center>图1-46：Access接口与Trunk接口</center>
+
+<p><img src="https://i.postimg.cc/PrzpPGYR/f46_Hybrid%E6%8E%A5%E5%8F%A3.png" alt="f46_Hybrid接口.png"></p>
+<center>图1-47：Hybrid接口</center>
+
+<p><img src="https://i.postimg.cc/ncYjC8B5/f47_Hybrid%E6%8E%A5%E5%8F%A3%E4%B8%BE%E4%BE%8B.png" alt="f47_Hybrid接口举例.png"></p>
+<center>图1-48：Hybrid接口举例</center>
+
+<p><img src="https://i.postimg.cc/Wb6FhRgQ/f48_%E5%B0%8F%E7%BB%93.png" alt="f48_小结.png"></p>
+<center>图1-49：小结</center>
+
+<p><img src="https://i.postimg.cc/jdQwLVPp/f49_VLAN%E7%9A%84%E8%A7%84%E5%88%92.png" alt="f49_VLAN的规划.png"></p>
+<center>图1-50：VLAN的规划</center>
+
+<p><img src="https://i.postimg.cc/ZKFBCk6t/f50_%E6%8E%A5%E5%8F%A3%E7%9A%84VLAN%E5%88%92%E5%88%86.png" alt="f50_接口的VLAN划分.png"></p>
+<center>图1-51：基于接口VLAN的划分</center>
+
+<p><img src="https://i.postimg.cc/tCtZY0F0/f51_MAC%E7%9A%84VLAN%E5%88%92%E5%88%86.png" alt="f51_MAC的VLAN划分.png"></p>
+<center>图1-52：基于MAC的VLAN划分</center>
+
+<p><img src="https://i.postimg.cc/8PBJj8LG/f52_VLAN%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4.png" alt="f52_VLAN的基础配置命令.png"></p>
+<center>图1-53：VLAN基础配置命令</center>
+
+<p><img src="https://i.postimg.cc/MKbMvk1z/f53_Trunk%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4.png" alt="f53_Trunk接口的基础配置命令.png"></p>
+<center>图1-54：Trunk接口基础配置命令</center>
+
+<p><img src="https://i.postimg.cc/zXSbVmTJ/f54_Hybrid%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4.png" alt="f54_Hybrid接口的基础配置命令.png"></p>
+<center>图1-55：Hybrid接口基础配置命令</center>
+
+<p><img src="https://i.postimg.cc/bNHDsX1G/f55_%E6%A1%88%E4%BE%8B1_1.png" alt="f55_案例1_1.png"></p>
+<center>图1-56：案例1</center>
+
+<p><img src="https://i.postimg.cc/sD9QvF52/f56_%E6%A1%88%E4%BE%8B1_2.png" alt="f56_案例1_2.png"></p>
+<center>图1-57：创建VLAN</center>
+
+<p><img src="https://i.postimg.cc/hPbzfFVj/f57_%E6%A1%88%E4%BE%8B1_3.png" alt="f57_案例1_3.png"></p>
+<center>图1-58：配置Access接口和Trunk接口</center>
+
+<p><img src="https://i.postimg.cc/GhJ8H0v4/f58_%E6%A1%88%E4%BE%8B1_4.png" alt="f58_案例1_4.png"></p>
+<center>图1-59：验证配置</center>
+
+<p><img src="https://i.postimg.cc/3x8yGLZw/f59_%E6%A1%88%E4%BE%8B2_1.png" alt="f59_案例2_1.png"></p>
+<center>图1-60：案例2</center>
+
+<p><img src="https://i.postimg.cc/qvJtKmGg/f60_%E6%A1%88%E4%BE%8B2_2.png" alt="f60_案例2_2.png"></p>
+<center>图1-61：Hybrid接口的基础配置1</center>
+
+<p><img src="https://i.postimg.cc/mgLc9dS9/f61_%E6%A1%88%E4%BE%8B2_3.png" alt="f61_案例2_3.png"></p>
+<center>图1-62：Hybrid接口的基础配置2</center>
+
+<p><img src="https://i.postimg.cc/cLxK3Dct/f62_%E9%AA%8C%E8%AF%81%E9%85%8D%E7%BD%AE.png" alt="f62_验证配置.png"></p>
+<center>图1-63：验证配置</center>
+
+<p><img src="https://i.postimg.cc/13mgFWKp/f63_VLAN%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4.png" alt="f63_VLAN的基础配置命令.png"></p>
+<center>图1-64：VLAN的基础配置命令</center>
+
+<p><img src="https://i.postimg.cc/2SkqWHx7/f64_%E6%A1%88%E4%BE%8BMAC%E5%9C%B0%E5%9D%80%E5%88%86VLAN.png" alt="f64_案例MAC地址分VLAN.png"></p>
+<center>图1-65：基于MAC地址划分VLAN</center>
+
+<p><img src="https://i.postimg.cc/wjqtNWk5/f65_%E6%A1%88%E4%BE%8BMAC%E5%9C%B0%E5%9D%80%E5%88%86VLAN1.png" alt="f65_案例MAC地址分VLAN1.png"></p>
+<center>图1-66：创建VLAN并关联MAC地址和VLAN</center>
+
+<p><img src="https://i.postimg.cc/zGzLhdkS/f66_%E6%A1%88%E4%BE%8BMAC%E5%9C%B0%E5%9D%80%E5%88%86VLAN2.png" alt="f66_案例MAC地址分VLAN2.png"></p>
+<center>图1-67：加入VLAN使能MAC VLAN功能</center>
+
+<p><img src="https://i.postimg.cc/GmLBDMjX/f67_%E6%A1%88%E4%BE%8BMAC%E5%9C%B0%E5%9D%80%E5%88%86VLAN3.png" alt="f67_案例MAC地址分VLAN3.png"></p>
+<center>图1-68：验证配置</center>
+
+<blockquote>
+<p><strong>孔子说：“你可以和我讲诗了，因为告诉你过去的事，你就能推知未来的事。”</strong></p>
+</blockquote>
+
+      
+       <hr><span style="font-style: bold;color: gray;"> 本站文章基于「知识共享署名4.0国际许可协议」共享，转载需注明源自「东方既白 Eastdawns」并保留原文链接。 </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2026 东方既白 Eastdawns
+</p>
+
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 572px;
+    }
+    .nav.fullscreen {
+        margin-left: -572px;
+    }
+    .nav-left {
+        width: 150px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.33;
+        background: url("/img/article_bg_img.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
