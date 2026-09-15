@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://eastdawns.com/2026/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E6%95%B0%E9%80%9AeNSP%E6%93%8D%E4%BD%9C%E8%B0%83%E8%AF%95%E6%B1%87%E6%80%BB/</loc>
+    <loc>https://eastdawns.com/2026/HCIA_00eNSP%E6%93%8D%E4%BD%9C%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/</loc>
     
     <lastmod>2026-09-15</lastmod>
     
@@ -270,14 +270,14 @@
   </url>
   
   <url>
-    <loc>https://eastdawns.com/tags/HCIA/</loc>
+    <loc>https://eastdawns.com/tags/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://eastdawns.com/tags/%E8%8B%B1%E8%AF%AD%E5%8D%95%E8%AF%8D/</loc>
+    <loc>https://eastdawns.com/tags/HCIA/</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -299,13 +299,6 @@
   
   <url>
     <loc>https://eastdawns.com/tags/S7-200%E7%B3%BB%E5%88%97/</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://eastdawns.com/tags/%E6%93%8D%E4%BD%9C%E8%B0%83%E8%AF%95/</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -335,14 +328,14 @@
   </url>
   
   <url>
-    <loc>https://eastdawns.com/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/</loc>
+    <loc>https://eastdawns.com/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://eastdawns.com/categories/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://eastdawns.com/categories/%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B/</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
